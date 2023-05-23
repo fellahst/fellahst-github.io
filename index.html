@@ -279,11 +279,13 @@
           DataService --> Dataset : dcat:servesDataset
           Dataset --> Distribution : dcat:distribution
           Distribution --> DataService : dcat:accessService
+          
           class Catalog {
           Mandatory:
+          - dct:title
           - dct:description
           - dct:publisher
-          - dct:title
+         
           Recommended:
           - dcat:dataset
           - foaf:homepage
@@ -296,6 +298,7 @@
           - dcat:themeTaxonomy
           - dct:modified
           }
+
           class DataService {
           Mandatory:
           - dcat:endpointURL
