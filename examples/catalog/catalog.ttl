@@ -4,45 +4,44 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # ---------- class Catalog --------------------------------------------------
-<https://swisstopo/opendata/catalog>
+<https://data.census.gov/catalog>
   a dcat:Catalog ;
 
   # mandatory properties
-  dct:description "Datenkatalog der Stadt Zurich"@de ;
-  dct:publisher <https://publishers/swisstopo> ;
-  dct:title "Open Data City of Zurich"@en ,
-            "Offene Daten der Stadt Zurich"@de ;
+  dct:title "US Census Open Data Catalog" ;
+  dct:description "US Census Data Catalog" ;
+  dct:publisher  <https://census.gov> ;
+
 
   # recommended properties
-  dcat:dataset <https://swisstopo/data/123>, <https://swisstopo/data/345> ;
-  foaf:homepage <https://swisstopo/homepage> ;
-  dcat:service <https://swisstopo/service/123>, <https://swisstopo/service/345> .
-  dct:issued "2021-01-07T00:00:00"^^xsd:dateTime ;
-  dct:license <http://dcat-ap.ch/vocabulary/licenses/terms_open> .
+  dcat:dataset <https://data.census.gov/data/123>, <https://data.census.gov/data/345> ;
+  foaf:homepage <https://census.gov/catalog.html> ;
+  dcat:service <https://data.census.gov/service/123>, <https://data.census.gov/service/345> .
+  dct:issued "2020-05-25T00:00:00"^^xsd:dateTime ;
+  dct:license <https://creativecommons.org/publicdomain/zero/1.0/> .
 
   # optional properties
-  dct:modified "2021-01-07T00:00:00"^^xsd:dateTime ;
-  dct:language <http://publications.europa.eu/resource/authority/language/DEU> ,
-               <http://publications.europa.eu/resource/authority/language/FRA> .
+  dct:modified "2020-05-25T00:00:00"^^xsd:dateTime ;
+  dct:language <http://publications.europa.eu/resource/authority/language/ENG> .
 
 # ---------- class Dataset --------------------------------------------------
-<https://swisstopo/data/123>
+<https://data.census.gov/data/123>
   a dcat:Dataset .
 
-<https://swisstopo/data/345>
+<https://data.census.gov/data/345>
   a dcat:Dataset .
 
 # ---------- class Document --------------------------------------------------
-<https://swisstopo/index.html>
+<https://data.census.gov/index.html>
   a foaf:Document .
 
 # ---------- class DataService -----------------------------------------------
-<https://swisstopo/service/123>
+<https://data.census.gov/service/123>
   a dcat:DataService .
 
-<https://swisstopo/service/345>
+<https://data.census.gov/service/345>
   a dcat:DataService .
 
 # ---------- class Agent -----------------------------------------------------
-<https://publishers/swisstopo>
-  a foaf:Agent .
+<https://census.gov>
+  a foaf:Organizaton .

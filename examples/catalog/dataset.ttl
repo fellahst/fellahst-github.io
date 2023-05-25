@@ -1,6 +1,19 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 
-<https://swisstopo/opendata/catalog>
+# ---------- class Catalog --------------------------------------------------
+<https://data.census.gov/catalog>
   a dcat:Catalog ;
 
-  dcat:dataset <https://swisstopo/data/123>, <https://swisstopo/data/345> .
+  # recommended property
+  dcat:dataset <https://data.census.gov/data/123>, 
+               <https://data.census.gov/data/345> .
+
+
+
+# ---------- class Dataset --------------------------------------------------
+<https://data.census.gov/data/123>
+  a dcat:Dataset .
+
+<https://data.census.gov/data/345>
+  a dcat:Dataset .
+

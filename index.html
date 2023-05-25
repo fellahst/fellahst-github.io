@@ -323,11 +323,13 @@
 
           class Dataset {
           Mandatory:
-          - dcat:contactPoint
+          - dct:title
           - dct:description
+          - dcat:contactPoint
+  
           - dct:identifier
           - dct:publisher
-          - dct:title
+
           Recommended:
           - dcat:distribution
           - dct:keyword
@@ -733,6 +735,15 @@
             <td>R</td>
             <td>0..1</td>
           </tr>
+          <tr>
+            <td><a href="#catalog-creator">creator</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/creator"><code>dct:creator</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+
         </tbody>
       </table>
 
@@ -1333,6 +1344,50 @@
         </table>
         <aside class="example" title="Usage of dct:modified for dcat:Catalog">
           <pre data-include-format="text" data-include="./examples/catalog/modified.ttl"></pre>
+        </aside>
+      </section>
+
+
+      <section id="catalog-creator">
+        <h4>Property: creator</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>creattor</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Optional</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/creator"><code>dct:creator</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>
+                <ul>
+                  <li>This property refers to the licence under which the Catalogue can be used or reused.
+                  </li>
+                  <li>CV to be used: [[VOCAB-US-LICENSE]]</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="example" title="Usage of dct:license for dcat:Catalog">
+          <pre data-include-format="text" data-include="./examples/catalog/license.ttl"></pre>
         </aside>
       </section>
 

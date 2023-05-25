@@ -3,7 +3,7 @@
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
 
-<https://opendata.zurich/opendata/1234>
+<https://data.census.gov/catalog>
   a dcat:Catalog;
   dct:spatial [
     a dct:Location ;
@@ -27,4 +27,8 @@
           7.24  53.504 , 3.053 53.504 ,
           3.053 47.975
         ))"""^^gsp:wktLiteral
-  ], <http://publications.europa.eu/resource/authority/country/CHE> .
+
+  ],
+  # Library of Congress MARC Countries taxonomy
+  <http://id.loc.gov/vocabulary/countries/xxu> 
+.
