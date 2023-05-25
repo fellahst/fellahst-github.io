@@ -111,10 +111,10 @@ var respecConfig = {
       "title":"EU Vocabularies Continents Named Authority List",
       "publisher":"Publications Office of the European Union",
      },
-    "VOCAB-EU-COUNTRY":{
-      "href":"https://publications.europa.eu/resource/authority/country",
-      "title":"EU Vocabularies Countries Named Authority List",
-      "publisher":"Publications Office of the European Union",
+    "VOCAB-US-COUNTRY":{
+      "href":"http://id.loc.gov/vocabulary/countries",
+      "title":"MARC List for Countries",
+      "publisher":"Library of Congress",
     },
     "VOCAB-EU-FILE-TYPE":{
       "href":"http://publications.europa.eu/resource/authority/file-type",
@@ -126,10 +126,10 @@ var respecConfig = {
       "title":"EU Vocabularies Frequency Named Authority List",
       "publisher":"Publications Office of the European Union",
     },
-    "VOCAB-EU-LANGUAGE":{
-      "href":"http://publications.europa.eu/resource/authority/language",
-      "title":"Continent",
-      "publisher":"Publications Office of the European Union",
+    "VOCAB-US-LANGUAGE":{
+      "href":"https://id.loc.gov/vocabulary/iso639-1",
+      "title":"ISO 639-1: Codes for the Representation of Names of Languages - Part 1: Two-letter codes for languages",
+      "publisher":"Library of Congress",
     },
     "VOCAB-EU-PLACE":{
       "href":"https://publications.europa.eu/resource/authority/place",
