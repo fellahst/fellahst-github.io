@@ -16,13 +16,15 @@
   # recommended properties
   dcat:dataset <https://data.census.gov/data/123>, <https://data.census.gov/data/345> ;
   foaf:homepage <https://census.gov/catalog.html> ;
-  dcat:service <https://data.census.gov/service/123>, <https://data.census.gov/service/345> .
-  dct:issued "2020-05-25T00:00:00"^^xsd:dateTime ;
-  dct:license <https://creativecommons.org/publicdomain/zero/1.0/> .
+  dcat:service <https://data.census.gov/service/123>, <https://data.census.gov/service/345> ;
+  dct:issued "2020-05-25"^^xsd:date ;
+  dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
 
   # optional properties
-  dct:modified "2020-05-25T00:00:00"^^xsd:dateTime ;
-  dct:language <http://publications.europa.eu/resource/authority/language/ENG> .
+  dct:modified "2020-05-25"^^xsd:date ;
+  dct:language  <http://id.loc.gov/vocabulary/iso639-1/en> 
+  
+.
 
 # ---------- class Dataset --------------------------------------------------
 <https://data.census.gov/data/123>
@@ -44,4 +46,4 @@
 
 # ---------- class Agent -----------------------------------------------------
 <https://census.gov>
-  a foaf:Organizaton .
+  a foaf:Organization .

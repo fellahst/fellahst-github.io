@@ -1,29 +1,41 @@
 var respecConfig = {
   specStatus: "base",
   logos: [],
-  editors: [{
-    name: "Open Government Data",
-  }, {
-    name: "S. Fellah",
-    company:"Image Matters LLC",
-    companyURL:"https://www.imagemattersllc.com",
+  editors: [
+ 
+  {
+    name:"Thomas Dabolt",
+    company:"US Department of Interior",
+    companyURL: "https://www.doi.gov",
     note: "",
-  }, {
-    name:"J. Davidson",
-    company:"Image Matters LLC",
-    companyURL:"https://www.imagemattersllc.com",
-    note: "",
-  }, {
-    name:"Michael Radcliffe",
+  },
+  {
+    name:"Michael Ratcliffe",
     company:"US Census Bureau",
     companyURL: "https://www.census.gov",
     note: "",
-  }],
+  },
+  {
+    name: "Open Government Data",
+    company:"Data.gov",
+    companyURL: "https://www.data.gov",
+  }, 
+  {
+    name: "Stephane Fellah",
+    company:"Image Matters LLC",
+    companyURL:"https://www.imagemattersllc.com",
+    note: "",
+  }, {
+    name:"John Davidson",
+    company:"Image Matters LLC",
+    companyURL:"https://www.imagemattersllc.com",
+    note: "",
+  }, ],
   github: {
     branch: "main",
-    repoURL: "https://github.com/DCAT-US/DCAT-US-Schema-v3.0",
+    repoURL: "https://github.com/DOI-DO/dcat-us/",
   },
-  edDraftURI: "https://github.com/DCAT-US/DCAT-US-Schema-v3.0/dcat-us.html",
+  edDraftURI: "https://github.com/DOI-DO/dcat-us/dcat-us.html",
   subtitle: "A DCAT Application Profile for United States Of America (Working Draft)",
   localBiblio: {
     "DATA-GOV":{
@@ -32,9 +44,9 @@ var respecConfig = {
       "publisher": "OMB?"
     },
     "DCAT-US-GITHUB-ISSUES":{
-      "href":"https://github.com/DCAT-US/DCAT-US-Schema-v3.0/issues",
+      "href":"https://github.com/DOI-DO/dcat-us/issues",
       "title": "GitHub issues for DCAT-US Version 3.0",
-      "publisher": "https://github.com/DCAT-US"
+      "publisher": "https://github.com/DOI-DO"
     },   
     "FAIR" : {
         title : "The FAIR Guiding Principles for scientific data management and stewardship",
