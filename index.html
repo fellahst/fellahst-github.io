@@ -304,9 +304,7 @@
           - dct:creator
           - dcat:theme
           - dct:accessRights
-          - dct:rights
-          - dct:hasPart
-          - dct:isPartOf
+          - dcat:catalog
           }
 
           class DataService {
@@ -743,7 +741,31 @@
             <td>O</td>
             <td>0..n</td>
           </tr>
-
+          <tr>
+            <td><a href="#catalog-theme-category">theme</a></td>
+            <td><a data-cite="VOCAB-DCAT#Property:catalog_theme"><code>dcat:theme</code></a></td>
+            <td><a data-cite="SKOS-REFERENCE#concepts"><code>skos:Concept</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-access-rights">access rights</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accessRights"><code>dct:accessRights</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement"><code>dct:RightsStatement</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-catalog">catalog</a></td>
+            <td><a data-cite="VOCAB-DCAT#Property:catalog_catalog"><code>dcat:catalog</code></a></td>
+            <td><a data-cite="VOCAB-DCAT#Class:Catalog"><code>dcat:Catalog</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
         </tbody>
       </table>
 
@@ -1122,7 +1144,7 @@
       </section>
 
       <section id="catalog-rights">
-        <h4>Property: Rights</h4>
+        <h4>Property: rights</h4>
         <table class="def">
           <tbody>
             <tr>
@@ -1347,7 +1369,7 @@
         </aside>
       </section>
 
-
+      <strong>Optional Properties</strong>
       <section id="catalog-creator">
         <h4>Property: creator</h4>
         <table class="def">
@@ -1391,6 +1413,133 @@
         </aside>
       </section>
 
+      <section id="catalog-theme-category">
+        <h4>Property: theme/category</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>theme/category</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Optional</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a data-cite="VOCAB-DCAT#Property:resource_theme"><code>dcat:theme</code></a></td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>
+                <ul>
+                  <li>
+                    This property refers to a category of the Catalog. A Catalog may be associated with multiple themes.
+                  </li>
+                  <li>CV to be used: [[VOCAB-US-THEME]]</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="example" title="Example for dcat:theme for dcat:Catalog.">
+          <pre data-include-format="text" data-include="./examples/catalog/theme.ttl"></pre>
+        </aside>
+      </section>
+      <section id="catalog-access-rights">
+        <h4>Property: access rights</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>access rights</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Optional</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..1</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accessRights"><code>dct:accessRights</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement"><code>dct:RightsStatement</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>
+                <ul>
+                  <li>This property refers to information that indicates whether the Catalog is open data, has access
+                    restrictions or is not public.
+                  </li>
+                  <li>
+                    CV to be used: [[VOCAB-US-ACCESS-RIGHT]].
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="example" title="Usage of dct:rights for dcat:Catalog">
+          <pre data-include-format="text" data-include="./examples/catalog/rights.ttl"></pre>
+        </aside>
+      </section>
+      <section id="catalog-catalog">
+        <h4>Property: catalog</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>catalog</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Optional</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a data-cite="VOCAB-DCAT#Property:catalog_catalog"><code>dcat:catalog</code></a></td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="VOCAB-DCAT#Class:Catalog"><code>dcat:Catalog</code></a></td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>
+                <ul>
+                  <li>This property refers to a catalog whose contents are of interest in the context of this catalog.
+                  </li>
+  
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="example" title="Usage of dcat:catelog for dcat:Catalog">
+          <pre data-include-format="text" data-include="./examples/catalog/subcatalog.ttl"></pre>
+        </aside>
+      </section>
     </section>
 
     <section id="Class:Dataset">
