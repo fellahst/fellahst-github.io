@@ -43,6 +43,11 @@ var respecConfig = {
       "title": "data.gov - The official portal for US Data",
       "publisher": "OMB?"
     },
+    "DCAT-US":{
+      "href":"https://github.com/DOI-DO/dcat-us/",
+      "title": "DCAT-US Version 3.0",
+      "publisher": "https://github.com/DOI-DO"
+    },   
     "DCAT-US-GITHUB-ISSUES":{
       "href":"https://github.com/DOI-DO/dcat-us/issues",
       "title": "GitHub issues for DCAT-US Version 3.0",
