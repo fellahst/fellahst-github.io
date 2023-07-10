@@ -27,7 +27,6 @@
 </head>
 
 <body>
-
   <section class="notoc" id="abstract">
     <p>The DCAT-US Profile Version 3 is an updated specification designed to facilitate data cataloging, discovery, and
       interoperability among US government agencies. Building upon the foundation of the Project Open Data (POD) 1.1
@@ -38,22 +37,20 @@
       specific metadata requirements unique to the US context. The profile includes properties for handling geospatial
       and statistical datasets, leveraging established vocabularies to improve data sharing and reuse. Defined using the
       Shapes Constraint Language (SHACL), the DCAT-US Profile Version 3 offers a more expressive, interoperable, and
-      future-proof framework for dataset metadata description and validation.</p>
-
+      future-proof framework for dataset metadata description and validation.
+    </p>
   </section>
-
   <aside class="note">
     <p>DCAT 3 supersedes DCAT 2 [[?VOCAB-DCAT-2]], but it does not make it obsolete. DCAT 3 maintains the DCAT namespace
       as its terms preserve backward compatibility with DCAT 2. DCAT 3 relaxes constraints and adds new classes and
-      properties, but these changes do not break the definition of previous terms.</p>
-
+      properties, but these changes do not break the definition of previous terms.
+    </p>
     <p>Any new implementation is expected to adopt DCAT 3, while the existing implementations do not need to upgrade to
       it, unless they want to use the new features. In particular, current DCAT 2 deployments that do not overlap with
       the DCAT 3 new features (e.g., versioning, dataset series and inverse properties) don't need to change anything to
       remain in conformance with DCAT 3.
     </p>
   </aside>
-
   <section id="introduction" class="informative">
     <h2>Introduction</h2>
     <p>The DCAT-US Profile Version 3 is a comprehensive update to the Project Open Data (POD) 1.1 standard, designed to
@@ -62,12 +59,13 @@
       (W3C). In addition, the profile aims to embody the FAIR principles, ensuring that data is Findable, Accessible,
       Interoperable, and Reusable. This introduction will provide an overview of the purpose of this profile, highlight
       the gaps between POD 1.1 and DCAT 3.0, and elaborate on the differences and enhancements offered by the DCAT-US
-      Profile Version 3.</p>
-
+      Profile Version 3.
+    </p>
     <h3>Purpose and Evolution</h3>
     <p>The purpose of the DCAT-US Profile Version 3 is to improve data discoverability, accessibility, and
       interoperability among US government agencies. By adhering to the FAIR principles, the profile promotes more
-      effective data sharing and reuse. The FAIR principles emphasize that data should be:</p>
+      effective data sharing and reuse. The FAIR principles emphasize that data should be:
+    </p>
     <ul>
       <li>Findable: Easy to discover by humans and machines.</li>
       <li>Accessible: Easily retrieved, with well-defined access protocols.</li>
@@ -77,98 +75,103 @@
     <p>The DCAT-US Profile Version 3 bridges the gap between the POD 1.1 and DCAT 3.0 standards by incorporating the
       best features of both while also addressing specific metadata requirements unique to the US context. It offers a
       standardized approach for describing and exchanging datasets, thereby enabling more efficient data sharing and
-      reuse.</p>
-
+      reuse.
+    </p>
     <h3>Gaps between POD 1.1 and DCAT</h3>
-
     <p>The POD 1.1 standard, while effective for its time, had some limitations that the DCAT 3.0 standard has
-      addressed. The key differences between the two standards include:</p>
+      addressed. The key differences between the two standards include:
+    </p>
     <ul>
       <li><strong>Increased expressiveness</strong>: DCAT 3.0 offers a richer set of classes and properties, enabling
         more detailed
-        descriptions of datasets and their relationships.</li>
+        descriptions of datasets and their relationships.
+      </li>
       <li><strong>Improved support for geospatial data</strong>: DCAT 3.0 provides better support for describing
         geospatial datasets,
-        including coordinate reference systems and geometry.</li>
+        including coordinate reference systems and geometry.
+      </li>
       <li><strong>Enhanced handling of statistical data</strong>: DCAT 3.0 and RDF Data Cube (QB) specification
         introduce new vocabulary terms to describe statistical
-        datasets and their dimensions more effectively.</li>
+        datasets and their dimensions more effectively.
+      </li>
       <li><strong>Refined vocabularies</strong>: DCAT 3.0 benefits from updated reference controlled vocabularies to
         ensure better
-        interoperability between agencies and systems.</li>
+        interoperability between agencies and systems.
+      </li>
     </ul>
-
     <h3>DCAT-US Profile Version 3 Features</h3>
-
     <p>The DCAT-US Profile Version 3 not only incorporates the enhancements provided by DCAT 3.0 but also maintains the
       US-specific metadata requirements defined in POD 1.1. This profile offers a harmonized approach to data cataloging
-      that accounts for the unique needs of US agencies.</p>
+      that accounts for the unique needs of US agencies.
+    </p>
     <p>One of the key features of this profile is its use of reference controlled vocabularies. These vocabularies
       enable better interoperability between US agencies by providing a common language for describing datasets. The
       profile also introduces new properties to handle geospatial data and statistical datasets, leveraging established
-      vocabularies in these domains.</p>
-
+      vocabularies in these domains.
+    </p>
     <h3>SHACL and the DCAT-US Profile Version 3</h3>
     <p>While the JSON Schema approach used in POD 1.1 was effective in certain scenarios, it has limitations when
-      compared to using SHACL for defining data models and constraints:</p>
+      compared to using SHACL for defining data models and constraints:
+    </p>
     <ul>
       <li><strong>Expressiveness:</strong> JSON Schema primarily targets validation of JSON data structures, which can
         be less expressive than RDF data models used with SHACL. RDF enables a more flexible and semantically rich
-        representation of data, while SHACL is designed to provide constraints and validation for RDF data.</li>
+        representation of data, while SHACL is designed to provide constraints and validation for RDF data.
+      </li>
       <li><strong>Linked Data Compatibility:</strong> JSON Schema is not specifically designed for Linked Data or
         semantic web applications. SHACL, on the other hand, is tailored for RDF and Linked Data, making it a more
-        natural fit for data models that need to interoperate with other semantic web resources and standards.</li>
+        natural fit for data models that need to interoperate with other semantic web resources and standards.
+      </li>
       <li><strong>Inferencing Support:</strong> SHACL can be used in conjunction with RDF reasoners to validate inferred
         triples, offering advanced inferencing capabilities beyond the scope of JSON Schema. This feature enables more
-        powerful and intelligent data validation.</li>
+        powerful and intelligent data validation.
+      </li>
       <li><strong>Extensibility:</strong> SHACL is designed to be extensible, allowing users to define custom constraint
         components, which can be reused across multiple shapes and datasets. In contrast, JSON Schema has a fixed set of
         validation keywords, and extending it may require the introduction of non-standard or custom keywords,
-        potentially affecting interoperability.</li>
+        potentially affecting interoperability.
+      </li>
     </ul>
     <p>Considering these limitations, the DCAT-US Profile Version 3 has chosen SHACL as the foundation for its data
       modeling and validation, ensuring a more expressive, interoperable, and future-proof framework for defining
-      dataset metadata.</p>
-
+      dataset metadata.
+    </p>
     <p>The DCAT-US Profile Version 3 is defined using the Shapes Constraint Language (SHACL), which offers several
-      advantages over previous approaches:</p>
+      advantages over previous approaches:
+    </p>
     <ul>
       <li><strong>Expressive and flexible</strong>: SHACL allows for the precise definition of constraints on RDF data,
         making it easier
-        to validate and verify datasets.</li>
+        to validate and verify datasets.
+      </li>
       <li><strong>Scalable and efficient</strong>: SHACL is designed for efficient validation, making it suitable for
         use with large
-        datasets and complex data models.</li>
+        datasets and complex data models.
+      </li>
       <li><strong>Widely adopted</strong>: As a W3C recommendation, SHACL enjoys broad support among data management
         tools and libraries,
-        facilitating interoperability and reuse.</li>
+        facilitating interoperability and reuse.
+      </li>
     </ul>
     <p>By using SHACL, the DCAT-US Profile Version 3 ensures a robust and extensible foundation for future updates, as
-      well as compatibility with a wide range of data processing tools and applications.</p>
-
-
+      well as compatibility with a wide range of data processing tools and applications.
+    </p>
     <section id="document-status">
       <h3>Status of the document</h3>
       <p></p>
-
     </section>
-
     <h2>Motivation for change</h2>
-
     <!--aside class="ednote">
-<p>This section will be updated to cover DCAT3 work in a later draft</p>
-</aside-->
-
+            <p>This section will be updated to cover DCAT3 work in a later draft</p>
+            </aside-->
     <p>
-
     </p>
-
   </section>
-
   <section id="area-of-application">
     <h3>Area of application</h3>
     <p>The DCAT Application Profile for data portals in United States (DCAT-US) is an Application Profile of the DCAT
-      vocabulary.</p>
+      vocabulary.
+    </p>
     <ul>
       <li><strong>DCAT (“Data Catalog Vocabulary”)</strong> is a semantic definition to describe data by the means of an
         RDF vocabulary.
@@ -191,18 +194,14 @@
       and how can they be accessed.
     </p>
   </section>
-
   <section id="changes-overview">
     <h3>Overview of Changes</h3>
     <p>The main focus of the Expert Group by the creation of DCAT-US v3 was to ensure the compatibility to DCAT 3.
     </p>
   </section>
-
   </section>
-
   <section id="dcat-us-building-blocks">
     <h2>DCAT-US: Building Blocks</h2>
-
     <section id="dcat-vocabulary">
       <h3>DCAT as a universal vocabulary</h3>
       <p>The Application Profile specified in this document is based on the specification of the Data Catalog Vocabulary
@@ -229,12 +228,9 @@
         </li>
       </ul>
       <p>Classes and properties are used to deliver the metadata in a structured way.</p>
-
     </section>
-
     <section id="core-structure">
       <h3>The core structure of DCAT-US 3.0</h3>
-
       <section id="classes">
         <h4>Classes</h4>
         <p>The DCAT US Application Profile (“DCAT-US ”) are structured around the following main 4 classes:
@@ -271,22 +267,21 @@
             </tr>
           </tbody>
         </table>
-
         <div id="diagram" class="mermaid">
           classDiagram
           Catalog --> Dataset : dcat:dataset
           Catalog --> DataService : dcat:service
           DataService --> Dataset : dcat:servesDataset
           Dataset --> Distribution : dcat:distribution
+          Dataset --> Location : dct:spatial
+          Dataset --> PeriodOfTime : dct:temporal
+          Dataset --> GeographicBoundingBox: dcat-us:geographicBoundingBox
           Distribution --> DataService : dcat:accessService
-
-          class Catalog { 
-
+          class Catalog {
           Mandatory:
           - dct:title
           - dct:description
           - dct:publisher
-
           Recommended:
           - dcat:dataset
           - foaf:homepage
@@ -299,14 +294,12 @@
           - dct:spatial
           - dct:temporal
           - dcat:themeTaxonomy
-          
-         Optional:
+          Optional:
           - dct:creator
           - dcat:theme
           - dct:accessRights
           - dcat:catalog
           }
-
           class DataService {
           Mandatory:
           - dcat:endpointURL
@@ -318,7 +311,6 @@
           - dct:license
           - dcat:servesDataset
           }
-
           class Dataset {
           Mandatory:
           - dct:title
@@ -326,7 +318,6 @@
           - dcat:contactPoint
           - dct:identifier
           - dct:publisher
-
           Recommended:
           - dcat:distribution
           - dct:keyword
@@ -335,8 +326,6 @@
           - dcat-us:geographicExtent
           - dct:temporal
           - dcat:theme
-
-          
           Optional:
           - dct:accrualPeriodicity
           - dct:created
@@ -348,7 +337,6 @@
           - dcat:hasVersion
           - dcat:spatialResolutionInMeters
           - dcat:temporalResolution
-
           }
           class Distribution {
           Mandatory:
@@ -366,9 +354,26 @@
           - dct:accessRights
           - dct:conformsTo
           }
+          class Location {
+          Recommended:
+          - gesoparql:geometry
+          Optional:
+          - dcat:centroid
+          }
+          class PeriodOfTime {
+          Recommended:
+          - dcat:startDate
+          - dcat:endDate
+          }
+          class GeographicBoundingBox {
+          Mandatory:
+          - dcat-us:northBoundLatitude
+          - dcat-us:southBoundLatitude
+          - dcat-us:westBoundLongitude
+          - dcat-us:eastBounddLongitude
+          }
         </div>
       </section>
-
       <section id="requirement-levels">
         <h4>Requirement levels</h4>
         <p>DCAT-US defines four requirement levels for data receivers and senders:</p>
@@ -396,7 +401,6 @@
           services finally do with the data (parse, convert, store, make searchable, display to users, etc.).
         </p>
       </section>
-
       <section id="controlled-vocabulary">
         <h4>Controlled vocabularies of DCAT-US 3.0</h4>
         <p>In the table below, a number of properties are listed with controlled vocabularies (CV) that MUST be used for
@@ -480,7 +484,6 @@
               <td>[[VOCAB-US-THEME]]
               </td>
               <td>The values to be used for this property are the URIs of the concepts in the vocabulary.
-
               </td>
             </tr>
             <tr>
@@ -491,17 +494,15 @@
               <td>[[VOCAB-US-THEME]]
               </td>
               <td>The value to be used for this property is the URI of the vocabulary itself, i.e.
-                the concept scheme, not the URIs of the concepts in the vocabulary.</td>
+                the concept scheme, not the URIs of the concepts in the vocabulary.
+              </td>
             </tr>
           </tbody>
         </table>
       </section>
-
     </section>
-
     <section id="multilingualism">
       <h3>Multilingualism</h3>
-
       <p>From a technical perspective multilingualism SHOULD be handled as follows:</p>
       <ul>
         <li><strong>Multilingual literals</strong>: Properties of Range rdfs:Literal can be provided in
@@ -516,8 +517,8 @@
           in the process of dispatching these URIs can use content negotiation.
         </li>
         <aside class="example" title="Example for a rdfs:Resource that is language independent. The host of that landing
-       page can redirect a request coming in for 'https://uscensus.gov/1234/about' to a page that matches
-       with the language of the user">
+                  page can redirect a request coming in for 'https://uscensus.gov/1234/about' to a page that matches
+                  with the language of the user">
           <pre data-include-format="text" data-include="./examples/multiple-languages/landing-page.ttl"></pre>
         </aside>
       </ul>
@@ -589,12 +590,9 @@
         </tbody>
       </table>
     </section>
-
   </section>
-
   <section id="properties-per-class">
     <h2>DCAT-US: Properties per Class</h2>
-
     <section id="notation">
       <h3>Notation</h3>
       <ul>
@@ -602,16 +600,15 @@
         <li><strong>URI</strong>: denotes the property URI.</li>
         <li><strong>Range</strong>: specifies the range of values that is expected for the property.</li>
         <li><strong>ReqLevel</strong> (“Requirement level”): denotes whether the class / property is mandatory,
-          recommended or optional.</li>
+          recommended or optional.
+        </li>
         <li><strong>Card</strong> (“Cardinality”): specifies the minimum number of values that MUST be provided for that
           property and the maximum number of values that MAY be provided.
         </li>
         <li><strong>Usage Note</strong>: specifies custom usage instructions and provides background information.</li>
         <li><strong>CV</strong> (“Controlled Vocabulary”): defines which controlled vocabulary SHOULD be used.</li>
       </ul>
-
     </section>
-
     <section id="Class:Catalog">
       <h3>Class: Catalog</h3>
       <p>
@@ -621,7 +618,6 @@
         DCAT-US allows Catalogues of only Datasets, but also Catalogues of only Data Services,
         but usually it will be a mixture of both.
       </p>
-
       <table class="simple">
         <thead>
           <tr>
@@ -654,7 +650,6 @@
             <td><strong>M</strong></td>
             <td>1..1</td>
           </tr>
-
           <tr>
             <td><a href="#catalog-dataset">dataset</a></td>
             <td><a data-cite="VOCAB-DCAT#Property:catalog_dataset"><code>dcat:dataset</code></a>
@@ -783,13 +778,10 @@
           </tr>
         </tbody>
       </table>
-
       <aside class="example" title="Example for a dcat:Catalog class">
         <pre data-include-format="text" data-include="./examples/catalog/catalog.ttl"></pre>
       </aside>
-
       <strong>Mandatory Properties</strong>
-
       <section id="catalog-title">
         <h4>Property: title</h4>
         <table class="def">
@@ -821,7 +813,8 @@
                 <ul>
                   <li>The title of the catalogue in the indicated language</li>
                   <li>This property can be repeated for parallel language versions of the description
-                    (see <a class="no-sectionRef" href="#multilingualism"></a>)</li>
+                    (see <a class="no-sectionRef" href="#multilingualism"></a>)
+                  </li>
                 </ul>
               </td>
             </tr>
@@ -831,8 +824,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/title.ttl"></pre>
         </aside>
       </section>
-
-
       <section id="catalog-description">
         <h4>Property: description</h4>
         <table class="def">
@@ -884,7 +875,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/description.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-publisher">
         <h4>Property: publisher</h4>
         <table class="def">
@@ -929,10 +919,7 @@
           <pre data-include-format="text" data-include="./examples/catalog/publisher.ttl"></pre>
         </aside>
       </section>
-
-    
       <strong>Recommended Properties</strong>
-
       <section id="catalog-dataset">
         <h4>Property: dataset</h4>
         <table class="def">
@@ -970,7 +957,8 @@
                 <ul>
                   <li>This property links the Catalogue with a Dataset that is part of the Catalogue.</li>
                   <li>As empty Catalogues are usually indications of problems, this property SHOULD be combined
-                    with the property service to implement an empty Catalogue check.</li>
+                    with the property service to implement an empty Catalogue check.
+                  </li>
                 </ul>
               </td>
             </tr>
@@ -980,7 +968,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/dataset.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-homepage">
         <h4>Property: homepage</h4>
         <table class="def">
@@ -1011,7 +998,8 @@
                 <ul>
                   <li>This property refers to a web page that acts as the main page for the Catalogue</li>
                   <li>For instance data.gov, would be the homepage of the Data Catalogue exported
-                    to [[DATAGOV]].</li>
+                    to [[DATAGOV]].
+                  </li>
                 </ul>
               </td>
             </tr>
@@ -1021,7 +1009,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/homepage.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-language">
         <h4>Property: language</h4>
         <table class="def">
@@ -1046,7 +1033,7 @@
             <tr>
               <th>Range</th>
               <td><a data-cite="DCTERMS#http://purl.org/dc/terms/LinguisticSystem"><code>
-            dct:LinguisticSystem</code></a>
+                           dct:LinguisticSystem</code></a>
               </td>
             </tr>
             <tr>
@@ -1070,7 +1057,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/language.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-license">
         <h4>Property: license</h4>
         <table class="def">
@@ -1113,7 +1099,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/license.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-issued">
         <h4>Property: release date</h4>
         <table class="def">
@@ -1159,7 +1144,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/issued.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-rights">
         <h4>Property: rights</h4>
         <table class="def">
@@ -1200,7 +1184,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/rights.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-service">
         <h4>Property: service</h4>
         <table class="def">
@@ -1245,7 +1228,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/service.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-spatial-geographic">
         <h4>Property: spatial/ geographic</h4>
         <table class="def">
@@ -1295,7 +1277,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/spatial.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-theme-taxonomy">
         <h4>Property: themes</h4>
         <table class="def">
@@ -1339,7 +1320,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/theme-taxonomy.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-modified">
         <h4>Property: update/ modification date</h4>
         <table class="def">
@@ -1385,7 +1365,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/modified.ttl"></pre>
         </aside>
       </section>
-
       <strong>Optional Properties</strong>
       <section id="catalog-creator">
         <h4>Property: creator</h4>
@@ -1429,7 +1408,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/license.ttl"></pre>
         </aside>
       </section>
-
       <section id="catalog-theme-category">
         <h4>Property: theme/category</h4>
         <table class="def">
@@ -1547,7 +1525,6 @@
                 <ul>
                   <li>This property refers to a catalog whose contents are of interest in the context of this catalog.
                   </li>
-  
                 </ul>
               </td>
             </tr>
@@ -1558,11 +1535,8 @@
         </aside>
       </section>
     </section>
-
     <section id="Class:Dataset">
-
       <h2>Class: Dataset</h2>
-
       <p>A Dataset is a collection of data, published or curated by a single source and related by a common
         idea or concept. In contrast to a Data Service a Dataset is expected to be a collection of data that is
         available for access or download in one or more formats, as Distributions. Distributions belonging to
@@ -1574,7 +1548,6 @@
         DCAT 3 provides guidelines about the usage of Data services and Distribution in relation to Datasets
         [[DCAT-3-USAGEGUIDE]].:
       </p>
-
       <table class="simple">
         <thead>
           <tr>
@@ -1601,7 +1574,6 @@
             <td><strong>M</strong></td>
             <td>1..n</td>
           </tr>
-
           <tr>
             <td><a href="#dataset-identifier">identifier</a></td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/identifier"><code>dct:identifier</code></a>
@@ -1626,7 +1598,6 @@
             <td><strong>M</strong></td>
             <td>1..1</td>
           </tr>
-
           <tr>
             <td><a href="#dataset-distribution">distribution</a></td>
             <td><a data-cite="VOCAB-DCAT#Property:dataset_distribution"><code>dcat:distribution</code></a></td>
@@ -1670,7 +1641,8 @@
             <td><a href="#dataset-geographic-extent">geographic bounding box</a></td>
             <td><a data-cite="DCAT-US##http://TBD/geographicBoundingBox"><code>dcat-us:geographicBoundingBox</code></a>
             </td>
-            <td><a data-cite="DCAT-US#http://TBD/GeographicBoundingBox"><code>dcat-us:GeographicBoundingBox</code></a></td>
+            <td><a data-cite="DCAT-US#http://TBD/GeographicBoundingBox"><code>dcat-us:GeographicBoundingBox</code></a>
+            </td>
             <td>R</td>
             <td>0..n</td>
           </tr>
@@ -1755,7 +1727,7 @@
               <a data-cite="SCHEMA-ORG/ImageObject" data-no-xref=""><code>schema:ImageObject</code></a>
             </td>
             <td>O</td>
-            <td>0..3</td>
+            <td>0..n</td>
           </tr>
           <tr>
             <td><a href="#dataset-is-referenced-by">is referenced by</a></td>
@@ -1804,17 +1776,12 @@
           </tr>
         </tbody>
       </table>
-
       <aside class="example" id="ex-dataset" title="Dataset">
         <pre data-include-format="text" data-include="./examples/dataset/dataset.ttl"></pre>
       </aside>
-
       <strong>Mandatory Properties</strong>
-
       <section id="dataset-title">
-
         <h4>Property: title</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -1851,19 +1818,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dct:title for dcat:Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/title.ttl"></pre>
         </aside>
-
       </section>
-
-      
-
       <section id="dataset-description">
-
         <h4>Property: description</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -1904,17 +1864,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dct:description for dcat:Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/description.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="dataset-identifier">
-
         <h4>Property: identifier</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -1954,17 +1909,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" id="ex-dataset-identifier" title="Usage of dct:identifier for dcat:Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/identifier.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="dataset-publisher">
-
         <h4>Property: publisher</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2001,17 +1951,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dct:publisher for dcat:Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/publisher.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="dataset-contact-point">
-
         <h4>Property: contact point</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2040,7 +1985,8 @@
               <td>
                 <ul>
                   <li>This property contains contact information that can be used for sending comments about the
-                    Dataset.</li>
+                    Dataset.
+                  </li>
                   <li>This property MUST contain an email address that is continuously monitored by the data publisher.
                   </li>
                   <li>If there are several contributors involved in the publication of the Dataset, the property can
@@ -2051,19 +1997,13 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dcat:contactPoint for dcat:Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/contact-point.ttl"></pre>
         </aside>
-
       </section>
-
       <strong>Recommended Properties</strong>
-
       <section id="dataset-distribution">
-
         <h4>Property: distribution</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2101,17 +2041,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dcat:distribution for dcat:Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/distribution.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="dataset-keyword">
-
         <h4>Property: keyword/tag</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2143,23 +2078,19 @@
                   <li>This property contains a keyword or tag describing the Dataset.</li>
                   <li>If a suitable keyword is available in [[TERMDAT]] then this SHOULD be used.</li>
                   <li>Good practice: mark the language of the keywords with the [[ISO 639-1]] language code such as
-                    "geodata"@en.</li>
+                    "geodata"@en.
+                  </li>
                 </ul>
               </td>
             </tr>
           </tbody>
         </table>
-
         <aside class="example" id="ex-dataset-keyword" title="Usage of dcat:keyword for dcat:Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/keyword.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="dataset-landing-page">
-
         <h4>Property: landing page</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2199,17 +2130,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Example of dcat:landingPage for dcat:Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/landing-page.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="dataset-release-date">
-
         <h4>Property: release date</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2256,11 +2182,8 @@
           <pre data-include-format="text" data-include="./examples/dataset/issued.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-spatial-geographical-coverage">
-
         <h4>Property: spatial/ geographical coverage</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2309,7 +2232,6 @@
           <pre data-include-format="text" data-include="./examples/dataset/spatial.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-temporal-coverage">
         <h4>Property: temporal coverage</h4>
         <table class="def">
@@ -2338,8 +2260,7 @@
             </tr>
             <tr>
               <th>Usage Note</th>
-              <td>For temporal references this property is MUST be used in order to conform to
-                DCAT-AP.
+              <td>The temporal coverage of a dataset may be encoded as an instance of dcterms:PeriodOfTime, or may be indicated using an IRI reference (link) to a resource describing a time period.
               </td>
             </tr>
           </tbody>
@@ -2348,7 +2269,6 @@
           <pre data-include-format="text" data-include="./examples/dataset/temporal.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-theme-category">
         <h4>Property: theme/category</h4>
         <table class="def">
@@ -2391,7 +2311,6 @@
           <pre data-include-format="text" data-include="./examples/dataset/theme.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-update-modification-date">
         <h4>Property: update/ modification date</h4>
         <table class="def">
@@ -2446,9 +2365,7 @@
           <pre data-include-format="text" data-include="./examples/dataset/modified.ttl"></pre>
         </aside>
       </section>
-
       <strong>Optional Properties</strong>
-
       <section id="dataset-access-rights">
         <h4>Property: access rights</h4>
         <table class="def">
@@ -2494,7 +2411,6 @@
           <pre data-include-format="text" data-include="./examples/catalog/rights.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-conforms-to">
         <h4>Property: conforms to</h4>
         <table class="def">
@@ -2539,7 +2455,6 @@
           <pre data-include-format="text" data-include="./examples/dataset/conforms-to.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-documentation">
         <h4>Property: documentation</h4>
         <table class="def">
@@ -2578,11 +2493,8 @@
           <pre data-include-format="text" data-include="./examples/dataset/documentation.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-frequency">
-
         <h4>Property: frequency</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2623,11 +2535,8 @@
           <pre data-include-format="text" data-include="./examples/dataset/frequency.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-image">
-
         <h4>Property: image</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2674,16 +2583,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of schema:Image for dcat:Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/image.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-is-referenced-by">
-
         <h4>Property: is referenced by</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2712,7 +2617,8 @@
               <td>
                 <ul>
                   <li>This property is about a related resource, such as a publication, that references,
-                    cites, or otherwise points to the Dataset.</li>
+                    cites, or otherwise points to the Dataset.
+                  </li>
                 </ul>
               </td>
             </tr>
@@ -2722,11 +2628,8 @@
           <pre data-include-format="text" data-include="./examples/dataset/is-referenced-by.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-language">
-
         <h4>Property: language</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2768,11 +2671,8 @@
           <pre data-include-format="text" data-include="./examples/dataset/language.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-qualified-attribution">
-
         <h4>Property: qualified attribution</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2814,11 +2714,8 @@
           <pre data-include-format="text" data-include="./examples/dataset/qualified-attribution.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-qualified-relation">
-
         <h4>Property: qualified relation</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2850,7 +2747,8 @@
               <td>
                 <ul>
                   <li>This property provides a link to a description of a relationship with another resource and
-                    it’s especially meant for relationships between Dataset.</li>
+                    it’s especially meant for relationships between Dataset.
+                  </li>
                   <li>It replaces the property rdfs:seeAlso of DCAT-US v1.</li>
                   <li>See here for examples on how to use
                     it: <a data-cite="VOCAB-DCAT#Property:resource_qualified_relation">
@@ -2866,11 +2764,8 @@
           <pre data-include-format="text" data-include="./examples/dataset/qualified-relation.ttl"></pre>
         </aside>
       </section>
-
       <section id="dataset-related-resource">
-
         <h4>Property: related resource</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -2909,20 +2804,101 @@
               </td>
             </tr>
           </tbody>
-
         </table>
         <aside class="example" id="ex-dataset-relation" title="Usage of dct:relation for dcat:Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/relation.ttl"></pre>
         </aside>
-
       </section>
-
+      <section id="dataset-temporal-resolution">
+        <h4>Property: spatial resolution</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>spatial resolution in meters</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Optional</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..1</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a data-cite="VOCAB-DCAT#Property:dataset_spatial_resolution"><code>dcat:spatialResolutionInMeters</code></a></td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="RDF-SCHEMA#ch_literal">
+                  <code>rdfs:Literal</code></a>
+                (typed as
+                as <a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a>)</td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>
+                <ul>
+                <li>If the dataset is an image or grid this should correspond to the spacing of items. For other kinds of spatial datasets, this property will usually indicate the smallest distance between items in the dataset.</li>
+                <li>The range of this property is a decimal number representing a length in meters. This is intended to provide a summary indication of the spatial resolution of the data as a single number. More complex descriptions of various aspects of spatial precision, accuracy,
+                  resolution and other statistics can be provided using the Data Quality Vocabulary [VOCAB-DQV].</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="example" id="ex-dataset-spatial-resolution"
+          title="Usage of dcat:spatialResolutionInMeters for dcat:Dataset">
+          <pre data-include-format="text" data-include="./examples/dataset/spatial-resolution.ttl"></pre>
+        </aside>
+      </section>
+      <section id="dataset-temporal-resolution">
+        <h4>Property: temporal resolution</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>temporal resolution</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Optional</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..1</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a data-cite="VOCAB-DCAT#Property:dataset_temporal_resolution"><code>dcat:temporalResolution</code></a></td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="RDF-SCHEMA#ch_literal">
+                  <code>rdfs:Literal</code></a>
+                (typed as
+                as <a data-cite="XMLSCHEMA11-2#duration"><code>xsd:duration</code></a>)</td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>
+                <ul>
+                <li>If the dataset is a time-series this should correspond to the spacing of items in the series. For other kinds of dataset, this property will usually indicate the smallest time difference between items in the dataset</li>
+                <li>This is intended to provide a summary indication of the temporal resolution of the dataset as a single value. More complex descriptions of various aspects of temporal precision, accuracy, resolution and other statistics can be provided using the Data Quality Vocabulary [VOCAB-DQV].</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="example" id="ex-dataset-temporal-resolution"
+          title="Usage of dcat:temporalResolution for dcat:Dataset">
+          <pre data-include-format="text" data-include="./examples/dataset/temporal-resolution.ttl"></pre>
+        </aside>
+      </section>
     </section>
-
     <section id="Class:Distribution">
-
       <h2>Class: Distribution</h2>
-
       <p>A metadata entry of this class describes a distribution of the data, which is a specific representation
         of a Dataset. A Dataset might be available in multiple serializations that may differ in various ways,
         including natural language, media-type or format, schematic organization, temporal and spatial resolution,
@@ -2945,7 +2921,6 @@
       <p>DCAT-AP provides guidelines about the usage of Data services and Distribution in relation to Dataset:
         [[DCAT-AP-USAGEGUIDE]].
       </p>
-
       <table class="simple">
         <thead>
           <tr>
@@ -3008,7 +2983,8 @@
                 <code>dct:rights</code></a>
             </td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement">
-                <code>dct:RightsStatement</code></a></td>
+                <code>dct:RightsStatement</code></a>
+            </td>
             <td>R</td>
             <td>0..1</td>
           </tr>
@@ -3172,18 +3148,13 @@
           </tr>
         </tbody>
       </table>
-
       <aside class="example" id="ex-distribution" title="Distribution that follows this specification except
-    for dct:rights that is given as it is currently implemented on data.gov">
+               for dct:rights that is given as it is currently implemented on data.gov">
         <pre data-include-format="text" data-include="./examples/distribution/distribution.ttl"></pre>
       </aside>
-
       <strong>Mandatory Properties</strong>
-
       <section id="distribution-access-url">
-
         <h4>Property: access URL</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3201,7 +3172,8 @@
             <tr>
               <th>URI</th>
               <td><a data-cite="VOCAB-DCAT#Property:distribution_access_url">
-                  <code>dcat:accessURL</code></a></td>
+                  <code>dcat:accessURL</code></a>
+              </td>
             </tr>
             <tr>
               <th>Range</th>
@@ -3214,24 +3186,19 @@
               <td>
                 <ul>
                   <li>This property contains a URL that gives access to a Distribution of the Dataset. The resource at
-                    the access URL may contain information about how to get the Dataset.</li>
+                    the access URL may contain information about how to get the Dataset.
+                  </li>
                 </ul>
               </td>
             </tr>
           </tbody>
-
         </table>
-
         <aside class="example" title="Usage of dcat:accessURL for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/access-url.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-license">
-
         <h4>Property: license</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3271,15 +3238,10 @@
         <aside class="example" title="Usage of dct:license for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/service/license.ttl"></pre>
         </aside>
-
       </section>
-
       <strong>Recommended Properties</strong>
-
       <section id="distribution-availability">
-
         <h4>Property: availability</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3318,13 +3280,9 @@
         <aside class="example" title="Usage of dcatap:availiablity for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/availability.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-description">
-
         <h4>Property: description</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3355,7 +3313,8 @@
                 <ul>
                   <li>This property contains a free-text account of the Distribution.</li>
                   <li>The description MUST be provided if the distribution contains only part of the data
-                    offered by the Dataset.</li>
+                    offered by the Dataset.
+                  </li>
                   <li>This property can be repeated for parallel language versions of the description
                     (see <a class="no-sectionRef" href="#multilingualism"></a>).
                   </li>
@@ -3364,17 +3323,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" id="ex-distribution-description" title="Usage of dct:description for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/description.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-format">
-
         <h4>Property: format</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3417,17 +3371,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" ttitle="Usage of dct:format for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/format.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-rights">
-
         <h4>Property: Rights</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3462,17 +3411,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dct:rights for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/rights.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-title">
-
         <h4>Property: Title</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3502,7 +3446,8 @@
                 <ul>
                   <li>This property contains a name given to the Distribution. This property can be repeated for
                     parallel language versions of the description
-                    (see <a class="no-sectionRef" href="#multilingualism"></a>).</li>
+                    (see <a class="no-sectionRef" href="#multilingualism"></a>).
+                  </li>
                   <li>The title MUST be given if the distribution contains only part of the data offered by the Dataset
                   </li>
                   <li>The title can be given in several languages. In multilingual data portals, the title in the
@@ -3513,17 +3458,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" id="ex-distribution-title" title="Usage of dct:title for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/title.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-modification-date">
-
         <h4>Property: update/modification date</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3562,15 +3502,11 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dct:modified for dcat:Distribution as specified in this definition">
           <pre data-include-format="text" data-include="./examples/distribution/modified.ttl"></pre>
         </aside>
-
       </section>
-
       <strong>Optional Properties</strong>
-
       <section id="distribution-access-service">
         <h4>Property: access service</h4>
         <table class="def">
@@ -3612,11 +3548,8 @@
           <pre data-include-format="text" data-include="./examples/distribution/access-service.ttl"></pre>
         </aside>
       </section>
-
       <section id="distribution-byte-size">
-
         <h4>Property: byte size</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3656,17 +3589,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dcat:byteSize for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/byte-size.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-checksum">
-
         <h4>Property: Checksum</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3710,17 +3638,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of spdx:checksum for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/checksum.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-coverage">
-
         <h4>Property: Coverage</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3752,7 +3675,8 @@
                 <ul>
                   <li>If a dataset contains distributions that differ regarding their content beyond just differences
                     in format or resolution this property can be used to specify temporal or spatial coverage of the
-                    data that the distribution contains.</li>
+                    data that the distribution contains.
+                  </li>
                   <li>
                     It’s a DCAT-US Custom Class (not present in DCAT-AP).
                   </li>
@@ -3761,13 +3685,10 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dct:coverage for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/coverage.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-documentation">
         <h4>Property: documentation</h4>
         <table class="def">
@@ -3807,11 +3728,8 @@
           <pre data-include-format="text" data-include="./examples/distribution/documentation.ttl"></pre>
         </aside>
       </section>
-
       <section id="distribution-download-url">
-
         <h4>Property: download URL</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3829,7 +3747,8 @@
             <tr>
               <th>URI</th>
               <td><a data-cite="VOCAB-DCAT#Property:distribution_download_url">
-                  <code>dcat:downloadURL</code></a></td>
+                  <code>dcat:downloadURL</code></a>
+              </td>
             </tr>
             <tr>
               <th>Range</th>
@@ -3856,11 +3775,8 @@
           <pre data-include-format="text" data-include="./examples/distribution/download-url.ttl"></pre>
         </aside>
       </section>
-
       <section id="distribution-identifier">
-
         <h4>Property: identifier</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3892,23 +3808,19 @@
               <td>
                 <ul>
                   <li>An identifier for the distribution, that identifies it as a
-                    resource mainly for the organisation publishing the data.</li>
+                    resource mainly for the organisation publishing the data.
+                  </li>
                 </ul>
               </td>
             </tr>
           </tbody>
         </table>
-
         <aside class="example" id="ex-distribution-identifier" title="Usage of dct:identifier for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/identifier.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-image">
-
         <h4>Property: image</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3940,7 +3852,8 @@
                   <li>A thumbnail picture illustrating the content of the Distribution.</li>
                   <li>
                     For distributions that consist of visual content (photographs, videos, maps, etc.) it makes
-                    sense to add a limited number of thumbnails to the metadata.</li>
+                    sense to add a limited number of thumbnails to the metadata.
+                  </li>
                   <li>
                     It’s a DCAT-US Custom Class (not present in [[DCAT-AP]]).
                   </li>
@@ -3953,11 +3866,8 @@
           <pre data-include-format="text" data-include="./examples/distribution/image.ttl"></pre>
         </aside>
       </section>
-
       <section id="distribution-language">
-
         <h4>Property: Language</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -3989,7 +3899,8 @@
                   <li>This property refers to a language used in the Distribution.</li>
                   <li>This property can be repeated if the metadata is provided in multiple languages.</li>
                   <li>The property MUST be set if the distribution is language-dependent, or if it is given in
-                    some of the languages German, French, Italian and English but not in all four languages.</li>
+                    some of the languages German, French, Italian and English but not in all four languages.
+                  </li>
                   <li>CV to be used: [[VOCAB-US-LANGUAGE]]
                   </li>
                 </ul>
@@ -4000,7 +3911,6 @@
           <pre data-include-format="text" data-include="./examples/distribution/language.ttl"></pre>
         </aside>
       </section>
-
       <section id="distribution-linked-schemas">
         <h4>Property: linked schemas</h4>
         <table class="def">
@@ -4041,11 +3951,8 @@
           <pre data-include-format="text" data-include="./examples/distribution/conforms-to.ttl"></pre>
         </aside>
       </section>
-
       <section id="distribution-media-type">
-
         <h4>Property: media type</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -4087,17 +3994,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dcat:mediaType for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/media-type.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-packaging-format">
-
         <h4>Property: packaging format</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -4139,17 +4041,12 @@
             </tr>
           </tbody>
         </table>
-
         <aside class="example" title="Usage of dcat:packageFormat for dcat:Distribution">
           <pre data-include-format="text" data-include="./examples/distribution/packaging-format.ttl"></pre>
         </aside>
-
       </section>
-
       <section id="distribution-release-date">
-
         <h4>Property: release date</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -4197,7 +4094,6 @@
           <pre data-include-format="text" data-include="./examples/distribution/issued.ttl"></pre>
         </aside>
       </section>
-
       <section id="distribution-temporal-resolution">
         <h4>Property: temporal resolution</h4>
         <table class="def">
@@ -4239,13 +4135,9 @@
           <pre data-include-format="text" data-include="./examples/distribution/temporal-resolution.ttl"></pre>
         </aside>
       </section>
-
     </section>
-
     <section id="Class:Data_Service">
-
       <h2>Class: Data Service</h2>
-
       <p>A Data Service is a collection of operations that provides access to one or more Datasets or data
         processing functions. If a dcat:DataService is bound to one or more specified Datasets, they are
         indicated by the dcat:servesDataset property.
@@ -4254,7 +4146,6 @@
         Datasets:
         [[DCAT-AP-USAGEGUIDE]].
       </p>
-
       <table class="simple">
         <thead>
           <tr>
@@ -4361,17 +4252,12 @@
           </tr>
         </tbody>
       </table>
-
       <aside class="example" id="ex-data-service" title="dcat:DataService with mandatory and recommended properties">
         <pre data-include-format="text" data-include="./examples/service/service.ttl"></pre>
       </aside>
-
       <strong>Mandatory Properties</strong>
-
       <section id="data-service-endpoint-url">
-
         <h4>Property: endpoint URL</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -4414,11 +4300,8 @@
           <pre data-include-format="text" data-include="./examples/service/endpoint-url.ttl"></pre>
         </aside>
       </section>
-
       <section id="data-service-contact-point">
-
         <h4>Property: Contact Point</h4>
-
         <table class="def">
           <tbody>
             <tr>
@@ -4450,9 +4333,11 @@
               <td>
                 <ul>
                   <li>This property contains contact information that can be used for sending
-                    comments about the Dataset.</li>
+                    comments about the Dataset.
+                  </li>
                   <li>This property MUST contain an email address that is continuously monitored
-                    by the data publisher.</li>
+                    by the data publisher.
+                  </li>
                   <li>If there are several contributors involved in the publication of the Dataset,
                     the property can be used multiple times.
                   </li>
@@ -4465,7 +4350,6 @@
           <pre data-include-format="text" data-include="./examples/service/contact-point.ttl"></pre>
         </aside>
       </section>
-
       <section id="data-service-publisher">
         <h4>Property: Publisher</h4>
         <table class="def">
@@ -4511,7 +4395,6 @@
           <pre data-include-format="text" data-include="./examples/service/publisher.ttl"></pre>
         </aside>
       </section>
-
       <section id="data-service-title">
         <h4>Property: Title</h4>
         <table class="def">
@@ -4543,7 +4426,8 @@
                 <ul>
                   <li>The title of the catalogue in the indicated language</li>
                   <li>This property can be repeated for parallel language versions of the
-                    description (see <a class="no-sectionRef" href="#multilingualism"></a>)</li>
+                    description (see <a class="no-sectionRef" href="#multilingualism"></a>)
+                  </li>
                 </ul>
               </td>
             </tr>
@@ -4553,9 +4437,7 @@
           <pre data-include-format="text" data-include="./examples/service/title.ttl"></pre>
         </aside>
       </section>
-
       <strong>Recommended Properties</strong>
-
       <section id="data-service-endpoint-description">
         <h4>Property: endpoint description</h4>
         <table class="def">
@@ -4600,7 +4482,6 @@
           <pre data-include-format="text" data-include="./examples/service/endpoint-description.ttl"></pre>
         </aside>
       </section>
-
       <section id="data-service-license">
         <h4>Property: license</h4>
         <table class="def">
@@ -4642,7 +4523,6 @@
           <pre data-include-format="text" data-include="./examples/service/license.ttl"></pre>
         </aside>
       </section>
-
       <section id="data-service-serves-dataset">
         <h4>Property: serves dataset</h4>
         <table class="def">
@@ -4688,9 +4568,7 @@
           <pre data-include-format="text" data-include="./examples/service/serves-dataset.ttl"></pre>
         </aside>
       </section>
-
       <strong>Optional Properties</strong>
-
       <section id="data-service-access-rights">
         <h4>Property: access rights</h4>
         <table class="def">
@@ -4722,7 +4600,8 @@
               <td>
                 <ul>
                   <li>This property MAY include information regarding access or restrictions based on privacy,
-                    security, or other policies.</li>
+                    security, or other policies.
+                  </li>
                   <li>CV must be used: [[VOCAB-US-ACCESS-RIGHT]]</li>
                 </ul>
               </td>
@@ -4733,7 +4612,6 @@
           <pre data-include-format="text" data-include="./examples/service/access-rights.ttl"></pre>
         </aside>
       </section>
-
       <section id="data-service-documentation">
         <h4>Property: Documentation</h4>
         <table class="def">
@@ -4772,7 +4650,6 @@
           <pre data-include-format="text" data-include="./examples/service/documentation.ttl"></pre>
         </aside>
       </section>
-
       <section id="data-service-keyword">
         <h4>Property: Keyword</h4>
         <table class="def">
@@ -4814,7 +4691,6 @@
           <pre data-include-format="text" data-include="./examples/service/keyword.ttl"></pre>
         </aside>
       </section>
-
       <section id="data-service-landing-page">
         <h4>Property: Landing page</h4>
         <table class="def">
@@ -4847,7 +4723,8 @@
                   <li>This property refers to a web page that provides access to the Data Service and/or
                     additional information. It is intended to point to a
                     landing page at the original data provider, not to a page on a site of a third party, such as an
-                    aggregator.</li>
+                    aggregator.
+                  </li>
                 </ul>
               </td>
             </tr>
@@ -4857,16 +4734,17 @@
           <pre data-include-format="text" data-include="./examples/service/landing-page.ttl"></pre>
         </aside>
       </section>
-
     </section>
-
     <section id="dcat-us:GeographicBoundingBox">
-
       <h2>Class: Geographic Bounding Box</h2>
-
-      <p>GeographicBoundingBox describes the spatial extent of domain of application of an resource and is standardized in WGS 84 Lat/Long coordinate system. </p>
-      <p>Rationale: There is no consensus and common vocabulary to describe spatial bounding box in the community. GML Envelope was proposed but it is too cumbersome to process. We introduce four separates fields for each bound (west, east, north and south) that removes any ambiguity and make it easy to index and query</p>
-
+      <p>GeographicBoundingBox describes the spatial extent of domain of application of an resource and is standardized
+        in WGS 84 Lat/Long coordinate system.
+      </p>
+      <p>Rationale: There is no consensus and common vocabulary to describe spatial bounding box in the community. GML
+        Envelope was proposed but it is too cumbersome to process. We introduce four separates fields for each bound
+        (west, east, north and south) that removes any ambiguity and make it easy to index and query
+      </p>
+      <p>TODO: handling of dateTime Line</p>
       <table class="simple">
         <thead>
           <tr>
@@ -4914,14 +4792,11 @@
             <td><strong>M</strong></td>
             <td>1</td>
           </tr>
-         
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of dcat-us:GeographicBoundingBox in dcat:Dataset">
-          <pre data-include-format="text" data-include="./examples/dataset/geographicbbox.ttl"></pre>
-        </aside>
-      
-
+        </tbody>
+      </table>
+      <aside class="example" title="Usage of dcat-us:GeographicBoundingBox in dcat:Dataset">
+        <pre data-include-format="text" data-include="./examples/dataset/geographicbbox.ttl"></pre>
+      </aside>
       <section id="geographic_bbox-west-bounding-longitude">
         <h4>Property: west bounding longitude</h4>
         <table class="def">
@@ -4940,458 +4815,540 @@
             </tr>
             <tr>
               <th>URI</th>
-              <td><a data-cite="DCAT-US#Property:geographic_bbox-west-bounding-longitude"><code>dcat-us:westBoundingLongitude</code></a>
+              <td><a
+                  data-cite="DCAT-US#Property:geographic_bbox-west-bounding-longitude"><code>dcat-us:westBoundingLongitude</code></a>
               </td>
             </tr>
             <tr>
               <th>Range</th>
               <td><a data-cite="XMLSCHEMA11-2#decimal""><code>xsd:decimal</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>West bound longitude in decimal degrees
-              </td>
-            </tr>
-        
-          </tbody>
-        </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th>Definition</th>
+                        <td>West bound longitude in decimal degrees
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </section>
+            <section id=" geographic_bbox-east-bounding-longitude">
+                  <h4>Property: east bounding longitude</h4>
+                  <table class="def">
+                    <tbody>
+                      <tr>
+                        <th>Property</th>
+                        <td>east bounding longitude</td>
+                      </tr>
+                      <tr>
+                        <th>Requirement level</th>
+                        <td>Mandatory</td>
+                      </tr>
+                      <tr>
+                        <th>Cardinality</th>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <th>URI</th>
+                        <td><a
+                            data-cite="DCAT-US#Property:geographic_bbox-east-bounding-longitude"><code>dcat-us:eastBoundingLongitude</code></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Range</th>
+                        <td><a data-cite="XMLSCHEMA11-2#decimal""><code>xsd:decimal</code></a>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th>Definition</th>
+                        <td>East bound longitude in decimal degrees</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </section>
+            <section id=" geographic_bbox-south-bounding-latitude">
+                            <h4>Property: south bounding latitude</h4>
+                            <table class="def">
+                              <tbody>
+                                <tr>
+                                  <th>Property</th>
+                                  <td>south bounding latitude</td>
+                                </tr>
+                                <tr>
+                                  <th>Requirement level</th>
+                                  <td>Mandatory</td>
+                                </tr>
+                                <tr>
+                                  <th>Cardinality</th>
+                                  <td>1</td>
+                                </tr>
+                                <tr>
+                                  <th>URI</th>
+                                  <td><a
+                                      data-cite="DCAT-US#Property:geographic_bbox-south-bounding-latitude"><code>dcat-us:southBoundingLatitude</code></a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>Range</th>
+                                  <td><a data-cite="XMLSCHEMA11-2#decimal""><code>xsd:decimal</code></a>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th>Definition</th>
+                        <td>South bound latitude in decimal degrees</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </section>
+            <section id=" geographic_bbox-north-bounding-latitude">
+                                      <h4>Property: north bounding latitude</h4>
+                                      <table class="def">
+                                        <tbody>
+                                          <tr>
+                                            <th>Property</th>
+                                            <td>north bounding latitude</td>
+                                          </tr>
+                                          <tr>
+                                            <th>Requirement level</th>
+                                            <td>Mandatory</td>
+                                          </tr>
+                                          <tr>
+                                            <th>Cardinality</th>
+                                            <td>1</td>
+                                          </tr>
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><a
+                                                data-cite="DCAT-US#Property:geographic_bbox-north-bounding-latitude"><code>dcat-us:southBoundingLatitude</code></a>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <th>Range</th>
+                                            <td><a data-cite="XMLSCHEMA11-2#decimal""><code>xsd:decimal</code></a>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th>Definition</th>
+                        <td>North bound latitude in decimal degrees</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </section>
+         </section>
+         <section id=" dct:PeriodOfTime">
+                                                <h2>Class: Period of Time</h2>
+                                                <p>PeriodOfTime represents a period of time with a start date and an
+                                                  end.
+                                                </p>
+                                                <table class="simple">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Property</th>
+                                                      <th>URI</th>
+                                                      <th>Range</th>
+                                                      <th>ReqLevel</th>
+                                                      <th>Card</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <td><a href="#period_start-date">start date</a></td>
+                                                      <td><a
+                                                          data-cite="DCAT-US#Property:dcat_startDate"><code>dcat:startDate</code></a>
+                                                      </td>
+                                                      <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>
+                                                      </td>
+                                                      <td><strong>R</strong></td>
+                                                      <td>0..1</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><a href="#period_end-date">end date</a></td>
+                                                      <td><a
+                                                          data-cite="DCAT-US#Property:dcat_endDate"><code>dcat:endDate</code></a>
+                                                      </td>
+                                                      <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>
+                                                      </td>
+                                                      <td><strong>R</strong></td>
+                                                      <td>0..1</td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                                <aside class="example"
+                                                  title="Usage of dct:PeriodOfTime for dcat:Dataset">
+                                                  <pre data-include-format="text"
+                                                    data-include="./examples/dataset/temporal.ttl"></pre>
+                                                </aside>
+                                                <section id="period_start-date">
+                                                  <h4>Property: start date</h4>
+                                                  <table class="def">
+                                                    <tbody>
+                                                      <tr>
+                                                        <th>Property</th>
+                                                        <td>start date</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Requirement level</th>
+                                                        <td>Recommended</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Cardinality</th>
+                                                        <td>0..1</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>URI</th>
+                                                        <td><a
+                                                            data-cite="DCAT-US#Property:period_start-date"><code>dcat:startDate</code></a>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Range</th>
+                                                        <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Definition</th>
+                                                        <td>The start date of the period of time</td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </section>
+                                                <section id="period_end-date">
+                                                  <h4>Property: end date</h4>
+                                                  <table class="def">
+                                                    <tbody>
+                                                      <tr>
+                                                        <th>Property</th>
+                                                        <td>end date</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Requirement level</th>
+                                                        <td>Recommended</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Cardinality</th>
+                                                        <td>0..1</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>URI</th>
+                                                        <td><a
+                                                            data-cite="DCAT-US#Property:period_end-date"><code>dcat:endDate</code></a>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Range</th>
+                                                        <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Definition</th>
+                                                        <td>The end date of the period of time</td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </section>
       </section>
-
-      <section id="geographic_bbox-east-bounding-longitude">
-        <h4>Property: east bounding longitude</h4>
-        <table class="def">
-          <tbody>
+      <section id="Class:XXX">
+        <h2>Class: XXXX</h2>
+        <p>A XXX is a
+        </p>
+        <p>DCAT-AP provides guidelines about the usage of Data services and Distribution in relation to
+          Datasets:
+          [[DCAT-AP-USAGEGUIDE]].
+        </p>
+        <table class="simple">
+          <thead>
             <tr>
               <th>Property</th>
-              <td>east bounding longitude</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Mandatory</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>1</td>
-            </tr>
-            <tr>
               <th>URI</th>
-              <td><a data-cite="DCAT-US#Property:geographic_bbox-east-bounding-longitude"><code>dcat-us:eastBoundingLongitude</code></a>
-              </td>
-            </tr>
-            <tr>
               <th>Range</th>
-              <td><a data-cite="XMLSCHEMA11-2#decimal""><code>xsd:decimal</code></a>
-              </td>
+              <th>ReqLevel</th>
+              <th>Card</th>
             </tr>
-            <tr>
-              <th>Definition</th>
-              <td>East bound longitude in decimal degrees</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section id="geographic_bbox-south-bounding-latitude">
-        <h4>Property: south bounding latitude</h4>
-        <table class="def">
+          </thead>
           <tbody>
             <tr>
-              <th>Property</th>
-              <td>south bounding latitude</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Mandatory</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="DCAT-US#Property:geographic_bbox-south-bounding-latitude"><code>dcat-us:southBoundingLatitude</code></a>
+              <td><a href="#data-service-endpoint-url">endpoint URL</a></td>
+              <td><a data-cite="VOCAB-DCAT#Property:data_service_endpoint_url">
+                  <code>dcat:endpointURL</code></a>
               </td>
+              <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a></td>
+              <td><strong>M</strong></td>
+              <td>1..n</td>
             </tr>
             <tr>
-              <th>Range</th>
-              <td><a data-cite="XMLSCHEMA11-2#decimal""><code>xsd:decimal</code></a>
+              <td><a href="#data-service-contact-point">Contact Point</a></td>
+              <td>
+                <a data-cite="VOCAB-DCAT#Property:resource_contact_point">
+                  <code>dcat:contactPoint</code>
+                </a>
               </td>
+              <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a></td>
+              <td><strong>M</strong></td>
+              <td>1..n</td>
             </tr>
-            <tr>
-              <th>Definition</th>
-              <td>South bound latitude in decimal degrees</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-
-      <section id="geographic_bbox-north-bounding-latitude">
-        <h4>Property: north bounding latitude</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>north bounding latitude</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Mandatory</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="DCAT-US#Property:geographic_bbox-north-bounding-latitude"><code>dcat-us:southBoundingLatitude</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="XMLSCHEMA11-2#decimal""><code>xsd:decimal</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>North bound latitude in decimal degrees</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-    </section>
-
-    <section id="Class:XXX">
-
-      <h2>Class: XXXX</h2>
-
-      <p>A XXX is a 
-      </p>
-      <p>DCAT-AP provides guidelines about the usage of Data services and Distribution in relation to
-        Datasets:
-        [[DCAT-AP-USAGEGUIDE]].
-      </p>
-
-      <table class="simple">
-        <thead>
-          <tr>
-            <th>Property</th>
-            <th>URI</th>
-            <th>Range</th>
-            <th>ReqLevel</th>
-            <th>Card</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="#data-service-endpoint-url">endpoint URL</a></td>
-            <td><a data-cite="VOCAB-DCAT#Property:data_service_endpoint_url">
-                <code>dcat:endpointURL</code></a>
-            </td>
-            <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a></td>
-            <td><strong>M</strong></td>
-            <td>1..n</td>
-          </tr>
-          <tr>
-            <td><a href="#data-service-contact-point">Contact Point</a></td>
-            <td>
-              <a data-cite="VOCAB-DCAT#Property:resource_contact_point">
-                <code>dcat:contactPoint</code>
-              </a>
-            </td>
-            <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a></td>
-            <td><strong>M</strong></td>
-            <td>1..n</td>
-          </tr>
-         
           </tbody>
         </table>
         <aside class="example" title="Usage of dct:license for dcat:DataService">
           <pre data-include-format="text" data-include="./examples/service/license.ttl"></pre>
         </aside>
-      
-
-      <section id="xxx-prop1">
-        <h4>Property: prop1</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>prop1 label</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="VOCAB-DCAT#Property:xxx-prop1"><code>prop1 qname</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="VOCAB-DCAT#Class:xxxx"><code>xxx qname</code></a>
-                (<a class="no-sectionRef" href="#Class:xxx"></a>)
-              </td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>xxx  definition</td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property usage note</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of prop1 qname for xxx qname">
-          <pre data-include-format="text" data-include="./examples/xxx/prop1.ttl"></pre>
-        </aside>
+        <section id="xxx-prop1">
+          <h4>Property: prop1</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>prop1 label</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT#Property:xxx-prop1"><code>prop1 qname</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT#Class:xxxx"><code>xxx qname</code></a>
+                  (<a class="no-sectionRef" href="#Class:xxx"></a>)
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>xxx definition</td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property usage note</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of prop1 qname for xxx qname">
+            <pre data-include-format="text" data-include="./examples/xxx/prop1.ttl"></pre>
+          </aside>
+        </section>
+        <strong>Optional Properties</strong>
+        <section id="xxx-prop2">
+          <h4>Property: prop2</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>prop2 label</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT#Property:xxx-prop2"><code>prop2 qname</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT#Class:xxxx"><code>xxx qname</code></a>
+                  (<a class="no-sectionRef" href="#Class:xxx"></a>)
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>xxx definition</td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property usage note</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of prop2 qname for xxx qname">
+            <pre data-include-format="text" data-include="./examples/xxx/prop2.ttl"></pre>
+          </aside>
+        </section>
       </section>
-
-      <strong>Optional Properties</strong>
-      <section id="xxx-prop2">
-        <h4>Property: prop2</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>prop2 label</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="VOCAB-DCAT#Property:xxx-prop2"><code>prop2 qname</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="VOCAB-DCAT#Class:xxxx"><code>xxx qname</code></a>
-                (<a class="no-sectionRef" href="#Class:xxx"></a>)
-              </td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>xxx  definition</td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property usage note</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of prop2 qname for xxx qname">
-          <pre data-include-format="text" data-include="./examples/xxx/prop2.ttl"></pre>
-        </aside>
+    </section>
+    <section id="conformance-to-dcat-3">
+      <h2>Conformance to DCAT 3</h2>
+      <p>DCAT-US is an application profile of DCAT Version 3.</p>
+      <p>The DCAT-Profile Guidance states that application profiles may form hierarchies.</p>
+      <p>The following diagram captures the relationship between DCAT and DCAT-US :</p>
+      <div id="diagram2" class="mermaid">
+        classDiagram
+        DCAT <-- DCAT_US: is_profile_of class DCAT { - defines classes - defines properties - base vocabulary } class
+          DCAT_US { - uses classes of DCAT - specifies requirement levels - specifies cardinalities - specifies
+          controlled vocabulary } </div>
+          <p>
+            <strong>Custom properties in DCAT-US </strong>
+          <p>The DCAT-US profile includes the following custom properties that were defined in POD 1.1 and migrated to
+            the
+            DCAT US namespace
+          </p>
+          <ul>
+            <li><strong>dcat-us:legalContactPoint:</strong> Contact information for legal entities or individuals
+              responsible
+              for legal issues related to the resource.
+            </li>
+            <li><strong>dcat-us:bureauCode:</strong> The specific US Federal Government agency responsible for the
+              resource.
+            </li>
+            <li><strong>dcat-us:programCode:</strong> The specific program or initiative associated with the resource.
+            </li>
+            <li><strong>dcat-us:accessLevel:</strong> The level of confidentiality or sensitivity of the resource,
+              according
+              to US government guidelines.
+            </li>
+          </ul>
+    </section>
+    <section id="conformance">
+      <strong>Conformance to DCAT-US </strong>
+      <aside class="ednote" title="Conformance statement">
+        The first part of the conformance statement (above this note) is generated by [[RESPEC]] as it is considered an
+        integral part of any specification.
+        The second part (below this note) has been added by the editor and follows similar conformance notes in
+        [[VOCAB-DCAT]].
+      </aside>
+      <section id="provider-requirements">
+        <h3>Data Provider requirements</h3>
+        <p>A data catalogue conforms to DCAT-US if:</p>
+        <ul>
+          <li>
+            An RDF description of the catalogue is available
+          </li>
+          <li>
+            All classes and properties defined in DCAT-US 3.0 are used in a way consistent with the
+            semantics declared in this specification.
+          </li>
+          <li>
+            Properties not mentioned in this specification MAY be used if they are included in either
+            DCAT 3 and their usage conforms to DCAT 3 if they are
+            included in DCAT-US or to DCAT if they are only included in DCAT.
+          </li>
+        </ul>
       </section>
-
-
+      <section id="receiver-requirements">
+        <h3>Receiver requirements</h3>
+        <p>An application (data portal) conforms to DCAT-US if:</p>
+        <ul>
+          <li>
+            It is able to process RDF catalogues that conform to DCAT-US .
+          </li>
+          <li>
+            Processing means that it MUST accept incoming data and transparently provide this
+            data to applications and services.
+          </li>
+          <li>
+            Processing does not prescribe whether and how the metadata is stored internally,
+            displayed or made searchable.
+          </li>
+          <li>
+            This processing of metadata also applies to classes and properties not mentioned in DCAT-US that are part of
+            DCAT 3. A DCAT-US conformant receiver MUST also be able to process these classes and properties].
+          </li>
+        </ul>
+      </section>
     </section>
-
-  </section>
-
-  <section id="conformance-to-dcat-ap">
-    <h2>Conformance to DCAT 3</h2>
-    <p>DCAT-US is an application profile of DCAT.</p>
-    <p>The DCAT-Profile Guidance states that application profiles may form hierarchies.</p>
-    
-    <p>The following diagram captures the relationship between DCAT and DCAT-US :</p>
-    <div id="diagram2" class="mermaid">
-      classDiagram
-
-      DCAT <-- DCAT_US: is_profile_of
-      class DCAT {
-      - defines classes
-      - defines properties
-      - base vocabulary
-      }
-      class DCAT_US {
-      - uses classes of DCAT
-      - specifies requirement levels
-      - specifies cardinalities
-      - specifies controlled vocabulary
-      }
-
-    </div>
- 
-    <p>
-      <strong>Custom properties in DCAT-US </strong>
-
-    <p>The DCAT-US profile includes the following custom properties that were defined in POD 1.1 and migrated to the
-      DCAT US namespace</p>
-    <ul>
-      <li><strong>dcat-us:legalContactPoint:</strong> Contact information for legal entities or individuals responsible
-        for legal issues related to the resource.</li>
-      <li><strong>dcat-us:bureauCode:</strong> The specific US Federal Government agency responsible for the resource.
-      </li>
-      <li><strong>dcat-us:programCode:</strong> The specific program or initiative associated with the resource.</li>
-      <li><strong>dcat-us:accessLevel:</strong> The level of confidentiality or sensitivity of the resource, according
-        to US government guidelines.</li>
-    </ul>
-  </section>
-
-  <section id="conformance">
-    <strong>Conformance to DCAT-US </strong>
-    <aside class="ednote" title="Conformance statement">
-      The first part of the conformance statement (above this note) is generated by [[RESPEC]] as it is considered an
-      integral part of any specification.
-      The second part (below this note) has been added by the editor and follows similar conformance notes in
-      [[VOCAB-DCAT]].
-    </aside>
-
-    <section id="provider-requirements">
-      <h3>Data Provider requirements</h3>
-      <p>A data catalogue conforms to DCAT-US if:</p>
-      <ul>
-        <li>
-          An RDF description of the catalogue is available
-        </li>
-        <li>
-          All classes and properties defined in DCAT-US 3.0 are used in a way consistent with the
-          semantics declared in this specification.
-        </li>
-        <li>
-          Properties not mentioned in this specification MAY be used if they are included in either
-          DCAT 3 and their usage conforms to DCAT 3 if they are
-          included in DCAT-US or to DCAT if they are only included in DCAT.
-        </li>
-      </ul>
+    <section class="appendix" id="namespaces">
+      <h2>Namespaces</h2>
+      <p>Namespaces and prefixes used in normative parts of this recommendation are shown in the following table:</p>
+      <table id="table-namespaces" class="simple">
+        <thead>
+          <tr>
+            <th>Prefix</th>
+            <th>Namespace IRI</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>dcat</code></td>
+            <td><code>https://www.w3.org/TR/vocab-dcat-3/</code></td>
+            <td>[[VOCAB-DCAT]]</td>
+          </tr>
+          <tr>
+            <td><code>dct</code></td>
+            <td><code>http://purl.org/dc/terms/</code></td>
+            <td>[[DCTERMS]]</td>
+          </tr>
+          <tr>
+            <td><code>foaf</code></td>
+            <td><code>http://xmlns.com/foaf/0.1/</code></td>
+            <td>[[FOAF]]</td>
+          </tr>
+          <tr>
+            <td><code>schema</code></td>
+            <td><code>http://schema.org/</code></td>
+            <td>[[schema-org]]</td>
+          </tr>
+          <tr>
+            <td><code>rdf</code></td>
+            <td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td>
+            <td>[[RDF-SYNTAX-GRAMMAR]]</td>
+          </tr>
+          <tr>
+            <td><code>rdfs</code></td>
+            <td><code>http://www.w3.org/2000/01/rdf-schema#</code></td>
+            <td>[[RDF-SCHEMA]]</td>
+          </tr>
+          <tr>
+            <td><code>vcard</code></td>
+            <td><code>http://www.w3.org/2006/vcard/ns#</code></td>
+            <td>[[VCARD-RDF]]</td>
+          </tr>
+          <tr>
+            <td><code>xsd</code></td>
+            <td><code>http://www.w3.org/2001/XMLSchema#</code></td>
+            <td>[[XMLSCHEMA11-2]]</td>
+          </tr>
+          <tr>
+            <td><code>adms</code></td>
+            <td><code>http://www.w3.org/ns/adms#</code></td>
+            <td>[[VOCAB-ADMS]]</td>
+          </tr>
+          <tr>
+            <td><code>skos</code></td>
+            <td><code>http://www.w3.org/2004/02/skos/core#</code></td>
+            <td>[[SKOS-REFERENCE]]</td>
+          </tr>
+          <tr>
+            <td><code>locn</code></td>
+            <td><code>http://www.w3.org/ns/locn#</code></td>
+            <td>[[LOCN]]</td>
+          </tr>
+          <tr>
+            <td><code>prov</code></td>
+            <td><code>http://www.w3.org/ns/prov#</code></td>
+            <td>[[PROV]]</td>
+          </tr>
+          <tr>
+            <td><code> spdx</code></td>
+            <td><code>http://spdx.org/rdf/terms#</code></td>
+            <td>[[SPDX]]</td>
+          </tr>
+          <tr>
+            <td><code> gsp</code></td>
+            <td><code>http://www.opengis.net/ont/geosparql#</code></td>
+            <td>[[GeoSPARQL]]</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
-
-    <section id="receiver-requirements">
-      <h3>Receiver requirements</h3>
-      <p>An application (data portal) conforms to DCAT-US if:</p>
-      <ul>
-        <li>
-          It is able to process RDF catalogues that conform to DCAT-US .
-        </li>
-        <li>
-          Processing means that it MUST accept incoming data and transparently provide this
-          data to applications and services.
-        </li>
-        <li>
-          Processing does not prescribe whether and how the metadata is stored internally,
-          displayed or made searchable.
-        </li>
-        <li>
-          This processing of metadata also applies to classes and properties not mentioned in DCAT-US that are part of
-          DCAT 3. A DCAT-US conformant receiver MUST also be able to process these classes and properties].
-        </li>
-      </ul>
-    </section>
-
-  </section>
-
-
-
-  <section class="appendix" id="namespaces">
-    <h2>Namespaces</h2>
-    <p>Namespaces and prefixes used in normative parts of this recommendation are shown in the following table:</p>
-    <table id="table-namespaces" class="simple">
-      <thead>
-        <tr>
-          <th>Prefix</th>
-          <th>Namespace IRI</th>
-          <th>Source</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>dcat</code></td>
-          <td><code>https://www.w3.org/TR/vocab-dcat-3/</code></td>
-          <td>[[VOCAB-DCAT]]</td>
-        </tr>
-        <tr>
-          <td><code>dct</code></td>
-          <td><code>http://purl.org/dc/terms/</code></td>
-          <td>[[DCTERMS]]</td>
-        </tr>
-        <tr>
-          <td><code>foaf</code></td>
-          <td><code>http://xmlns.com/foaf/0.1/</code></td>
-          <td>[[FOAF]]</td>
-        </tr>
-        <tr>
-          <td><code>schema</code></td>
-          <td><code>http://schema.org/</code></td>
-          <td>[[schema-org]]</td>
-        </tr>
-        <tr>
-          <td><code>rdf</code></td>
-          <td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td>
-          <td>[[RDF-SYNTAX-GRAMMAR]]</td>
-        </tr>
-        <tr>
-          <td><code>rdfs</code></td>
-          <td><code>http://www.w3.org/2000/01/rdf-schema#</code></td>
-          <td>[[RDF-SCHEMA]]</td>
-        </tr>
-        <tr>
-          <td><code>vcard</code></td>
-          <td><code>http://www.w3.org/2006/vcard/ns#</code></td>
-          <td>[[VCARD-RDF]]</td>
-        </tr>
-        <tr>
-          <td><code>xsd</code></td>
-          <td><code>http://www.w3.org/2001/XMLSchema#</code></td>
-          <td>[[XMLSCHEMA11-2]]</td>
-        </tr>
-        <tr>
-          <td><code>adms</code></td>
-          <td><code>http://www.w3.org/ns/adms#</code></td>
-          <td>[[VOCAB-ADMS]]</td>
-        </tr>
-        <tr>
-          <td><code>skos</code></td>
-          <td><code>http://www.w3.org/2004/02/skos/core#</code></td>
-          <td>[[SKOS-REFERENCE]]</td>
-        </tr>
-        <tr>
-          <td><code>locn</code></td>
-          <td><code>http://www.w3.org/ns/locn#</code></td>
-          <td>[[LOCN]]</td>
-        </tr>
-        <tr>
-          <td><code>prov</code></td>
-          <td><code>http://www.w3.org/ns/prov#</code></td>
-          <td>[[PROV]]</td>
-        </tr>
-        <tr>
-          <td><code> spdx</code></td>
-          <td><code>http://spdx.org/rdf/terms#</code></td>
-          <td>[[SPDX]]</td>
-        </tr>
-        <tr>
-          <td><code> gsp</code></td>
-          <td><code>http://www.opengis.net/ont/geosparql#</code></td>
-          <td>[[GeoSPARQL]]</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-
 </body>
 
 </html>
