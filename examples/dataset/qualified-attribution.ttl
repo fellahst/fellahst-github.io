@@ -3,7 +3,7 @@
 
 
 
-ex:DS987
+ex:Dataset1
   a dcat:Dataset ;
   prov:qualifiedAttribution [
     a prov:Attribution ;

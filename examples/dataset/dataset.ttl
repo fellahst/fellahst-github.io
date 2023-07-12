@@ -21,9 +21,9 @@
   ] ;
   dct:description 
                  """This dataset contains information regarding the
-                 census in Country of Loudoun"""@en ;
+                 census in County of Loudoun"""@en ;
   dct:publisher <https://uscensus.gov/> ;
-  dct:title "Waldbestand Zürich"@en, "Forests of Zurich"@de ;
+  dct:title "Loudoun County"@en, "Condado de Loudoun"@es ;
 
   # recommended properties
 
