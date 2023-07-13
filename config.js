@@ -119,22 +119,22 @@ var respecConfig = {
       "title": "List of licenses for US opendata to enter in dct:license",
       "publisher": "??",
     },
-    "VOCAB-EU": {
+    "VOCAB-US": {
       "href": "http://publications.europa.eu/resource/authority/",
       "title": "EU Vocabularies",
       "publisher": "Publications Office of the European Union",
     },
-    "VOCAB-EU-ACCESS-RIGHT": {
+    "VOCAB-US-ACCESS-RIGHT": {
       "href": "http://publications.europa.eu/resource/authority/access-right",
       "title": "Access Rights Named Authority List",
       "publisher": "Publications Office of the European Union",
     },
-    "VOCAB-EU-AVAILABLITY": {
+    "VOCAB-US-AVAILABLITY": {
       "href": "http://publications.europa.eu/resource/authority/planned-availability",
       "title": "Distribution availability vocabulary",
       "publisher": "Publications Office of the European Union",
     },
-    "VOCAB-EU-CONTINENT": {
+    "VOCAB-US-CONTINENT": {
       "href": "http://publications.europa.eu/resource/authority/continent",
       "title": "EU Vocabularies Continents Named Authority List",
       "publisher": "Publications Office of the European Union",
@@ -144,12 +144,12 @@ var respecConfig = {
       "title": "MARC List for Countries",
       "publisher": "Library of Congress",
     },
-    "VOCAB-EU-FILE-TYPE": {
+    "VOCAB-US-FILE-TYPE": {
       "href": "http://publications.europa.eu/resource/authority/file-type",
       "title": "EU Vocabularies File Type Named Authority List",
       "publisher": "Publications Office of the European Union",
     },
-    "VOCAB-EU-FREQUENCY": {
+    "VOCAB-US-FREQUENCY": {
       "href": "http://publications.europa.eu/resource/authority/frequency",
       "title": "EU Vocabularies Frequency Named Authority List",
       "publisher": "Publications Office of the European Union",
@@ -159,20 +159,15 @@ var respecConfig = {
       "title": "ISO 639-1: Codes for the Representation of Names of Languages - Part 1: Two-letter codes for languages",
       "publisher": "Library of Congress",
     },
-    "VOCAB-EU-PLACE": {
+    "VOCAB-US-PLACE": {
       "href": "https://publications.europa.eu/resource/authority/place",
       "title": "Vocabularies Places Named Authority List",
       "publisher": "Publications Office of the European Union",
     },
-    "VOCAB-EU-THEME": {
+    "VOCAB-US-THEME": {
       "href": "https://publications.europa.eu/resource/authority/data-theme",
       "title": "Dataset Theme Vocabulary",
       "publisher": "Publications Office of the European Union",
-    },
-    "VOCAB-EU-OP-CONTACT": {
-      "href": "https://op.europa.eu/en/web/about-us/contact-us",
-      "title": "EU Vocabularies",
-      "publisher": "Publications Office of the European Union",
-    },
+    }
   }
 };
