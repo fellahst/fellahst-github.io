@@ -387,7 +387,7 @@
           - dcat-us:northBoundLatitude
           - dcat-us:southBoundLatitude
           - dcat-us:westBoundLongitude
-          - dcat-us:eastBounddLongitude
+          - dcat-us:eastBoundLongitude
           }
           class Attribution {
           Mandatory:
@@ -4454,489 +4454,489 @@
       <section id="data-service-mandatory-props">
 
         <h4>Mandatory Properties</h4>
-      <section id="data-service-endpoint-url">
-        <h4>Property: endpoint URL</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>endpoint URL</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td><strong>Mandatory</strong></td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>1..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td>
-                <a data-cite="VOCAB-DCAT-3#Property:data_service_endpoint_url">
-                  <code>dcat:endpointURL</code>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="RDF-SCHEMA#ch_resource">
-                  <code>rdfs:Resource</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>The root location or primary endpoint of the service (an IRI)</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of dcat:endpointURL for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/endpoint-url.ttl"></pre>
-        </aside>
-      </section>
-      <section id="data-service-contact-point">
-        <h4>Property: contact Point</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>contact Point</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td><strong>Mandatory</strong></td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>1..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td>
-                <a data-cite="VOCAB-DCAT-3#Property:resource_contact_point">
-                  <code>dcat:contactPoint</code>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a></td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property contains contact information that can be used for sending
-                    comments about the Dataset.
-                  </li>
-                  <li>This property MUST contain an email address that is continuously monitored
-                    by the data publisher.
-                  </li>
-                  <li>If there are several contributors involved in the publication of the Dataset,
-                    the property can be used multiple times.
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of dcat:contactPoint for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/contact-point.ttl"></pre>
-        </aside>
-      </section>
-      <section id="data-service-publisher">
-        <h4>Property: publisher</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>publisher</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td><strong>Mandatory</strong></td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>1..1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a></td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="FOAF#term_Agent"><code>foaf:Agent</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>This property refers to an entity (organisation) responsible for making the Data Service available.
-              </td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property refers to an entity (organisation) responsible for making the Catalogue available.
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of dct:publisher for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/publisher.ttl"></pre>
-        </aside>
-      </section>
-      <section id="data-service-title">
-        <h4>Property: title</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>title</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td><strong>Mandatory</strong></td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>1..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>The title of the catalogue in the indicated language</li>
-                  <li>This property can be repeated for parallel language versions of the
-                    description (see <a class="no-sectionRef" href="#multilingualism"></a>)
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of dct:title for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/title.ttl"></pre>
-        </aside>
-      </section>
+        <section id="data-service-endpoint-url">
+          <h4>Property: endpoint URL</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>endpoint URL</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Mandatory</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td>
+                  <a data-cite="VOCAB-DCAT-3#Property:data_service_endpoint_url">
+                    <code>dcat:endpointURL</code>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_resource">
+                    <code>rdfs:Resource</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>The root location or primary endpoint of the service (an IRI)</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:endpointURL for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/endpoint-url.ttl"></pre>
+          </aside>
+        </section>
+        <section id="data-service-contact-point">
+          <h4>Property: contact Point</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>contact Point</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Mandatory</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td>
+                  <a data-cite="VOCAB-DCAT-3#Property:resource_contact_point">
+                    <code>dcat:contactPoint</code>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains contact information that can be used for sending
+                      comments about the Dataset.
+                    </li>
+                    <li>This property MUST contain an email address that is continuously monitored
+                      by the data publisher.
+                    </li>
+                    <li>If there are several contributors involved in the publication of the Dataset,
+                      the property can be used multiple times.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:contactPoint for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/contact-point.ttl"></pre>
+          </aside>
+        </section>
+        <section id="data-service-publisher">
+          <h4>Property: publisher</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>publisher</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Mandatory</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="FOAF#term_Agent"><code>foaf:Agent</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property refers to an entity (organisation) responsible for making the Data Service available.
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to an entity (organisation) responsible for making the Catalogue available.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:publisher for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/publisher.ttl"></pre>
+          </aside>
+        </section>
+        <section id="data-service-title">
+          <h4>Property: title</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>title</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Mandatory</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>The title of the catalogue in the indicated language</li>
+                    <li>This property can be repeated for parallel language versions of the
+                      description (see <a class="no-sectionRef" href="#multilingualism"></a>)
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:title for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/title.ttl"></pre>
+          </aside>
+        </section>
       </section>
       <section id="data-service-recommended-props">
 
         <h4>Recommended Properties</h4>
-      <section id="data-service-endpoint-description">
-        <h4>Property: endpoint description</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>endpoint description</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="VOCAB-DCAT-3#Property:data_service_endpoint_description">
-                  <code>dcat:endpointDescription</code></a>
-              </td>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a></td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property contains a description of the services available via the end-points,
-                    including their operations, parameters etc.The property gives specific details of the actual
-                    endpoint instances.
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of dcat:endpointDescription for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/endpoint-description.ttl"></pre>
-        </aside>
-      </section>
-      <section id="data-service-license">
-        <h4>Property: license</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>license</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/license"><code>dct:license</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/LicenseDocument"><code>dct:LicenseDocument</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property refers to the licence under which the Data Service is made available.</li>
-                  <li>CV to used: [[VOCAB-CH-LICENSE]]</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of dct:license for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/license.ttl"></pre>
-        </aside>
-      </section>
-      <section id="data-service-serves-dataset">
-        <h4>Property: serves dataset</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>serves dataset</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="VOCAB-DCAT-3#Property:data_service_serves_dataset"><code>dcat:servesDataset</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a>
-                (<a class="no-sectionRef" href="#Class:Dataset"></a>)
-              </td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>Dataset that is part of the catalog.</td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property refers to a collection of data that this data service can distribute.</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of dcat:servesDataset for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/serves-dataset.ttl"></pre>
-        </aside>
-      </section>
+        <section id="data-service-endpoint-description">
+          <h4>Property: endpoint description</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>endpoint description</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:data_service_endpoint_description">
+                    <code>dcat:endpointDescription</code></a>
+                </td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains a description of the services available via the end-points,
+                      including their operations, parameters etc.The property gives specific details of the actual
+                      endpoint instances.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:endpointDescription for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/endpoint-description.ttl"></pre>
+          </aside>
+        </section>
+        <section id="data-service-license">
+          <h4>Property: license</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>license</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/license"><code>dct:license</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/LicenseDocument"><code>dct:LicenseDocument</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to the licence under which the Data Service is made available.</li>
+                    <li>CV to used: [[VOCAB-CH-LICENSE]]</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:license for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/license.ttl"></pre>
+          </aside>
+        </section>
+        <section id="data-service-serves-dataset">
+          <h4>Property: serves dataset</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>serves dataset</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:data_service_serves_dataset"><code>dcat:servesDataset</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a>
+                  (<a class="no-sectionRef" href="#Class:Dataset"></a>)
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>Dataset that is part of the catalog.</td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a collection of data that this data service can distribute.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:servesDataset for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/serves-dataset.ttl"></pre>
+          </aside>
+        </section>
       </section>
       <section id="data-service-optional-props">
-      <h4>Optional Properties</h4>
-      <section id="data-service-access-rights">
-        <h4>Property: access rights</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>access rights</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Optional</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accessRights"><code>dct:accessRights</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement"><code>dct:RightsStatement</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property MAY include information regarding access or restrictions based on privacy,
-                    security, or other policies.
-                  </li>
-                  <li>CV must be used: [[VOCAB-US-ACCESS-RIGHT]]</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of dct:accessRights for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/access-rights.ttl"></pre>
-        </aside>
-      </section>
-      <section id="data-service-documentation">
-        <h4>Property: documentation</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>documentation</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Optional</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="FOAF#term_page"><code>foaf:page</code></a></td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="FOAF#term_Document"><code>foaf:Document</code></a></td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property refers to a page or document about this Data Service.</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of foaf:page for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/documentation.ttl"></pre>
-        </aside>
-      </section>
-      <section id="data-service-keyword">
-        <h4>Property: keyword</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>keyword</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Optional</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="VOCAB-DCAT-3#Property:resource_keyword"><code>dcat:keyword</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property contains a keyword or tag describing the Data Service.</li>
-                  <li>If available, the keyword from [[TERMDAT]] SHOULD be used.</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of dcat:keyword for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/keyword.ttl"></pre>
-        </aside>
-      </section>
-      <section id="data-service-landing-page">
-        <h4>Property: landing page</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>landing page</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Optional</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="VOCAB-DCAT-3#Property:resource_landing_page"><code>dcat:landingPage</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="FOAF#term_Document"><code>foaf:Document</code></a></td>
-            </tr>
-            <tr>
-              <th>Usage Note</th>
-              <td>
-                <ul>
-                  <li>This property refers to a web page that provides access to the Data Service and/or
-                    additional information. It is intended to point to a
-                    landing page at the original data provider, not to a page on a site of a third party, such as an
-                    aggregator.
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="example" title="Usage of foaf:landingPage for dcat:DataService">
-          <pre data-include-format="text" data-include="./examples/service/landing-page.ttl"></pre>
-        </aside>
-      </section>
+        <h4>Optional Properties</h4>
+        <section id="data-service-access-rights">
+          <h4>Property: access rights</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>access rights</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accessRights"><code>dct:accessRights</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement"><code>dct:RightsStatement</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property MAY include information regarding access or restrictions based on privacy,
+                      security, or other policies.
+                    </li>
+                    <li>CV must be used: [[VOCAB-US-ACCESS-RIGHT]]</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:accessRights for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/access-rights.ttl"></pre>
+          </aside>
+        </section>
+        <section id="data-service-documentation">
+          <h4>Property: documentation</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>documentation</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="FOAF#term_page"><code>foaf:page</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="FOAF#term_Document"><code>foaf:Document</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a page or document about this Data Service.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of foaf:page for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/documentation.ttl"></pre>
+          </aside>
+        </section>
+        <section id="data-service-keyword">
+          <h4>Property: keyword</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>keyword</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_keyword"><code>dcat:keyword</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains a keyword or tag describing the Data Service.</li>
+                    <li>If available, the keyword from [[TERMDAT]] SHOULD be used.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:keyword for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/keyword.ttl"></pre>
+          </aside>
+        </section>
+        <section id="data-service-landing-page">
+          <h4>Property: landing page</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>landing page</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_landing_page"><code>dcat:landingPage</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="FOAF#term_Document"><code>foaf:Document</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a web page that provides access to the Data Service and/or
+                      additional information. It is intended to point to a
+                      landing page at the original data provider, not to a page on a site of a third party, such as an
+                      aggregator.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of foaf:landingPage for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/landing-page.ttl"></pre>
+          </aside>
+        </section>
       </section>
     </section>
     <section id="dcat-us:GeographicBoundingBox">
@@ -5038,7 +5038,7 @@
             </tbody>
           </table>
         </section>
-        <section id=" geographic_bbox-east-bounding-longitude">
+        <section id="geographic_bbox-east-bounding-longitude">
           <h4>Property: east bounding longitude</h4>
           <table class="def">
             <tbody>
@@ -5072,7 +5072,7 @@
             </tbody>
           </table>
         </section>
-        <section id=" geographic_bbox-south-bounding-latitude">
+        <section id="geographic_bbox-south-bounding-latitude">
           <h4>Property: south bounding latitude</h4>
           <table class="def">
             <tbody>
@@ -5106,7 +5106,7 @@
             </tbody>
           </table>
         </section>
-        <section id=" geographic_bbox-north-bounding-latitude">
+        <section id="geographic_bbox-north-bounding-latitude">
           <h4>Property: north bounding latitude</h4>
           <table class="def">
             <tbody>
@@ -5502,6 +5502,86 @@
   <section id="resource-attributions">
 
     <h2>Resource Attributions</h2>
+
+    <p><strong>Attribution</strong>, in the context of a data catalog, refers to the process of associating a particular
+      resource (like a dataset or a service) with a responsible party, often referred to as an <strong>"agent"</strong>.
+      Agents could be
+      individuals, organizations, or services that contribute to, create, publish, or have some significant interaction
+      with the data. These attributions often include details about the role the agent played, such as whether they were
+      a contributor, creator, publisher, funder, distributor, custodian, or editor, etc.</p>
+
+    <p><strong>Attributions</strong> are critically important for data catalog search for several reasons:</p>
+
+    <ol>
+      <li><strong>Provenance and Trustworthiness</strong>: Attributions help users understand who created or has
+        interacted with the data, which can inform assessments of its quality and trustworthiness. For example, data
+        published by a well-known and trusted organization might be deemed more reliable.</li>
+      <li><strong>Credit and Accountability</strong>: Attributions ensure that the individuals or organizations that
+        contributed to the data are appropriately acknowledged. This is not only a matter of fairness but can also be
+        legally required in some cases.</li>
+      <li><strong>Search and Discovery</strong>: Attributions can be used as a filter or search criterion. For instance,
+        users might want to find all datasets created by a specific researcher or organization, or all datasets on which
+        a certain individual was a contributor.</li>
+      <li><strong>Collaboration and Networking</strong>: Identifying the agents involved in a dataset can lead to new
+        collaboration opportunities, allowing users to reach out to those who have relevant expertise or shared research
+        interests.</li>
+      <li><strong>Issue Resolution</strong>: When users find issues or have questions about a particular dataset, they
+        can reach out to the attributed agent for clarification or resolution, thus ensuring data reliability and
+        integrity.</li>
+    </ol>
+
+    <p>
+
+      The standard [[!DCTERMS]] <a href="http://purl.org/dc/terms/creator"><code>dcterms:creator</code></a>,
+      <a href="http://purl.org/dc/terms/contributor"><code>dcterms:contributor</code></a>,
+      <a href="http://purl.org/dc/terms/rightsHolder"><code>dcterms:rightsHolder</code></a>,
+      and <a href="http://purl.org/dc/terms/publisher"><code>dcterms:publisher</code></a>,
+      and the generic <a data-cite="!PROV-O#wasAttributedTo"><code>prov:wasAttributedTo</code></a> from [[!PROV-O]],
+      support basic
+      associations of responsible agents with a cataloged resource.
+      However, there are many other roles of importance in relation to datasets and services - e.g., funder,
+      distributor, custodian, editor. Some of these roles are enumerated in the
+      <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml"><code>CI_RoleCode</code></a>
+      values from [[ISO-19115-1]], in the [[DataCite]] metadata schema, and included within the
+      <a href="https://id.loc.gov/vocabulary/relators">MARC relators</a>.
+    </p>
+    <p>
+      A general method for assigning an agent to a resource with a specified role is provided by using the qualified
+      form <a data-cite="PROV-O#qualifiedAttribution"><code>prov:qualifiedAttribution</code></a> from [[PROV-O]].
+      It is used to link to an Agent where the nature of the relationship is known but does
+      not match one of the standard attribution property roles (<code>dcterms:creator</code></a>,
+      <a href="http://purl.org/dc/terms/contributor"><code>dcterms:contributor</code></a>,
+      <a href="http://purl.org/dc/terms/rightsHolder"><code>dcterms:rightsHolder</code></a>,
+      and <a href="http://purl.org/dc/terms/publisher"><code>dcterms:publisher</code></a>). The
+      range of <a data-cite="PROV-O#qualifiedAttribution"><code>prov:qualifiedAttribution</code></a> is
+      <a data-cite="PROV-O#Attribution"><code>prov:Attribution</code></a>.
+      Use <a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code><a></a> on the
+        <a data-cite="PROV-O#Attribution"><code>prov:Attribution</code></a> to capture the
+        responsibility of the Agent with respect to the Resource. More precisely, the relevant Agent is specified via
+        property <a data-cite="PROV-O#agent"><code>prov:agent</code></a>, whereas the role is specified with property
+        <a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>, which takes as value a
+        <a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+        describing that role - as those included in the relevant code list operated a US Government-controlled Registry.
+    </p>
+
+    <p>The <a data-cite="PROV-O#qualifiedAttribution"><code>prov:qualifiedAttribution</code></a> property is used to
+      provide more detailed and structured information about the attribution of a resource. It allows for
+      specifying additional attributes, such as the role or position of the attributed entity, the date of
+      attribution, or other relevant details. The [PROV-O]-based approach is meant to
+      give data providers an extension mechanism to specify, in a harmonised way, any kind of role, and, possibly,to
+      attach additional information to the role and the associated Agent. As such, it MAY be used in combination
+      with or
+      to complement the property-based approach, but it MUST NOT replace it. For instance, it can be used to specify
+      roles not covered by the agent role properties used in DCAT-US, and/or to specify additional information that
+      cannot be expressed via a property (as the period during which an Agent covered a given role).</p>
+
+    <p><a href="#ex-attributions"></a> provides an illustration of the usage of attribution properties: </p>
+
+    <aside id="ex-attributions" class="example" title="Usage of attribution properties for dcat:Dataset">
+      <pre class="nohighlight turtle" data-include-format="text"
+        data-include="./examples/dataset/attributions.ttl"></pre>
+    </aside>
+
 
   </section>
 
