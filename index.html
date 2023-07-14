@@ -619,8 +619,699 @@
       </table>
     </section>
   </section>
+  <section id="classes">
+    <h2>Application Profile Classes</h2>
+    <section id="mandatory-classes">
+      <h3>Mandatory Classes</h3>
+      <table class="simple" id="table-mandatory-classes">
+        <thead>
+          <tr>
+            <th>
+              <p>Class name</p>
+            </th>
+            <th>
+              <p>Usage note for the Application Profile</p>
+            </th>
+            <th>
+              <p>URI</p>
+            </th>
+            <th>
+              <p>Reference</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="class mandatory" id="agent">
+            <td>
+              <a href="#properties-for-agent">Agent</a>
+            </td>
+            <td>
+              <p>An entity (e.g., an individual or an organisation) that is associated with Catalogues, Catalogue
+                Records, Data Services, or Datasets. If the Agent is an organisation, the use of the Organization
+                Ontology [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-org"
+                    title="The Organization Ontology">VOCAB-ORG</a></cite>] is recommended. See <a
+                  class="no-sectionRef sec-ref" href="#agent-roles">§&nbsp;<bdi class="secno">7. </bdi>Agent Roles</a>
+                for a discussion on Agent roles.</p>
+            </td>
+            <td>
+              <p><code>foaf:Agent</code></p>
+            </td>
+            <td>
+              <p><a class="sec-ref" href="http://xmlns.com/foaf/spec#term_Agent">§&nbsp;Class: foaf:Agent</a> [<cite><a
+                    class="bibref" data-link-type="biblio" href="#bib-foaf"
+                    title="FOAF Vocabulary Specification 0.99 (Paddington Edition)">FOAF</a></cite>]</p>
+              <p>[<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-org"
+                    title="The Organization Ontology">VOCAB-ORG</a></cite>]</p>
+            </td>
+          </tr>
+          <tr class="class mandatory" id="catalog">
+            <td>
+              <a href="#properties-for-catalog">Catalog</a>
+            </td>
+            <td>
+              <p>A catalogue or repository that hosts the resources (as Data Services, Datasets, or other Catalogues)
+                being described.</p>
+            </td>
+            <td>
+              <p><code>dcat:Catalog</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">§&nbsp;<bdi class="secno">6.3 </bdi>Class:
+                  Catalog</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dcat-3"
+                    title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]</p>
+            </td>
+          </tr>
+          <tr class="class mandatory" id="dataset">
+            <td>
+              <a href="#properties-for-dataset">Dataset</a>
+            </td>
+            <td>
+              <p>A conceptual entity that represents the information published.</p>
+            </td>
+            <td>
+              <p><code>dcat:Dataset</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">§&nbsp;<bdi class="secno">6.6 </bdi>Class:
+                  Dataset</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dcat-3"
+                    title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]</p>
+            </td>
+          </tr>
+          <tr class="class mandatory" id="literal">
+            <td>
+              <p>Literal</p>
+            </td>
+            <td>
+              <p>A literal value such as a string or integer; Literals may be typed, e.g. as a date according to
+                <code>xsd:date</code>. Literals that contain human-readable text have an optional language tag as
+                defined by [<cite><a class="bibref" data-link-type="biblio" href="#bib-bcp47"
+                    title="Tags for Identifying Languages">BCP47</a></cite>].
+              </p>
+            </td>
+            <td>
+              <p><code>rdfs:Literal</code></p>
+            </td>
+            <td>
+              <p><a class="sec-ref" href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">§&nbsp;<bdi
+                    class="secno">3.3 </bdi>Literals</a> [<cite><a class="bibref" data-link-type="biblio"
+                    href="#bib-rdf11-concepts" title="RDF 1.1 Concepts and Abstract Syntax">RDF11-CONCEPTS</a></cite>]
+              </p>
+            </td>
+          </tr>
+          <tr class="class mandatory" id="resource">
+            <td>
+              <p>Resource</p>
+            </td>
+            <td>
+              <p>Anything described by RDF.</p>
+            </td>
+            <td>
+              <p><code>rdfs:Resource</code></p>
+            </td>
+            <td>
+              <p><a class="sec-ref" href="https://www.w3.org/TR/rdf-schema/#ch_resource">§&nbsp;<bdi class="secno">2.1
+                  </bdi>rdfs:Resource</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf-schema"
+                    title="RDF Schema 1.1">RDF-SCHEMA</a></cite>]</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="recommended-classes">
+      <h3>Recommended Classes</h3>
+
+      <table class="simple" id="table-recommended-classes">
+        <thead>
+          <tr>
+            <th>
+              <p>Class name</p>
+            </th>
+            <th>
+              <p>Usage note for the Application Profile</p>
+            </th>
+            <th>
+              <p>URI</p>
+            </th>
+            <th>
+              <p>Reference</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="class recommended" id="concept">
+            <td>
+              <a href="#properties-for-concept">Concept</a>
+            </td>
+            <td>
+              <p>A subject of a Catalogue, Dataset, or Data Service.</p>
+            </td>
+            <td>
+              <p><code>skos:Concept</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Concept">§&nbsp;<bdi class="secno">6.11</bdi>Class:
+                  Concept</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dcat-3"
+                    title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]</p>
+            </td>
+          </tr>
+          <tr class="class recommended" id="concept-scheme">
+            <td>
+              <a href="#properties-for-concept-scheme">Concept scheme</a>
+            </td>
+            <td>
+              <p>A concept collection (e.g. controlled vocabulary) in which the Concept is defined.</p>
+            </td>
+            <td>
+              <p><code>skos:ConceptScheme</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Concept_Scheme">§&nbsp;<bdi class="secno">6.10
+                  </bdi>Class: Concept Scheme</a> [<cite><a class="bibref" data-link-type="biblio"
+                    href="#bib-vocab-dcat-3" title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]
+              </p>
+            </td>
+          </tr>
+          <tr class="class recommended" id="distribution">
+            <td>
+              <a href="#properties-for-distribution">Distribution</a>
+            </td>
+            <td>
+              <p>A physical embodiment of the Dataset in a particular format.</p>
+            </td>
+            <td>
+              <p><code>dcat:Distribution</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution">§&nbsp;<bdi class="secno">6.8
+                  </bdi>Class: Distribution</a> [<cite><a class="bibref" data-link-type="biblio"
+                    href="#bib-vocab-dcat-3" title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]
+              </p>
+            </td>
+          </tr>
+          <tr class="class recommended" id="licence-document">
+            <td>
+              <a href="#properties-for-licence-document">Licence Document</a>
+            </td>
+            <td>
+              <p>A legal document giving official permission to do something with a resource.</p>
+            </td>
+            <td>
+              <p><code>dct:LicenseDocument</code></p>
+            </td>
+            <td>
+              <p><a
+                  href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-LicenseDocument">§&nbsp;Term
+                  name: LicenseDocument</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
+                    title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="optional-classes">
+      <h3>Optional Classes</h3>
+
+      <table class="simple" id="table-optional-classes">
+        <thead>
+          <tr>
+            <th>
+              <p>Class name</p>
+            </th>
+            <th>
+              <p>Usage note for the Application Profile</p>
+            </th>
+            <th>
+              <p>URI</p>
+            </th>
+            <th>
+              <p>Reference</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="class optional ap-ext" id="activity">
+            <td>
+              <p>+<a href="#properties-for-activity">Activity</a></p>
+            </td>
+            <td>
+              <p>An activity carried out by an Agent over an entity, according to a plan, and generating another entity.
+              </p>
+              <p>In DCAT-US, this class <em class="rfc2119">SHOULD</em> be used to specify a testing activity over a
+                resource, against a given Standard, producing as output a conformance degree.</p>
+            </td>
+            <td>
+              <p><code>prov:Activity</code></p>
+            </td>
+            <td>
+              <p>
+                <a href="https://www.w3.org/TR/prov-o/#Activity">§&nbsp;(2) Class: prov:Activity</a> [<cite><a
+                    class="bibref" data-link-type="biblio" href="#bib-prov-o"
+                    title="PROV-O: The PROV Ontology">PROV-O</a></cite>];
+                <a class="src-ref" href="https://www.w3.org/TR/vocab-dcat-3/#quality-conformance-degree">§&nbsp;<bdi
+                    class="secno">12.2.2 </bdi>Relationships between datasets and agents</a> [<cite><a class="bibref"
+                    data-link-type="biblio" href="#bib-vocab-dcat-3"
+                    title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]
+              </p>
+            </td>
+          </tr>
+
+          <tr class="class optional ap-ext" id="address-agent">
+            <td>
+              <p>+<a href="#properties-for-address-agent">Address (Agent)</a></p>
+            </td>
+            <td>
+              <p>A postal address of the Agent.</p>
+            </td>
+            <td>
+              <p><code>locn:Address</code></p>
+            </td>
+            <td>
+              <p><a href="http://www.w3.org/ns/locn#locn:Address">§&nbsp;Class Address</a> [<cite><a class="bibref"
+                    data-link-type="biblio" href="#bib-locn"
+                    title="ISA Programme Location Core Vocabulary">LOCN</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional ap-ext" id="address-kind">
+            <td>
+              <p>+<a href="#properties-for-address-kind">Address (Kind)</a></p>
+            </td>
+            <td>
+              <p>A postal address of the Kind.</p>
+            </td>
+            <td>
+              <p><code>vcard:Address</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.w3.org/TR/vcard-rdf/#d4e1292">§&nbsp;Address</a> [<cite><a class="bibref"
+                    data-link-type="biblio" href="#bib-vcard-rdf"
+                    title="vCard Ontology - for describing People and Organizations">VCARD-RDF</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional ap-ext" id="attribution">
+            <td>
+              <p>+<a href="#properties-for-attribution">Attribution</a></p>
+            </td>
+            <td>
+              <p>A responsibility of an Agent for a resource.</p>
+            </td>
+            <td>
+              <p><code>prov:Attribution</code></p>
+            </td>
+            <td>
+              <p>
+                <a href="https://www.w3.org/TR/prov-o/#Attribution">§&nbsp;(50) Class: prov:Attribution</a> [<cite><a
+                    class="bibref" data-link-type="biblio" href="#bib-prov-o"
+                    title="PROV-O: The PROV Ontology">PROV-O</a></cite>];
+                <a class="src-ref" href="https://www.w3.org/TR/vocab-dcat-3/#qualified-attribution">§&nbsp;<bdi
+                    class="secno">13.1 </bdi>Relationships between datasets and agents</a> [<cite><a class="bibref"
+                    data-link-type="biblio" href="#bib-vocab-dcat-3"
+                    title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]
+              </p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="catalogue-record">
+            <td>
+              <a href="#properties-for-catalogue-record">Catalogue Record</a>
+            </td>
+            <td>
+              <p>A description of a Catalogue's, Data Service's, or Dataset's entry in the Catalogue.</p>
+            </td>
+            <td>
+              <p><code>dcat:CatalogRecord</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog_Record">§&nbsp;<bdi class="secno">6.5
+                  </bdi>Class: Catalog Record</a> [<cite><a class="bibref" data-link-type="biblio"
+                    href="#bib-vocab-dcat-3" title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]
+              </p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="checksum">
+            <td>
+              <a href="#properties-for-checksum">Checksum</a>
+            </td>
+            <td>
+              <p>A value that allows the contents of a file to be authenticated. This class allows the results of a
+                variety of checksum and cryptographic message digest algorithms to be represented.</p>
+            </td>
+            <td>
+              <p><code>spdx:Checksum</code></p>
+            </td>
+            <td>
+              <p><a class="sec-ref" href="http://spdx.org/rdf/terms#d4e1930">§&nbsp;checksum</a> [<cite><a
+                    class="bibref" data-link-type="biblio" href="#bib-spdx" title="SPDX 2.2">SPDX</a></cite>]</p>
+            </td>
+          </tr>
+          <tr class="class optional" id="contact">
+            <td>
+              <a href="#properties-for-contact">Contact</a>
+            </td>
+            <td>
+              <p>A description following the [<cite><a class="bibref" data-link-type="biblio" href="#bib-vcard-rdf"
+                    title="vCard Ontology - for describing People and Organizations">VCARD-RDF</a></cite>]
+                specification, e.g. to provide telephone number and e-mail address for a contact point using
+                <code>vcard:Contact</code> .
+            </td>
+            <td>
+              <p><code>vcard:Contact</code></p>
+            </td>
+            <td>
+              <p><a class="sec-ref" href="https://www.w3.org/TR/vcard-rdf/#d4e1508">§&nbsp;Contact</a> [<cite><a
+                    class="bibref" data-link-type="biblio" href="#bib-vcard-rdf"
+                    title="vCard Ontology - for describing People and Organizations">VCARD-RDF</a></cite>]</p>
+            </td>
+          </tr>
+          <tr class="class optional" id="data-service">
+            <td>
+              <a href="#properties-for-data-service">Data Service</a>
+            </td>
+            <td>
+              <p>A collection of operations that provides access to one or more datasets or data processing functions.
+              </p>
+            </td>
+            <td>
+              <p><code>dcat:DataService</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">§&nbsp;<bdi class="secno">6.8
+                  </bdi>Class: Data Service</a> [<cite><a class="bibref" data-link-type="biblio"
+                    href="#bib-vocab-dcat-3" title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]
+              </p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="document">
+            <td>
+              <a href="#properties-for-document">Document</a>
+            </td>
+            <td>
+              <p>A textual resource intended for human consumption that contains information, e.g., a Web page about a
+                Dataset.</p>
+            </td>
+            <td>
+              <p><code>foaf:Document</code></p>
+            </td>
+            <td>
+              <p><a class="sec-ref" href="http://xmlns.com/foaf/spec#term_Document">§&nbsp;Class: foaf:Document</a>
+                [<cite><a class="bibref" data-link-type="biblio" href="#bib-foaf"
+                    title="FOAF Vocabulary Specification 0.99 (Paddington Edition)">FOAF</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="frequency">
+            <td>
+              <p>Frequency</p>
+            </td>
+            <td>
+              <p>A rate at which something recurs, e.g., the publication of a Dataset.</p>
+            </td>
+            <td>
+              <p><code>dct:Frequency</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Frequency">§&nbsp;Term
+                  name: Frequency</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
+                    title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="identifier">
+            <td>
+              <a href="#properties-for-identifier">Identifier</a>
+            </td>
+            <td>
+              <p>An identifier in a particular context, consisting of the string that is the identifier; an optional
+                identifier for the identifier scheme; an optional identifier for the version of the identifier scheme;
+                an optional identifier for the agency that manages the identifier scheme</p>
+            </td>
+            <td>
+              <p><code>adms:Identifier</code></p>
+            </td>
+            <td>
+              <p><a class="sec-ref" href="https://www.w3.org/TR/vocab-adms/#identifier">§&nbsp;<bdi class="secno">5.2.6
+                  </bdi>Identifier</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-adms"
+                    title="Asset Description Metadata Schema (ADMS)">VOCAB-ADMS</a></cite>]</p>
+            </td>
+          </tr>
+
+
+
+          <tr class="class optional" id="linguistic-system">
+            <td>
+              <p>Linguistic system</p>
+            </td>
+            <td>
+              <p>A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language</p>
+            </td>
+            <td>
+              <p><code>dct:LinguisticSystem</code></p>
+            </td>
+            <td>
+              <p><a
+                  href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-LinguisticSystem">§&nbsp;Term
+                  name: LinguisticSystem</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
+                    title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="location">
+            <td>
+              <a href="#properties-for-location">Location</a>
+            </td>
+            <td>
+              <p>A spatial region or named place. It can be represented using a controlled vocabulary or with geographic
+                coordinates.
+
+              </p>
+            </td>
+            <td>
+              <p><code>dct:Location</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Location">§&nbsp;Term
+                  name: Location</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
+                    title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="media-type">
+            <td>
+              <p><a href="#properties-for-media-type">Media type</a></p>
+            </td>
+            <td>
+              <p>A media type, e.g. the format of a computer file.</p>
+            </td>
+            <td>
+              <p><code>dct:MediaType</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-MediaType">§&nbsp;Term
+                  name: MediaType</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
+                    title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional ap-ext" id="metric">
+            <td>
+              <p>+<a href="#properties-for-metric">Metric</a></p>
+            </td>
+            <td>
+              <p>Represents a standard to measure a quality dimension. An observation (instance of
+                <code>dqv:QualityMeasurement</code>) assigns a value in a given unit to a Metric.
+              </p>
+              <p>In DCAT-US, this class is used to define individuals corresponding to the different types of spatial
+                resolution.</p>
+            </td>
+            <td>
+              <p><code>dqv:Metric</code></p>
+            </td>
+            <td>
+              <p><a class="src-ref" href="https://www.w3.org/TR/vocab-dqv/#dqv:Metric">§&nbsp;<bdi class="secno">4.2
+                  </bdi>Class: Metric</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dqv"
+                    title="Data on the Web Best Practices: Data Quality Vocabulary">VOCAB-DQV</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="period-of-time">
+            <td>
+              <a href="#properties-for-period-of-time">Period of time</a>
+            </td>
+            <td>
+              <p>An interval of time that is named or defined by its start and end dates.</p>
+            </td>
+            <td>
+              <p><code>dct:PeriodOfTime</code></p>
+            </td>
+            <td>
+              <p><a
+                  href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-PeriodOfTime">§&nbsp;Term
+                  name: PeriodOfTime</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
+                    title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="provenance-statement">
+            <td>
+              <a href="#properties-for-provenance-statement">Provenance Statement</a>
+            </td>
+            <td>
+              <p>A statement of any changes in ownership and custody of a resource since its creation that are
+                significant for its authenticity, integrity, and interpretation</p>
+            </td>
+            <td>
+              <p><code>dct:ProvenanceStatement</code></p>
+            </td>
+            <td>
+              <p><a
+                  href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-ProvenanceStatement">§&nbsp;Term
+                  name: ProvenanceStatement</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
+                    title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="publisher-type">
+            <td>
+              <p>Publisher type</p>
+            </td>
+            <td>
+              <p>A type of organisation that acts as a publisher</p>
+            </td>
+            <td>
+              <p><code>skos:Concept</code></p>
+            </td>
+            <td>
+              <p><a class="sec-ref" href="https://www.w3.org/TR/vocab-adms/#dcterms-type">§&nbsp;<bdi
+                    class="secno">5.3.41 </bdi>dcterms:type</a> [<cite><a class="bibref" data-link-type="biblio"
+                    href="#bib-vocab-adms" title="Asset Description Metadata Schema (ADMS)">VOCAB-ADMS</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional ap-ext" id="quality-measurement">
+            <td>
+              <p>+<a href="#properties-for-quality-measurement">Quality Measurement</a></p>
+            </td>
+            <td>
+              <p>Represents the evaluation of a given resource (as a Data Service, Dataset, or Distribution) against a
+                specific quality metric.</p>
+              <p>[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-19115"
+                    title="Geographic information -- Metadata">ISO-19115</a></cite>], and [<cite><a class="bibref"
+                    data-link-type="biblio" href="#bib-iso-19115-1"
+                    title="Geographic information -- Metadata -- Part 1: Fundamentals">ISO-19115-1</a></cite>].</p>
+            </td>
+            <td>
+              <p><code>dqv:QualityMeasurement</code></p>
+            </td>
+            <td>
+              <p><a class="src-ref" href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement">§&nbsp;<bdi
+                    class="secno">4.1 </bdi>Class: Quality Measurement</a> [<cite><a class="bibref"
+                    data-link-type="biblio" href="#bib-vocab-dqv"
+                    title="Data on the Web Best Practices: Data Quality Vocabulary">VOCAB-DQV</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="relationship">
+            <td>
+              <a href="#properties-for-relationship">Relationship</a>
+            </td>
+            <td>
+              <p>An association class for attaching additional information to a relationship between DCAT Resources</p>
+            </td>
+            <td>
+              <p><code>dcat:Relationship</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Relationship">§&nbsp;<bdi class="secno">6.12
+                  </bdi>Class: Relationship</a> [<cite><a class="bibref" data-link-type="biblio"
+                    href="#bib-vocab-dcat-3" title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]
+              </p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="rights-statement">
+            <td>
+              <a href="#properties-for-rights-statement">Rights statement</a>
+            </td>
+            <td>
+              <p>A statement about the intellectual property rights (IPR) held in or over a resource, a legal document
+                giving official permission to do something with a resource, or a statement about access rights.</p>
+            </td>
+            <td>
+              <p><code>dct:RightsStatement</code></p>
+            </td>
+
+            <td>
+              <p><a
+                  href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-RightsStatement">§&nbsp;Term
+                  name: RightsStatement</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
+                    title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+            </td>
+          </tr>
+          <tr class="class optional" id="role">
+            <td>
+              <p>Role</p>
+            </td>
+            <td>
+              <p>A role is the function of a resource or agent with respect to another resource, in the context of
+                resource attribution or resource relationships.</p>
+              <p>Note it is a subclass of <code>skos:Concept</code>.</p>
+            </td>
+            <td>
+              <p><code>dcat:Role</code></p>
+            </td>
+            <td>
+              <p><a class="src-ref" href="https://www.w3.org/TR/vocab-dcat-3/#Class:Role">§&nbsp;<bdi class="secno">6.13
+                  </bdi>Class: Role</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dcat-3"
+                    title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="standard">
+            <td>
+              <a href="#properties-for-standard">Standard</a>
+            </td>
+            <td>
+              <p>A standard or other specification to which a Catalogue, Catalogue Record, Data Service, Dataset, or
+                Distribution conforms.</p>
+            </td>
+            <td>
+              <p><code>dct:Standard</code></p>
+            </td>
+            <td>
+              <p><a href="http://purl.org/dc/terms/Standard">§&nbsp;Term
+                  name: Standard</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
+                    title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+            </td>
+          </tr>
+
+          <tr class="class optional" id="status">
+            <td>
+              <p>Status</p>
+            </td>
+            <td>
+              <p>An indication of the maturity of a Distribution or the type of change of a Catalogue Record.</p>
+            </td>
+            <td>
+              <p><code>skos:Concept</code></p>
+            </td>
+            <td>
+              <p><a class="src-ref" href="https://www.w3.org/TR/vocab-adms/#status">§&nbsp;<bdi class="secno">5.2.13
+                  </bdi>Status</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-adms"
+                    title="Asset Description Metadata Schema (ADMS)">VOCAB-ADMS</a></cite>]</p>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </section>
+  </section>
   <section id="properties-per-class">
-    <h2>DCAT-US: Properties per Class</h2>
+    <h2>Application Profile Properties per Class</h2>
     <section id="notation">
       <h3>Notation</h3>
       <ul>
@@ -637,7 +1328,7 @@
         <li><strong>CV</strong> (“Controlled Vocabulary”): defines which controlled vocabulary SHOULD be used.</li>
       </ul>
     </section>
-    <section id="foaf:Agent">
+    <section id="properties-for-agent">
       <h2>Class: Agent</h2>
       <p>TODO</p>
       <table class="def">
@@ -727,7 +1418,7 @@
         <h3>Optional Properties</h3>
       </section>
     </section>
-    <section id="prov:Attribution">
+    <section id="properties-for-attribution">
       <h2>Class: Attribution</h2>
       <p>
       </p>
@@ -861,7 +1552,7 @@
         </aside>
       </section>
     </section>
-    <section id="Class:Catalog">
+    <section id="properties-for-catalog">
       <h3>Class: Catalog</h3>
       <p>
         A Catalogue or repository that hosts the Datasets or Data Services being described.
@@ -1827,7 +2518,7 @@
       </section>
     </section>
     <!-- Contact-->
-    <section id="vcard:Contact">
+    <section id="properties-for-contact">
       <h2>Class: Contact</h2>
       <p>
       </p>
@@ -1959,8 +2650,8 @@
         </aside>
       </section>
     </section>
-
-    <section id="skos:Concept">
+    <!-- skos:Concept-->
+    <section id="properties-for-concept">
       <h2>Class: Concept</h2>
       <p>
       </p>
@@ -2092,9 +2783,9 @@
         </aside>
       </section>
     </section>
+    <!-- skos:ConceptScheme -->
 
-
-    <section id="skos:ConceptScheme">
+    <section id="properties-for-concept-scheme">
       <h2>Class: Concept Scheme</h2>
       <p>
       </p>
@@ -2228,8 +2919,8 @@
         </aside>
       </section>
     </section>
-
-    <section id="Class:Data_Service">
+    <!-- dcat:DataService-->
+    <section id="properties-for-data-service">
       <h2>Class: Data Service</h2>
 
       <p>
@@ -2863,7 +3554,8 @@
         </aside>
       </section>
     </section>
-    <section id="Class:Dataset">
+    <!-- dcat:Dataset-->
+    <section id="properties-for-dataset">
       <h2>Class: Dataset</h2>
       <p>A Dataset is a collection of data, published or curated by a single source and related by a common
         idea or concept. In contrast to a Data Service a Dataset is expected to be a collection of data that is
@@ -4396,7 +5088,8 @@
         </aside>
       </section>
     </section>
-    <section id="Class:Distribution">
+    <!-- dcat:Distribution-->
+    <section id="properties-for-distribution">
       <h2>Class: Distribution</h2>
       <p>A metadata entry of this class describes a distribution of the data, which is a specific representation
         of a Dataset. A Dataset might be available in multiple serializations that may differ in various ways,
@@ -5677,7 +6370,8 @@
         </aside>
       </section>
     </section>
-    <section id="dcat-us:GeographicBoundingBox">
+    <!-- dcat-us:GeographicBoundingBox-->
+    <section id="properties-for-geographic-bbox">
       <h2>Class: Geographic Bounding Box</h2>
       <p>GeographicBoundingBox describes the spatial extent of domain of application of an resource and is standardized
         in WGS 84 Lat/Long coordinate system.
@@ -5914,7 +6608,8 @@
         </aside>
       </section>
     </section>
-    <section id="dct:Location">
+    <!-- dct:Location-->
+    <section id="properties-for-location">
       <h2>Class: Location</h2>
       <p>
       </p>
@@ -5984,7 +6679,8 @@
         <pre data-include-format="text" data-include="./examples/dataset/location.ttl"></pre>
       </aside>
     </section>
-    <section id="org:Organization">
+    <!-- org:Organization -->
+    <section id="properties-for-organization">
       <h2>Class: Organization</h2>
       <p>TODO</p>
       <table class="def">
@@ -6202,7 +6898,8 @@
       </section>
 
     </section>
-    <section id="dct:PeriodOfTime">
+    <!-- dct:PeriodOfTime-->
+    <section id="properties-for-period-of-time">
       <h2>Class: Period of Time</h2>
       <p>PeriodOfTime represents a period of time with a start date and an
         end.
@@ -6338,8 +7035,8 @@
       </section>
 
     </section>
-
-    <section id="foaf:Person">
+    <!-- foaf:Person -->
+    <section id="properties-for-person">
       <h2>Class: Person</h2>
       <p>TODO</p>
 
@@ -6540,8 +7237,8 @@
         </aside>
       </section>
     </section>
-
-    <section id="dcat:Relationship">
+    <!-- dcat:Relationship-->
+    <section id="properties-for-relationship">
       <h2>Class: Relationship</h2>
       <p>
       </p>
@@ -6554,30 +7251,33 @@
           <th class="prop">Definition: </th>
           <td>An association class for attaching additional information to a relationship between DCAT Resources</td>
         </tr>
-        <tr><th class="prop">Usage note:</th><td>
-          Use to characterize a relationship between datasets, and potentially other resources, where the nature of the relationship is known but is not adequately characterized by the standard [[?DCTERMS]] properties
-          (<a href="http://purl.org/dc/terms/hasPart"><code>dcterms:hasPart</code></a>,
-          <a href="http://purl.org/dc/terms/isPartOf"><code>dcterms:isPartOf</code></a>,
-          <a href="http://purl.org/dc/terms/conformsTo"><code>dcterms:conformsTo</code></a>,
-          <a href="http://purl.org/dc/terms/isFormatOf"><code>dcterms:isFormatOf</code></a>,
-          <a href="http://purl.org/dc/terms/hasFormat"><code>dcterms:hasFormat</code></a>,
-          <a href="http://purl.org/dc/terms/isVersionOf"><code>dcterms:isVersionOf</code></a>,
-          <a href="http://purl.org/dc/terms/hasVersion"><code>dcterms:hasVersion</code></a>,
-          <a href="http://purl.org/dc/terms/replaces"><code>dcterms:replaces</code></a>,
-          <a href="http://purl.org/dc/terms/isReplacedBy"><code>dcterms:isReplacedBy</code></a>,
-          <a href="http://purl.org/dc/terms/references"><code>dcterms:references</code></a>,
-          <a href="http://purl.org/dc/terms/isReferencedBy"><code>dcterms:isReferencedBy</code></a>,
-          <a href="http://purl.org/dc/terms/requires"><code>dcterms:requires</code></a>,
-          <a href="http://purl.org/dc/terms/isRequiredBy"><code>dcterms:isRequiredBy</code></a>)
-          or [[?PROV-O]] properties
-          (<a data-cite="PROV-O#wasDerivedFrom"><code>prov:wasDerivedFrom</code></a>,
-          <a data-cite="PROV-O#wasInfluencedBy"><code>prov:wasInfluencedBy</code></a>,
-          <a data-cite="PROV-O#wasQuotedFrom"><code>prov:wasQuotedFrom</code></a>,
-          <a data-cite="PROV-O#wasRevisionOf"><code>prov:wasRevisionOf</code></a>,
-          <a data-cite="PROV-O#hadPrimarySource"><code>prov:hadPrimarySource</code></a>,
-          <a data-cite="PROV-O#alternateOf"><code>prov:alternateOf</code></a>,
-          <a data-cite="PROV-O#specializationOf"><code>prov:specializationOf</code></a>)
-        </td>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            Use to characterize a relationship between datasets, and potentially other resources, where the nature of
+            the relationship is known but is not adequately characterized by the standard [[?DCTERMS]] properties
+            (<a href="http://purl.org/dc/terms/hasPart"><code>dcterms:hasPart</code></a>,
+            <a href="http://purl.org/dc/terms/isPartOf"><code>dcterms:isPartOf</code></a>,
+            <a href="http://purl.org/dc/terms/conformsTo"><code>dcterms:conformsTo</code></a>,
+            <a href="http://purl.org/dc/terms/isFormatOf"><code>dcterms:isFormatOf</code></a>,
+            <a href="http://purl.org/dc/terms/hasFormat"><code>dcterms:hasFormat</code></a>,
+            <a href="http://purl.org/dc/terms/isVersionOf"><code>dcterms:isVersionOf</code></a>,
+            <a href="http://purl.org/dc/terms/hasVersion"><code>dcterms:hasVersion</code></a>,
+            <a href="http://purl.org/dc/terms/replaces"><code>dcterms:replaces</code></a>,
+            <a href="http://purl.org/dc/terms/isReplacedBy"><code>dcterms:isReplacedBy</code></a>,
+            <a href="http://purl.org/dc/terms/references"><code>dcterms:references</code></a>,
+            <a href="http://purl.org/dc/terms/isReferencedBy"><code>dcterms:isReferencedBy</code></a>,
+            <a href="http://purl.org/dc/terms/requires"><code>dcterms:requires</code></a>,
+            <a href="http://purl.org/dc/terms/isRequiredBy"><code>dcterms:isRequiredBy</code></a>)
+            or [[?PROV-O]] properties
+            (<a data-cite="PROV-O#wasDerivedFrom"><code>prov:wasDerivedFrom</code></a>,
+            <a data-cite="PROV-O#wasInfluencedBy"><code>prov:wasInfluencedBy</code></a>,
+            <a data-cite="PROV-O#wasQuotedFrom"><code>prov:wasQuotedFrom</code></a>,
+            <a data-cite="PROV-O#wasRevisionOf"><code>prov:wasRevisionOf</code></a>,
+            <a data-cite="PROV-O#hadPrimarySource"><code>prov:hadPrimarySource</code></a>,
+            <a data-cite="PROV-O#alternateOf"><code>prov:alternateOf</code></a>,
+            <a data-cite="PROV-O#specializationOf"><code>prov:specializationOf</code></a>)
+          </td>
         </tr>
       </table>
 
@@ -6597,7 +7297,7 @@
           <tr>
             <td><a href="#relationship-relation">agent</a></td>
             <td><a href="http://purl.org/dc/terms/relation"><code>dcterms:relation</code></a></td>
-        
+
             <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code></code></a>
             </td>
             <td><strong>M</strong></td>
