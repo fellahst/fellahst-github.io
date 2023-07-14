@@ -7391,6 +7391,142 @@
         </aside>
       </section>
     </section>
+    <section id="properties-for-standard">
+       <h2>Class: Standard</h2>
+        <p>
+        </p>
+        <table class="def" id="table-class-standard">
+          <tr>
+            <th>RDF Class:</th>
+            <td><a data-cite="DCTerms#terms_Standard"><code>dct:Standard</code></a></td>
+          </tr>
+          <tr>
+            <th>Obligation</th>
+            <td>Optional</td>
+          </tr>
+          <tr>
+            <th class="prop">Definition: </th>
+            <td></td>
+          </tr>
+          <tr>
+            <th class="prop">Usage note:</th>
+            <td>A standard or other specification to which a Catalogue, Catalogue Record, Data Service, Dataset, or Distribution conforms</td>
+             
+          </tr>
+          <tr>
+            <th>Reference</th>
+            <td>
+            <p><a data-cite="DCTERMS#terms-Standard">§&nbsp;Term name: Standard</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+            </td></tr>
+        </table>
+
+        <p><strong>Properties Summary</strong></p>
+
+        <table class="simple">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>URI</th>
+              <th>Range</th>
+              <th>ReqLevel</th>
+              <th>Card</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#standard-description">description</a></td>
+              <td><a href="http://purl.org/dc/terms/description"><code>dcterms:description</code></a></td>
+              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+              </td>
+              <td><strong>R</strong></td>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <td><a href="#standard-identifier">identifier</a></td>
+              <td><a href="http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a></td>
+              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+              </td>
+              <td><strong>R</strong></td>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <td><a href="#standard-issued">issued</a></td>
+              <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a></td>
+              <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
+              </td>
+              <td><strong>R</strong></td>
+              <td>0..1</td>
+            </tr>
+            <tr>
+              <td><a href="#standard-title">title</a></td>
+              <td><a href="http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
+              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+              </td>
+              <td><strong>R</strong></td>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <td><a href="#standard-type">type</a></td>
+              <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a></td>
+              <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a></td>
+              </td>
+              <td><strong>R</strong></td>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <td><a href="#standard-version">version</a></td>
+              <td><a href="http://purl.org/dc/terms/version"><code>dcterms:version</code></a></td>
+              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+              </td>
+              <td><strong>R</strong></td>
+              <td>0..1</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <section id="recommended-properties-for-standard">
+          <h4>Recommended Properties</h4>
+          <section id="standard-description">
+            <h4>Property: relation</h4>
+            <table class="def" id="table-recommended-properties-for-standard">
+              <tbody>
+                <tr>
+                  <th>Property</th>
+                  <td>description</td>
+                </tr>
+                <tr>
+                  <th>Requirement level</th>
+                  <td>Recommended</td>
+                </tr>
+                <tr>
+                  <th>Cardinality</th>
+                  <td>0..n</td>
+                </tr>
+                <tr>
+                  <th>URI</th>
+                  <td><a href="http://purl.org/dc/terms/description"><code>dcterms:description</code></a></td>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Range</th>
+                  <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+                </tr>
+                <tr>
+                  <th>Definition</th>
+                  <td>This property contains a free-text account of the Standard. This property can be repeated for parallel language versions of the description - see <a class="no-secRef sec-ref" href="#accessibility-and-multilingual-aspects">§&nbsp;<bdi class="secno">9. </bdi>Accessibility and Multilingual Aspects</a></p>                    .</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          
+        </section>
+        <section id="relationship-example">
+          <h4>Example</h4>
+          <aside class="example" title="Usage of dcat:Relationship">
+            <pre data-include-format="text" data-include="./examples/dataset/qualified-relationship.ttl"></pre>
+          </aside>
+        </section>
+    </section>
   </section>
 
   <!-- Dereferenceable identifiers -->
