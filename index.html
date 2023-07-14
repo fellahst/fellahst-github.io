@@ -637,6 +637,133 @@
         <li><strong>CV</strong> (“Controlled Vocabulary”): defines which controlled vocabulary SHOULD be used.</li>
       </ul>
     </section>
+    <section id="prov:Attribution">
+      <h2>Class: Attribution</h2>
+      <p>
+      </p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a data-cite="PROV#Class:Attribution"><code>prov:Attribution</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#attribution-agent">agent</a></td>
+            <td><a data-cite="PROV#Property:prov_agent"><code>prov:agent</code></a>
+            </td>
+            <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><a href="#attribution-role">role</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
+            </td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Role"><code>dcat:Role</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <aside class="example" title="Usage of prov:qualifiedAttribution for dcat:Dataset">
+        <pre data-include-format="text" data-include="./examples/dataset/qualified-attribution.ttl"></pre>
+      </aside>
+      <section id="attribution-mandatory-props">
+        <h4>Mandatory Properties</h4>
+        <section id="attribution-agent">
+          <h4>Property: agent</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>agent</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="PROV#Property:prov_agent"><code>prov:agent</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="attribution-role">
+          <h4>Property: role</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>role</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB_DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB_DCAT-3#class:Role"><code>xsd:date</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </section>
     <section id="Class:Catalog">
       <h3>Class: Catalog</h3>
       <p>
@@ -646,6 +773,30 @@
         DCAT-US allows Catalogues of only Datasets, but also Catalogues of only Data Services,
         but usually it will be a mixture of both.
       </p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Catalog"><code>dcat:Catalog</code></a>
+          </td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Subclass Of:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Resource"><code>dcat:Resource</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+              <li></li>
+            </ul>
+          </td>
+        </tr>
+
+      </table>
       <table class="simple">
         <thead>
           <tr>
@@ -1568,12 +1719,146 @@
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Usage of dcat:catelog for dcat:Catalog">
+          <aside class="example" title="Usage of dcat:catalog for dcat:Catalog">
             <pre data-include-format="text" data-include="./examples/catalog/subcatalog.ttl"></pre>
           </aside>
         </section>
       </section>
     </section>
+    <!-- Contact-->
+    <section id="vcard:Contact">
+      <h2>Class: Contact</h2>
+      <p>
+      </p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="VCARD-RDF#d4e1508"><code>vcard:Contact</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td>Point of Contact information</td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#contact-fn">formatted name</a></td>
+            <td><a data-cite="VCARD-RDF#d4e891"><code>vcard:fn</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><a href="#contact-email">email</a></td>
+            <td><a data-cite="VCARD-RDF#d4e57"><code>vcard:email</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section id="contact-mandatory-props">
+        <h4>Mandatory Properties</h4>
+        <section id="contact-fn">
+          <h4>Property: formatted name</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>formatted name</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VCARD-RDF#d4e891"><code>vcard:fn</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The formatted text corresponding to the name of the contact</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="contact-email">
+          <h4>Property: email</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>email</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VCARD-RDF#d4e57"><code>vcard:email</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+      <section id="contact-example">
+        <h4>Contact Example</h4>
+        <aside class="example" title="Usage of vcard:Contact for dcat:Dataset">
+          <pre data-include-format="text" data-include="./examples/dataset/contact.ttl"></pre>
+        </aside>
+      </section>
+    </section>
+
     <section id="Class:Dataset">
       <h2>Class: Dataset</h2>
       <p>A Dataset is a collection of data, published or curated by a single source and related by a common
@@ -1587,6 +1872,30 @@
         DCAT 3 provides guidelines about the usage of Data services and Distribution in relation to Datasets
         [[DCAT-3-USAGEGUIDE]].:
       </p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a>
+          </td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Subclass Of:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Resource"><code>dcat:Resource</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+              <li></li>
+            </ul>
+          </td>
+        </tr>
+
+      </table>
       <table class="simple">
         <thead>
           <tr>
@@ -3103,6 +3412,31 @@
       <p>DCAT-AP provides guidelines about the usage of Data services and Distribution in relation to Dataset:
         [[DCAT-AP-USAGEGUIDE]].
       </p>
+
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Distribution"><code>dcat:Distribution</code></a>
+          </td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Subclass Of:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Resource"><code>dcat:Resource</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+              <li></li>
+            </ul>
+          </td>
+        </tr>
+
+      </table>
       <table class="simple">
         <thead>
           <tr>
@@ -4334,14 +4668,37 @@
     </section>
     <section id="Class:Data_Service">
       <h2>Class: Data Service</h2>
-      <p>A Data Service is a collection of operations that provides access to one or more Datasets or data
-        processing functions. If a dcat:DataService is bound to one or more specified Datasets, they are
-        indicated by the dcat:servesDataset property.
+
+      <p>
       </p>
-      <p>DCAT-AP provides guidelines about the usage of Data services and Distribution in relation to
-        Datasets:
-        [[DCAT-AP-USAGEGUIDE]].
-      </p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:DataService"><code>dcat:DataService</code></a>
+          </td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td>A Data Service is a collection of operations that provides access to one or more Datasets or data
+            processing functions. If a dcat:DataService is bound to one or more specified Datasets, they are
+            indicated by the dcat:servesDataset property.</td>
+        </tr>
+        <tr>
+          <th class="prop">Subclass Of:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Resource"><code>dcat:Resource</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+              <li>TOFIX: DCAT-AP provides guidelines about the usage of Data services and Distribution in relation to
+                Datasets:
+                [[DCAT-AP-USAGEGUIDE]].</li>
+            </ul>
+          </td>
+        </tr>
+
+      </table>
       <table class="simple">
         <thead>
           <tr>
@@ -4939,15 +5296,115 @@
         </section>
       </section>
     </section>
+    <section id="dct:Location">
+      <h2>Class: Location</h2>
+      <p>
+      </p>
+
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://purl.org/dc/terms/Location"><code
+                title="http://purl.org/dc/terms/Location">:Location</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <p>TODO</p>
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#geographic_bbox-west-bounding-longitude">centroid</a></td>
+            <td><a data-cite="DCAT-US#Property:data_service_westBoundingLongitude">
+                <code>dcat-us:westBoundingLongitude</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a></td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><a href="#geographic_bbox-east-bounding-longitude">geometry</a></td>
+            <td><a data-cite="DCAT-US#Property:data_service_eastBoundingLongitude">
+                <code>dcat-us:eastBoundingLongitude</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a></td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><a href="#geographic_bbox-south-bounding-latitude">geographicName</a></td>
+            <td><a data-cite="DCAT-US#Property:data_service_southBoundingLatitude">
+                <code>dcat-us:southBoundingLatitude</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <aside class="example" title="Usage of dct:Location in dcat:Dataset">
+        <pre data-include-format="text" data-include="./examples/dataset/location.ttl"></pre>
+      </aside>
+    </section>
     <section id="dcat-us:GeographicBoundingBox">
       <h2>Class: Geographic Bounding Box</h2>
       <p>GeographicBoundingBox describes the spatial extent of domain of application of an resource and is standardized
         in WGS 84 Lat/Long coordinate system.
       </p>
-      <p>Rationale: There is no consensus and common vocabulary to describe spatial bounding box in the community. GML
-        Envelope was proposed but it is too cumbersome to process. We introduce four separates fields for each bound
-        (west, east, north and south) that removes any ambiguity and make it easy to index and query
-      </p>
+
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://purl.org/dc/terms/Location"><code
+                title="http://purl.org/dc/terms/Location">dcat-us:GeographicBoundingBox</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td>GeographicBoundingBox describes the spatial extent of domain of application of an resource and is
+            standardized
+            in WGS 84 Lat/Long coordinate system.</td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th class="prop">Rationale</th>
+          <td>
+            <ul>
+              <li>Rationale: There is no consensus and common vocabulary to describe spatial bounding box in the
+                community. GML
+                Envelope was proposed but it is too cumbersome to process. We introduce four separates fields for each
+                bound
+                (west, east, north and south) that removes any ambiguity and make it easy to index and query</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
       <p>TODO: handling of dateTime Line</p>
       <table class="simple">
         <thead>
@@ -5147,6 +5604,28 @@
       <p>PeriodOfTime represents a period of time with a start date and an
         end.
       </p>
+
+
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://purl.org/dc/terms/PeriodOfTime"><code
+                title="http://purl.org/dc/terms/PeriodOfTime">dct:PeriodOfTime</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td>PeriodOfTime represents a period of time with a start date and an end.</td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
       <table class="simple">
         <thead>
           <tr>
@@ -5254,6 +5733,31 @@
     <section id="org:Organization">
       <h2>Class: Organization</h2>
       <p>TODO</p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://www.w3c.org/ns/org#"><code title="http://www.w3c.org/ns/org#">org:Organization</code></a>
+          </td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Subclass Of:</th>
+          <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code
+                title="http://xmlns.com/foaf/0.1/#term_Agent">foaf:Agent</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
       <table class="simple">
         <thead>
           <tr>
@@ -5337,7 +5841,8 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a href="https://www.w3.org/TR/vocab-org/#org:subOrganizationOf"><code>org:subOrganizationOf</code></a>
+                <td><a
+                    href="https://www.w3.org/TR/vocab-org/#org:subOrganizationOf"><code>org:subOrganizationOf</code></a>
                 </td>
               </tr>
               <tr>
@@ -5347,7 +5852,8 @@
               </tr>
               <tr>
                 <th>Definition</th>
-                <td>Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization.</td>
+                <td>Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an
+                  Organization which contains this Organization.</td>
               </tr>
             </tbody>
           </table>
@@ -5359,6 +5865,32 @@
     <section id="foaf:Person">
       <h2>Class: Person</h2>
       <p>TODO</p>
+
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://xmlns.com/foaf/0.1/#term_Person"><code
+                title="http://xmlns.com/foaf/0.1/#term_Person">foaf:Person</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Subclass Of:</th>
+          <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code
+                title="http://xmlns.com/foaf/0.1/#term_Agent">foaf:Agent</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
       <table class="simple">
         <thead>
           <tr>
@@ -5496,6 +6028,26 @@
     <section id="foaf:Agent">
       <h2>Class: Software Agent</h2>
       <p>TODO</p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code
+                title="http://xmlns.com/foaf/0.1/#term_Agent">foaf:Agent</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
       <table class="simple">
         <thead>
           <tr>
@@ -5599,114 +6151,7 @@
         <h3>Optional Properties</h3>
       </section>
     </section>
-    <section id="prov:Attribution">
-      <h2>Class: Attribution</h2>
-      <p>
-      </p>
-      <table class="simple">
-        <thead>
-          <tr>
-            <th>Property</th>
-            <th>URI</th>
-            <th>Range</th>
-            <th>ReqLevel</th>
-            <th>Card</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="#attribution-agent">agent</a></td>
-            <td><a data-cite="PROV#Property:prov_agent"><code>prov:agent</code></a>
-            </td>
-            <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
-            </td>
-            <td><strong>M</strong></td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td><a href="#attribution-role">role</a></td>
-            <td><a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
-            </td>
-            <td><a data-cite="VOCAB-DCAT-3#Class:Role"><code>dcat:Role</code></a>
-            </td>
-            <td><strong>M</strong></td>
-            <td>1</td>
-          </tr>
-        </tbody>
-      </table>
-      <aside class="example" title="Usage of prov:qualifiedAttribution for dcat:Dataset">
-        <pre data-include-format="text" data-include="./examples/dataset/qualified-attribution.ttl"></pre>
-      </aside>
-      <section id="attribution-mandatory-props">
-        <h4>Mandatory Properties</h4>
-        <section id="attribution-agent">
-          <h4>Property: agent</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>agent</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td>Mandatory</td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="PROV#Property:prov_agent"><code>prov:agent</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a href="http://xmlns.com/foaf/0.1/#class:Agent"><code>foaf:Agent</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Definition</th>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="attribution-role">
-          <h4>Property: role</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>role</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td>Mandatory</td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="VOCAB_DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a data-cite="VOCAB_DCAT-3#class:Role"><code>xsd:date</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Definition</th>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-      </section>
-    </section>
+
 
     <section id="Class:XXX">
       <h2>Class: XXXX</h2>
