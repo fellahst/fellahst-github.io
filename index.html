@@ -784,7 +784,7 @@
           </tr>
         </tbody>
       </table>
-     
+
       <section id="attribution-mandatory-props">
         <h4>Mandatory Properties</h4>
         <section id="attribution-agent">
@@ -843,7 +843,7 @@
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a data-cite="VOCAB_DCAT-3#class:Role"><code>xsd:date</code></a>
+                <td><a data-cite="VOCAB_DCAT-3#class:Role"><code>dcat:Role</code></a>
                 </td>
               </tr>
               <tr>
@@ -1054,7 +1054,7 @@
           </tr>
         </tbody>
       </table>
-     
+
       <section id="catalog-mandatory-props">
         <h4>Mandatory Properties</h4>
 
@@ -1953,12 +1953,282 @@
         </section>
       </section>
       <section id="contact-example">
-        <h4>Contact Example</h4>
-        <aside class="example" title="Usage of vcard:Contact for dcat:Dataset">
+        <h4>Example</h4>
+        <aside class="example" title="vcard:Contact example">
           <pre data-include-format="text" data-include="./examples/dataset/contact.ttl"></pre>
         </aside>
       </section>
     </section>
+
+    <section id="skos:Concept">
+      <h2>Class: Concept</h2>
+      <p>
+      </p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="SKOS-REFERENCE#Class:Concept"><code>skos:Concept</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#contact-fn">formatted name</a></td>
+            <td><a data-cite="VCARD-RDF#d4e891"><code>vcard:fn</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><a href="#contact-email">email</a></td>
+            <td><a data-cite="VCARD-RDF#d4e57"><code>vcard:email</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section id="contact-mandatory-props">
+        <h4>Mandatory Properties</h4>
+        <section id="contact-fn">
+          <h4>Property: formatted name</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>formatted name</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VCARD-RDF#d4e891"><code>vcard:fn</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The formatted text corresponding to the name of the contact</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="contact-email">
+          <h4>Property: email</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>email</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VCARD-RDF#d4e57"><code>vcard:email</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+      <section id="concept-example">
+        <h4>Example</h4>
+        <aside class="example" title="skos:Concept example">
+          <pre data-include-format="text" data-include="./examples/dataset/concept.ttl"></pre>
+        </aside>
+      </section>
+    </section>
+
+
+    <section id="skos:ConceptScheme">
+      <h2>Class: Concept Scheme</h2>
+      <p>
+      </p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="SKOS-REFERENCE#Class:ConceptScheme"><code>skos:ConceptScheme</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
+      <p><strong>Properties</strong></p>
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#contact-fn">formatted name</a></td>
+            <td><a data-cite="VCARD-RDF#d4e891"><code>vcard:fn</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><a href="#contact-email">email</a></td>
+            <td><a data-cite="VCARD-RDF#d4e57"><code>vcard:email</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section id="contact-mandatory-props">
+        <h4>Mandatory Properties</h4>
+        <section id="contact-fn">
+          <h4>Property: formatted name</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>formatted name</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VCARD-RDF#d4e891"><code>vcard:fn</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The formatted text corresponding to the name of the contact</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="contact-email">
+          <h4>Property: email</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>email</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VCARD-RDF#d4e57"><code>vcard:email</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property MAY be used to provide the email address specified using fully qualified mailto: URI
+                  scheme [[RFC6068]].</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+      <section id="conceptscheme-example">
+        <h4>Example</h4>
+        <aside class="example" title="Concept Scheme example">
+          <pre data-include-format="text" data-include="./examples/dataset/conceptScheme.ttl"></pre>
+        </aside>
+      </section>
+    </section>
+
     <section id="Class:Data_Service">
       <h2>Class: Data Service</h2>
 
@@ -2329,9 +2599,7 @@
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Usage of dcat:endpointDescription for dcat:DataService">
-            <pre data-include-format="text" data-include="./examples/service/endpoint-description.ttl"></pre>
-          </aside>
+
         </section>
         <section id="data-service-license">
           <h4>Property: license</h4>
@@ -2587,6 +2855,12 @@
             <pre data-include-format="text" data-include="./examples/service/landing-page.ttl"></pre>
           </aside>
         </section>
+      </section>
+      <section id="dataservice-example">
+        <h4>Example</h4>
+        <aside class="example" title="Usage of dcat:endpointDescription for dcat:DataService">
+          <pre data-include-format="text" data-include="./examples/service/endpoint-description.ttl"></pre>
+        </aside>
       </section>
     </section>
     <section id="Class:Dataset">
@@ -2882,9 +3156,7 @@
           </tr>
         </tbody>
       </table>
-      <aside class="example" id="ex-dataset" title="Dataset">
-        <pre data-include-format="text" data-include="./examples/dataset/dataset.ttl"></pre>
-      </aside>
+
       <section id="dataset-mandatory-props">
         <h4>Mandatory Properties</h4>
         <section id="dataset-title">
@@ -4117,6 +4389,12 @@
           </aside>
         </section>
       </section>
+      <section id="dataset-example">
+        <h4>Example</h4>
+        <aside class="example" id="ex-dataset" title="Dataset">
+          <pre data-include-format="text" data-include="./examples/dataset/dataset.ttl"></pre>
+        </aside>
+      </section>
     </section>
     <section id="Class:Distribution">
       <h2>Class: Distribution</h2>
@@ -4394,10 +4672,7 @@
           </tr>
         </tbody>
       </table>
-      <aside class="example" id="ex-distribution" title="Distribution that follows this specification except
-               for dct:rights that is given as it is currently implemented on data.gov">
-        <pre data-include-format="text" data-include="./examples/distribution/distribution.ttl"></pre>
-      </aside>
+
       <section id="distribution-mandatory-props">
 
         <h4>Mandatory Properties</h4>
@@ -5395,6 +5670,12 @@
           </aside>
         </section>
       </section>
+      <section id="dataset-example">
+        <h4>Example</h4>
+        <aside class="example" id="ex-distribution" title="Distribution example">
+          <pre data-include-format="text" data-include="./examples/distribution/distribution.ttl"></pre>
+        </aside>
+      </section>
     </section>
     <section id="dcat-us:GeographicBoundingBox">
       <h2>Class: Geographic Bounding Box</h2>
@@ -5485,9 +5766,7 @@
           </tr>
         </tbody>
       </table>
-      <aside class="example" title="Usage of dcat-us:GeographicBoundingBox in dcat:Dataset">
-        <pre data-include-format="text" data-include="./examples/dataset/geographicbbox.ttl"></pre>
-      </aside>
+
       <section id="geographic_bbox-mandatory-props">
         <h4>Mandatory Properties</h4>
 
@@ -5628,6 +5907,12 @@
           </table>
         </section>
       </section>
+      <section id="geographic_bbox-example">
+        <h4>Example</h4>
+        <aside class="example" title="Usage of dcat-us:GeographicBoundingBox in dcat:Dataset">
+          <pre data-include-format="text" data-include="./examples/dataset/geographicbbox.ttl"></pre>
+        </aside>
+      </section>
     </section>
     <section id="dct:Location">
       <h2>Class: Location</h2>
@@ -5705,7 +5990,8 @@
       <table class="def">
         <tr>
           <th>RDF Class:</th>
-          <td><a href="http://www.w3c.org/ns/org#"><code title="http://www.w3c.org/ns/org#">org:Organization</code></a>
+          <td><a href="http://www.w3c.org/ns/org#Organization"><code
+                title="http://www.w3c.org/ns/org#">org:Organization</code></a>
           </td>
         </tr>
         <tr>
@@ -5739,25 +6025,43 @@
         </thead>
         <tbody>
           <tr>
-            <td><a href="#agent-name">start date</a></td>
-            <td><a data-cite="FOAF-US#term_name"><code>foaf:name</code></a>
+            <td><a href="#organization-prefLabel">preferred label</a></td>
+            <td><a data-cite="SKOS-REFERENCE#prefLabel"><code>skos:prefLabel</code></a>
             </td>
             <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
             </td>
             <td><strong>M</strong></td>
             <td>1..1</td>
           </tr>
+          <tr>
+            <td><a href="#organization-altLabel">alternative label</a></td>
+            <td><a data-cite="SKOS-REFERENCE#altLabel"><code>skos:altLabel</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+            </td>
+            <td><strong>O</strong></td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#organization-notation">notation</a></td>
+            <td><a data-cite="SKOS-REFERENCE#notation"><code>skos:notation</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+            </td>
+            <td><strong>O</strong></td>
+            <td>0..n</td>
+          </tr>
         </tbody>
       </table>
       <section id="organization-mandatory-props">
         <h3>Mandatory Properties</h3>
-        <section id="person-name">
-          <h4>Property: name</h4>
+        <section id="organization-prefLabel">
+          <h4>Property: preferred label</h4>
           <table class="def">
             <tbody>
               <tr>
                 <th>Property</th>
-                <td>name</td>
+                <td>preferred label</td>
               </tr>
               <tr>
                 <th>Requirement level</th>
@@ -5769,7 +6073,7 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a href="http://xmlns.com/foaf/0.1/#term_name"><code>foaf:name</code></a>
+                <td><a data-cite="SKOS-REFERENCE#prefLabel"><code>skos:prefLabel</code></a>
                 </td>
               </tr>
               <tr>
@@ -5786,12 +6090,74 @@
         </section>
       </section>
 
-      <section id="organization-recommended-props">
-        <h3>Recommended Properties</h3>
-      </section>
-
       <section id="organization-optional-props">
         <h3>Optional Properties</h3>
+        <section id="organization-altLabel">
+          <h4>Property: alternate label</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>alternate label</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="SKOS-REFERENCE#altLabel"><code>skos:altLabel</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>alternative names (trading names, colloquial names) for an organization</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="organization-notation">
+          <h4>Property: notation</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>notation</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="SKOS-REFERENCE#notation"><code>skos:notation</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>abbreviations or codes from code lists for an organization</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
         <section id="organization-subOrganizationOf">
           <h4>Property: suborganization of</h4>
           <table class="def">
@@ -5828,7 +6194,12 @@
           </table>
         </section>
       </section>
-
+      <section id="organization-example">
+        <h4>Example</h4>
+        <aside class="example" title="org:Organization example">
+          <pre data-include-format="text" data-include="./examples/dataset/organization.ttl"></pre>
+        </aside>
+      </section>
 
     </section>
     <section id="dct:PeriodOfTime">
@@ -5889,9 +6260,7 @@
           </tr>
         </tbody>
       </table>
-      <aside class="example" title="Usage of dct:PeriodOfTime for dcat:Dataset">
-        <pre data-include-format="text" data-include="./examples/dataset/temporal.ttl"></pre>
-      </aside>
+
       <section id="period-recommended-props">
         <h4>Recommended Properties</h4>
         <section id="period_start-date">
@@ -5961,6 +6330,13 @@
           </table>
         </section>
       </section>
+      <section id="period-example">
+        <h4>Example</h4>
+        <aside class="example" title="dct:PeriodOfTime example">
+          <pre data-include-format="text" data-include="./examples/dataset/temporal.ttl"></pre>
+        </aside>
+      </section>
+
     </section>
 
     <section id="foaf:Person">
@@ -6123,10 +6499,198 @@
 
       <section id="person-optional-props">
         <h3>Optional Properties</h3>
+        <section id="person-affiliation">
+          <h4>Property: affiliation</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>name</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://www.w3c.org/ns/org#memberOf"><code>org:memberOf</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://www.w3c.org/ns/org#Organization"><code>org:Organization</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property MAY be used to specify the affiliation of the Person to an organization.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </section>
-
+      <section id="person-example">
+        <h4>Example</h4>
+        <aside class="example" title="foaf:Person example">
+          <pre data-include-format="text" data-include="./examples/dataset/person.ttl"></pre>
+        </aside>
+      </section>
     </section>
 
+    <section id="dcat:Relationship">
+      <h2>Class: Relationship</h2>
+      <p>
+      </p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Relationship"><code>dcat:Relationship</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition: </th>
+          <td>An association class for attaching additional information to a relationship between DCAT Resources</td>
+        </tr>
+        <tr><th class="prop">Usage note:</th><td>
+          Use to characterize a relationship between datasets, and potentially other resources, where the nature of the relationship is known but is not adequately characterized by the standard [[?DCTERMS]] properties
+          (<a href="http://purl.org/dc/terms/hasPart"><code>dcterms:hasPart</code></a>,
+          <a href="http://purl.org/dc/terms/isPartOf"><code>dcterms:isPartOf</code></a>,
+          <a href="http://purl.org/dc/terms/conformsTo"><code>dcterms:conformsTo</code></a>,
+          <a href="http://purl.org/dc/terms/isFormatOf"><code>dcterms:isFormatOf</code></a>,
+          <a href="http://purl.org/dc/terms/hasFormat"><code>dcterms:hasFormat</code></a>,
+          <a href="http://purl.org/dc/terms/isVersionOf"><code>dcterms:isVersionOf</code></a>,
+          <a href="http://purl.org/dc/terms/hasVersion"><code>dcterms:hasVersion</code></a>,
+          <a href="http://purl.org/dc/terms/replaces"><code>dcterms:replaces</code></a>,
+          <a href="http://purl.org/dc/terms/isReplacedBy"><code>dcterms:isReplacedBy</code></a>,
+          <a href="http://purl.org/dc/terms/references"><code>dcterms:references</code></a>,
+          <a href="http://purl.org/dc/terms/isReferencedBy"><code>dcterms:isReferencedBy</code></a>,
+          <a href="http://purl.org/dc/terms/requires"><code>dcterms:requires</code></a>,
+          <a href="http://purl.org/dc/terms/isRequiredBy"><code>dcterms:isRequiredBy</code></a>)
+          or [[?PROV-O]] properties
+          (<a data-cite="PROV-O#wasDerivedFrom"><code>prov:wasDerivedFrom</code></a>,
+          <a data-cite="PROV-O#wasInfluencedBy"><code>prov:wasInfluencedBy</code></a>,
+          <a data-cite="PROV-O#wasQuotedFrom"><code>prov:wasQuotedFrom</code></a>,
+          <a data-cite="PROV-O#wasRevisionOf"><code>prov:wasRevisionOf</code></a>,
+          <a data-cite="PROV-O#hadPrimarySource"><code>prov:hadPrimarySource</code></a>,
+          <a data-cite="PROV-O#alternateOf"><code>prov:alternateOf</code></a>,
+          <a data-cite="PROV-O#specializationOf"><code>prov:specializationOf</code></a>)
+        </td>
+        </tr>
+      </table>
+
+      <p><strong>Properties Summary</strong></p>
+
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#relationship-relation">agent</a></td>
+            <td><a href="http://purl.org/dc/terms/relation"><code>dcterms:relation</code></a></td>
+        
+            <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code></code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><a href="#relationship_hadRole">role</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
+            </td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Role"><code>dcat:Role</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section id="relationship-mandatory-props">
+        <h4>Mandatory Properties</h4>
+        <section id="relationship-relation">
+          <h4>Property: relation</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>relation</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/relation"><code>dcterms:relation</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code></code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The resource related to the source resource.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="relationship_hadRole">
+          <h4>Property: role</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>role</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Role"><code>dcat:Role</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The function of an entity or agent with respect to another entity or resource.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+      <section id="relationship-example">
+        <h4>Example</h4>
+        <aside class="example" title="Usage of dcat:Relationship">
+          <pre data-include-format="text" data-include="./examples/dataset/qualified-relationship.ttl"></pre>
+        </aside>
+      </section>
+    </section>
   </section>
 
   <!-- Dereferenceable identifiers -->
