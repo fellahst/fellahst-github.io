@@ -20,4 +20,6 @@
     # optional properties
     dct:created "01-01-1981"^^xsd:date
     dct:modified "2023-07-04T08:24:42Z"^^xsd:dateTime;
+    dct:issued "2023-07"^^xsd:gYearMonth;
+    dct:version "2023-07";
 .
