@@ -2818,8 +2818,8 @@
       </section>
       <section id="concept-example">
         <h4>Example</h4>
-        <aside class="example" title="skos:Concept example">
-          <pre data-include-format="text" data-include="./examples/dataset/concept.ttl"></pre>
+        <aside class="example" title="GCMD skos:Concept example">
+          <pre data-include-format="text" data-include="./examples/concept.ttl"></pre>
         </aside>
       </section>
     </section>
@@ -2892,7 +2892,7 @@
             <td><a href="#concept-scheme-created">created</a></td>
             <td><a href="http://purl.org/dc/terms/created"><code>dcterms:created</code></a>
             </td>
-            <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>xsd:date</code></a>
             </td>
             <td><strong>O</strong></td>
             <td>0..1</td>
@@ -2901,7 +2901,7 @@
             <td><a href="#concept-scheme-issued">issued</a></td>
             <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a>
             </td>
-            <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>xsd:date</code></a>
             </td>
             <td><strong>O</strong></td>
             <td>0..1</td>
@@ -2910,7 +2910,7 @@
             <td><a href="#concept-scheme-modified">modified</a></td>
             <td><a href="http://purl.org/dc/terms/modified"><code>dcterms:modified</code></a>
             </td>
-            <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>xsd:date</code></a>
             </td>
             <td><strong>O</strong></td>
             <td>0..1</td>
@@ -3024,12 +3024,18 @@
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                  (typed as
+                  as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+                  <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+                  <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+                  or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+                </td>
                 </td>
               </tr>
               <tr>
                 <th>Definition</th>
-                <td></td>
+                <td>This property contains the date on which the Concept Scheme has been first created.</td>
               </tr>
             </tbody>
           </table>
@@ -3058,12 +3064,18 @@
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                  (typed as
+                  as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+                  <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+                  <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+                  or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+                </td>
                 </td>
               </tr>
               <tr>
                 <th>Definition</th>
-                <td></td>
+                <td>This property contains the date of formal issuance (e.g., publication) of the Concept Scheme.</td>
               </tr>
             </tbody>
           </table>
@@ -3092,12 +3104,18 @@
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                  (typed as
+                  as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+                  <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+                  <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+                  or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+                </td>
                 </td>
               </tr>
               <tr>
                 <th>Definition</th>
-                <td></td>
+                <td>This property contains the most recent date on which the Concept Scheme was changed or modified.</td>
               </tr>
             </tbody>
           </table>
@@ -3131,7 +3149,7 @@
               </tr>
               <tr>
                 <th>Definition</th>
-                <td></td>
+                <td>This property contains a version number or other version designation of the Concept Scheme.</td>
               </tr>
             </tbody>
           </table>
@@ -3139,8 +3157,11 @@
       </section>
 
       <section id="conceptscheme-example">
-        <h4>Example</h4>
-        <aside class="example" title="Concept Scheme example">
+        <h4>Examples</h4>
+        <aside class="example" title="AGROVOC Concept Scheme example">
+          <pre data-include-format="text" data-include="./examples/concept-scheme-agrovoc.ttl"></pre>
+        </aside>
+        <aside class="example" title="GCMD Concept Scheme example">
           <pre data-include-format="text" data-include="./examples/concept-scheme.ttl"></pre>
         </aside>
       </section>
