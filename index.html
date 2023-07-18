@@ -2894,7 +2894,12 @@
             <td><a href="#concept-scheme-issued">issued</a></td>
             <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a>
             </td>
-            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>xsd:date</code></a>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+              (typed as
+              as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+              <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+              <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+              or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
             </td>
             <td><strong>O</strong></td>
             <td>0..1</td>
@@ -2903,7 +2908,14 @@
             <td><a href="#concept-scheme-modified">modified</a></td>
             <td><a href="http://purl.org/dc/terms/modified"><code>dcterms:modified</code></a>
             </td>
-            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>xsd:date</code></a>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+              (typed as
+              as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+              <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+              <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+              or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+            </td>
+
             </td>
             <td><strong>O</strong></td>
             <td>0..1</td>
@@ -6794,6 +6806,120 @@
           </tr>
         </thead>
         <tbody>
+          
+          <tr>
+            <td><a href="#document-title">title</a></td>
+            <td><a href="hhttp://purl.org/dc/terms/title"><code>dcterms:title</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1..n</td>
+          </tr>
+          
+          <tr>
+            <td><a href="#document-creator">individual author</a></td>
+            <td><a href="http://purl.org/dc/terms/creator"><code>dcterms:creator</code></a>
+            </td>
+            <td><a href="http://xmlns.com/foaf/0.1/#term_Person"><code>foaf:Person</code></a>
+            </td>
+            <td><strong>O</strong></td>
+            <td>0..n</td>
+          </tr>
+          
+          <tr>
+            <td><a href="#document-creator">corporate author</a></td>
+            <td><a href="http://purl.org/dc/terms/creator"><code>dcterms:creator</code></a>
+            </td>
+            <td><a href="https://www.w3.org/TR/vocab-org/#org:Organization"><code>org:Organization</code></a>
+            </td>
+            <td><strong>O</strong></td>
+            <td>0..n</td>
+          </tr>
+
+          <tr>
+            <td><a href="#document-creator-as-literal">author(s) as literal</a></td>
+            <td><a href="http://purl.org/dc/elements/1.1/creator"><code>dc:creator</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+
+          <tr>
+            <td><a href="#document-publisher">publisher organization</a></td>
+            <td><a href="http://purl.org/dc/terms/publisher"><code>dcterms:publisher</code></a>
+            </td>
+            <td><a href="https://www.w3.org/TR/vocab-org/#org:Organization"><code>org:Organization</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+
+          <tr>
+            <td><a href="#document-publisher-as-literal">publisher(s) as literal</a></td>
+            <td><a href="http://purl.org/dc/elements/1.1/publisher"><code>dc:publisher</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+
+          <tr>
+            <td><a href="#document-identifier">identifier</a></td>
+            <td><a href="http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td><strong>R</strong></td>
+            <td>0..1</td>
+          </tr>
+
+
+          <tr>
+            <td><a href="#document-issued">publication date</a></td>
+            <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+              (typed as
+              as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+              <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+              <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+              or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+            </td>
+            <td>M</td>
+            <td>1</td>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#document-bibliographicCitation">bibliographic citation</a></td>
+            <td><a href="http://purl.org/dc/terms/bibliographicCitation"><code>dcterms:bibliographicCitation</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td><strong>R</strong></td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#document-type">document-type</a></td>
+            <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a>
+            </td>
+            <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+            </td>
+            <td><strong>R</strong></td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#document-abstract">abstract</a></td>
+            <td><a href="http://purl.org/dc/terms/abstract"><code>dcterms:abstract</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td><strong>O</strong></td>
+            <td>0..n</td>
+          </tr>
         </tbody>
       </table>
       <section id="mandatory-document-props">
@@ -7049,6 +7175,62 @@
       </section>
     </section>
 
+    <!-- adms:Identifier-->
+
+    <section id="properties-for-identifier">
+      <h2>Class: Identifier</h2>
+      <table class="def" id="table-class-identifier">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://www.w3.org/ns/adms#Identifier"><code>adms:Identifier</code></a></td>
+        </tr>
+        <tr>
+          <th>Obligation</th>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td>This is based on the UN/CEFACT Identifier class.</td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>An identifier in a particular context, consisting of the
+            <ul>
+              <li>content string that is the identifier;</li>
+              <li>an optional identifier for the identifier scheme;</li>
+              <li>an optional identifier for the version of the identifier scheme;</li>
+              <li>an optional identifier for the agency that manages the identifier scheme.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Reference</th>
+          <td>
+            <p><a href="https://semiceu.github.io/ADMS/releases/2.00/#Identifier">§&nbsp;Term name: Identifier</a>
+              [<cite><a class="bibref" data-link-type="biblio" href="#bib-adms"
+                  title="Asset Description Metadata Schema (ADMS)">ADMS</a></cite>]</p>
+          </td>
+        </tr>
+      </table>
+      <p><strong>Properties Summary</strong></p>
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+      </table>
+    </section>
+
+
     <!-- dct:LicenseDocument-->
 
     <section id="properties-for-licence-document">
@@ -7097,7 +7279,7 @@
         <tbody>
 
           <tr>
-            <td><a href="#license-document-license-text">label</a></td>
+            <td><a href="#license-document-license-text">license text</a></td>
             <td><a href="http://spdx.org/rdf/terms#licenseText"><code>spdx:licenseText</code></a>
           </td>
           <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
@@ -7110,7 +7292,7 @@
       </table>
       <section id="license-document-optional-props">
         <h3>Optional Properties</h3>
-        <section id="license-document-license-test">
+        <section id="license-document-license-text">
           <h4>Property: license text</h4>
           <table class="def">
             <tbody>
@@ -7179,7 +7361,8 @@
         <tr>
           <th class="prop">Usage note:</th>
           <td>
-             A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates.
+            A spatial region or named place. It can be represented using a controlled vocabulary or with geographic
+            coordinates.
           </td>
         </tr>
       </table>
@@ -7270,8 +7453,8 @@
           </tr>
         </thead>
         <tbody>
-          
-    
+
+
         </tbody>
       </table>
 
@@ -7325,8 +7508,8 @@
           </tr>
         </thead>
         <tbody>
-          
-    
+
+
         </tbody>
       </table>
     </section>
@@ -7340,7 +7523,7 @@
         <tr>
           <th>RDF Class:</th>
           <td><a href="http://www.w3c.org/ns/org#Organization"><code
-                title="http://www.w3c.org/ns/org#">org:Organization</code></a>
+                title="http://www.w3c.org/ns/org#Organization">org:Organization</code></a>
           </td>
         </tr>
         <tr>
@@ -7939,8 +8122,8 @@
           </tr>
         </thead>
         <tbody>
-          
-    
+
+
         </tbody>
       </table>
     </section>
@@ -7991,8 +8174,8 @@
           </tr>
         </thead>
         <tbody>
-          
-    
+
+
         </tbody>
       </table>
     </section>
@@ -8202,8 +8385,8 @@
           </tr>
         </thead>
         <tbody>
-          
-    
+
+
         </tbody>
       </table>
     </section>
