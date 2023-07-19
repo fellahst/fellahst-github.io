@@ -283,7 +283,7 @@
           Dataset --> "0..n" Agent: dct:rightsHolder
           Attribution --> "1" Agent: prov:agent
           Distribution --> DataService : dcat:accessService
-
+  
           class Catalog {
           Mandatory:
           - dct:title
@@ -354,6 +354,7 @@
           - dcat:temporalResolution
           - prov:qualifiedAttribution
           - prov:wasAttributedTo
+          - vann:usageNote
           }
           class Distribution {
           Mandatory:
@@ -370,6 +371,7 @@
           - dcat:accessService
           - dct:accessRights
           - dct:conformsTo
+          - vann:usageNote
           }
           class Location {
           Recommended:
@@ -399,7 +401,15 @@
           - foaf:name
           }
 
+          class Person {
+          Mandatory:
+         - foaf:name
+          }
 
+          class Organization {
+          Mandatory:
+         - foaf:name
+          }  
         </div>
       </section>
       <section id="requirement-levels">
@@ -563,7 +573,7 @@
         <tbody>
           <tr>
             <td><a href="#catalog-title">Catalog title</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
             <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
             <td>Language encoded string</td>
           </tr>
@@ -575,7 +585,7 @@
           </tr>
           <tr>
             <td><a href="#dataset-title">Dataset title</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
             <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
             <td>Language encoded string</td>
           </tr>
@@ -1601,7 +1611,7 @@
         <tbody>
           <tr>
             <td><a href="#catalog-title">title</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
             <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
             <td><strong>M</strong></td>
             <td>1..n</td>
@@ -1770,7 +1780,7 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
               </tr>
               <tr>
                 <th>Range</th>
@@ -1790,7 +1800,7 @@
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Usage of dct:title for dcat:Catalog">
+          <aside class="example" title="Usage of dcterms:title for dcat:Catalog">
             <pre data-include-format="text" data-include="./examples/catalog/title.ttl"></pre>
           </aside>
         </section>
@@ -3384,7 +3394,7 @@
           </tr>
           <tr>
             <td><a href="#data-service-title">Title</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
             <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
             <td><strong>M</strong></td>
             <td>1..n</td>
@@ -3612,7 +3622,7 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
               </tr>
               <tr>
                 <th>Range</th>
@@ -3632,7 +3642,7 @@
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Usage of dct:title for dcat:DataService">
+          <aside class="example" title="Usage of dcterms:title for dcat:DataService">
             <pre data-include-format="text" data-include="./examples/service/title.ttl"></pre>
           </aside>
         </section>
@@ -3995,14 +4005,14 @@
         <tbody>
           <tr>
             <td><a href="#dataset-title">title</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
             <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
             <td><strong>M</strong></td>
             <td>1..n</td>
           </tr>
           <tr>
             <td><a href="#dataset-description">description</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/description"><code>dct:description</code></a>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/description"><code>dcterms:description</code></a>
             </td>
             <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
             <td><strong>M</strong></td>
@@ -4010,7 +4020,7 @@
           </tr>
           <tr>
             <td><a href="#dataset-identifier">identifier</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/identifier"><code>dct:identifier</code></a>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a>
             </td>
             <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
             <td><strong>M</strong></td>
@@ -4265,7 +4275,7 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
               </tr>
               <tr>
                 <th>Range</th>
@@ -4285,7 +4295,7 @@
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Usage of dct:title for dcat:Dataset">
+          <aside class="example" title="Usage of dcterms:title for dcat:Dataset">
             <pre data-include-format="text" data-include="./examples/dataset/title.ttl"></pre>
           </aside>
         </section>
@@ -5651,7 +5661,7 @@
           </tr>
           <tr>
             <td><a href="#distribution-title">Title</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
             <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
             <td>R</td>
             <td>0..n</td>
@@ -6097,7 +6107,7 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dct:title</code></a></td>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
               </tr>
               <tr>
                 <th>Range</th>
@@ -6123,7 +6133,7 @@
               </tr>
             </tbody>
           </table>
-          <aside class="example" id="ex-distribution-title" title="Usage of dct:title for dcat:Distribution">
+          <aside class="example" id="ex-distribution-title" title="Usage of dcterms:title for dcat:Distribution">
             <pre data-include-format="text" data-include="./examples/distribution/title.ttl"></pre>
           </aside>
         </section>
@@ -7282,6 +7292,15 @@
 
         </tbody>
       </table>
+      <section id="identifier-mandatory-props">
+        <h4>Mandatory Properties</h4>
+      </section>  
+      <section id="identifier-recommended-props">
+        <h4>Recommended Properties</h4>
+      </section> 
+      <section id="identifier-optional-props">
+        <h4>Optional Properties</h4>
+      </section> 
     </section>
 
 
@@ -7566,6 +7585,15 @@
 
         </tbody>
       </table>
+      <section id="metric-mandatory-props">
+        <h4>Mandatory Properties</h4>
+      </section>  
+      <section id="metric-recommended-props">
+        <h4>Recommended Properties</h4>
+      </section> 
+      <section id="metric-optional-props">
+        <h4>Optional Properties</h4>
+      </section> 
     </section>
 
     <!-- org:Organization -->
@@ -8180,6 +8208,10 @@
 
         </tbody>
       </table>
+      <section id="provenance-statement-recommended-props">
+        <h4>Recommended Properties</h4>
+      </section>  
+      </section> 
     </section>
 
     <!-- dqv:QualityMeasurement-->
@@ -8232,6 +8264,15 @@
 
         </tbody>
       </table>
+      <section id="identifier-mandatory-props">
+        <h4>Mandatory Properties</h4>
+      </section>  
+      <section id="identifier-recommended-props">
+        <h4>Recommended Properties</h4>
+      </section> 
+      <section id="identifier-optional-props">
+        <h4>Optional Properties</h4>
+      </section> 
     </section>
 
     <!-- dcat:Relationship-->
@@ -8392,14 +8433,14 @@
       </section>
     </section>
 
-    <!-- dct:RightsDocument-->
+    <!-- dct:RightsStatement -->
 
-    <section id="properties-for-rights-document">
-      <h2>Class: RightsDocument</h2>
-      <table class="def" id="table-class-rights-document">
+    <section id="properties-for-rights-statement">
+      <h2>Class: RightsStatement</h2>
+      <table class="def" id="table-class-rights-statement">
         <tr>
           <th>RDF Class:</th>
-          <td><a href="http://purl.org/dc/terms/RightsDocument"><code>dcterms:RightsDocument</code></a></td>
+          <td><a href="http://purl.org/dc/terms/RightsStatement"><code>dcterms:RightsStatement</code></a></td>
         </tr>
         <tr>
           <th>Obligation</th>
@@ -8413,15 +8454,16 @@
         </tr>
         <tr>
           <th class="prop">Usage note:</th>
-          <td>A statement about the intellectual property rights (IPR) held in or over a resource, a legal document
-            giving
-            official permission to do something with a resource, or a statement about access rights..
+          <td>Information about rights SHOULD be provided on the level of Distribution. Information about rights MAY be 
+            provided for a Dataset in addition to but not instead of the information provided for the Distributions of that Dataset. 
+            Providing rights information for a Dataset that is different from information provided for a Distribution of that Dataset 
+            SHOULD be avoided as this can create legal conflicts. 
           </td>
         </tr>
         <tr>
           <th>Reference</th>
           <td>
-            <p><a href="http://purl.org/dc/terms/RightsDocument">§&nbsp;Term name: RightsDocument</a>
+            <p><a href="http://purl.org/dc/terms/RightsStatement">§&nbsp;Term name: RightsStatement</a>
               [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
                   title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
           </td>
@@ -8439,10 +8481,60 @@
           </tr>
         </thead>
         <tbody>
-
-
+         
+            <tr>
+              <td><a href="#rights-statement-label">label</a></td>
+              <td><a data-cite="RDF-SCHEMA#ch_label"><code>rdfs:label</code></a></td>
+              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+              </td>
+              <td><strong>R</strong></td>
+              <td>0..n</td>
+            </tr>
+         
         </tbody>
       </table>
+      <section id="recommended-properties-for-rights-statement">
+        <h4>Recommended Properties</h4>
+        <section id="rights-statement-label">
+          <h4>Property: label</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>label</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="RDF-SCHEMA#ch_label"><code>rdfs:label</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property contains the text of the Rights Statement. This property can be repeated for parallel language versions of the name - see § 4.3. Multilingualism section.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </section>
+      <section id="rights-statement-example">
+        <h4>Example</h4>
+        <aside class="example" title="Usage of dct:RightsStatement">
+          <pre data-include-format="text" data-include="./examples/rights-statement.ttl"></pre>
+        </aside>
+      </section>
     </section>
 
     <!-- dct:Standard -->
@@ -8495,7 +8587,7 @@
           <tr>
             <td><a href="#standard-description">description</a></td>
             <td><a href="http://purl.org/dc/terms/description"><code>dcterms:description</code></a></td>
-            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
             </td>
             <td><strong>R</strong></td>
             <td>0..n</td>
@@ -8519,7 +8611,7 @@
           <tr>
             <td><a href="#standard-title">title</a></td>
             <td><a href="http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
-            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
             </td>
             <td><strong>R</strong></td>
             <td>0..n</td>

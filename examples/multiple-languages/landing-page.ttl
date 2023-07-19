@@ -1,6 +1,6 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-<https://opendata.swisstopo/1234>
+<https://nces.ed.gov/pubs2006/data/ALS2002>
   a dcat:Dataset ;
-  dcat:landingPage <https://opendata.swisstopo/1234/about> .
+  dcat:landingPage <https://nces.ed.gov/surveys/libraries/academic.asp> .

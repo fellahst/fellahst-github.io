@@ -5,8 +5,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # ---------- class Dataset --------------------------------------------------
-<https://uscensus.gov/api>
-  a dcat:DataService ;
+<https://uscensus.gov/dataset1>
+  a dcat:Dataset ;
 
   # mandatory properties
 
