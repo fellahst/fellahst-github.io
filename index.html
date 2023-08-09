@@ -1555,6 +1555,10 @@
               </tr>
             </tbody>
           </table>
+          <aside class="example" title="Usage of dcat:hadRole for prov:Attribution">
+            <!-- TODO: uncomment below and add a dcat:hadRole example for prov:Attribution-->
+            <!-- <pre data-include-format="text" data-include="./examples/attribution/hadRole.ttl"></pre> -->
+          </aside>
         </section>
       </section>
       <section id="attribution-example">
@@ -3100,7 +3104,7 @@
         <tbody>
 
           <tr>
-            <td><a href="#concept-altLabel">alternative label</a></td>
+            <td><a href="#concept-altLabel">alternate label</a></td>
             <td><a data-cite="SKOS-REFERENCE#altLabel"><code>skos:altLabel</code></a>
             </td>
             <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
@@ -3460,8 +3464,8 @@
             <td>0..1</td>
           </tr>
           <tr>
-            <td><a href="#concept-scheme-version">version</a></td>
-            <td><a href="http://purl.org/dc/terms/version"><code>dcterms:version</code></a>
+            <td><a href="#concept-scheme-version">version info</a></td>
+            <td><a href="https://www.w3.org/TR/owl-ref/#versionInfo-def"><code>owl:versionInfo</code></a>
             </td>
             <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
             </td>
@@ -3667,7 +3671,7 @@
         </section>
 
         <section id="concept-scheme-version">
-          <h4>Property: version</h4>
+          <h4>Property: version info</h4>
           <table class="def" id="table-concept-scheme-version">
             <tbody>
               <tr>
@@ -3684,7 +3688,7 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a href="http://purl.org/dc/terms/version"><code>dcterms:version</code></a>
+                <td><a href="https://www.w3.org/TR/owl-ref/#versionInfo-def"><code>owl:versionInfo</code></a>
                 </td>
               </tr>
               <tr>
@@ -7410,7 +7414,7 @@
           </tr>
 
           <tr>
-            <td><a href="#document-creator">individual author</a></td>
+            <td><a href="#document-individual-creator">individual author</a></td>
             <td><a href="http://purl.org/dc/terms/creator"><code>dcterms:creator</code></a>
             </td>
             <td><a href="http://xmlns.com/foaf/0.1/#term_Person"><code>foaf:Person</code></a>
@@ -7420,7 +7424,7 @@
           </tr>
 
           <tr>
-            <td><a href="#document-creator">corporate author</a></td>
+            <td><a href="#document-corporate-creator">corporate author</a></td>
             <td><a href="http://purl.org/dc/terms/creator"><code>dcterms:creator</code></a>
             </td>
             <td><a href="https://www.w3.org/TR/vocab-org/#org:Organization"><code>org:Organization</code></a>
@@ -7512,17 +7516,494 @@
             <td><strong>O</strong></td>
             <td>0..n</td>
           </tr>
+          <tr>
+            <td><a href="#document-description">description</a></td>
+            <td><a href="http://purl.org/dc/terms/description"><code>dcterms:description</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td><strong>R</strong></td>
+            <td>0..n</td>
+          </tr>
         </tbody>
       </table>
       <section id="mandatory-document-props">
         <h4>Mandatory Properties</h4>
+        <section id="document-creator-as-literal">
+          <h4>Property: author(s) as literal</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>author(s) as literal</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/elements/1.1/creator"><code>dc:creator</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dc:creator for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/creator-as-literal.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="document-publisher-as-literal">
+          <h4>Property: publisher(s) as literal</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>publisher(s) as literal</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/elements/1.1/publisher"><code>dc:publisher</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dc:publisher for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/publisher-as-literal.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="document-issued">
+          <h4>Property: publication date</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>publication date</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n/td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:issued for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/issued.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="document-publisher">
+          <h4>Property: publisher organization</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>publisher organization</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n/td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/publisher"><code>dcterms:publisher</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="https://www.w3.org/TR/vocab-org/#org:Organization"><code>org:Organization</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:publisher for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/publisher.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="document-title">
+          <h4>Property: title</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>title</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n/td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/title"><code>dcterms:title</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:title for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/title.ttl"></pre> -->
+          </aside>
+        </section>
       </section>
       <section id="recommended-document-props">
         <h4>Recommended Properties</h4>
+        <section id="document-bibliographicCitation">
+          <h4>Property: bibliographic citation</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>bibliographic citation</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/bibliographicCitation"><code>dcterms:bibliographicCitation</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:bibliographicCitation for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/bibliographicCitation.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="document-description">
+          <h4>Property: description</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>description</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/description"><code>dcterms:description</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:description for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/description.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="document-identifier">
+          <h4>Property: identifier</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>identifier</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:identifier for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/identifier.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="document-type">
+          <h4>Property: document type</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>document type</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:type for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/type.ttl"></pre> -->
+          </aside>
+        </section>
 
       </section>
       <section id="optional-document-props">
         <h4>Optional Properties</h4>
+        <section id="document-abstract">
+          <h4>Property: abstract</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>abstract</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/abstract"><code>dcterms:abstract</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:abstract for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/abstract.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="document-individual-creator">
+          <h4>Property: individual author</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>individual author</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/creator"><code>dct:creator</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://xmlns.com/foaf/0.1/#term_Person"><code>foaf:Person</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:creator for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/creator.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="document-corporate-creator">
+          <h4>Property: corporate author</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>corporate author</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/creator"><code>dct:creator</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="https://www.w3.org/TR/vocab-org/#org:Organization"><code>org:Organization</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:creator for foaf:Document">
+            <!-- <pre data-include-format="text" data-include="./examples/document/creator.ttl"></pre> -->
+          </aside>
+        </section>
       </section>
 
 
@@ -9015,7 +9496,13 @@
           <td><a href="#rights-statement-label">label</a></td>
           <td><a data-cite="RDF-SCHEMA#ch_label"><code>rdfs:label</code></a></td>
           <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-          </td>
+          <td><strong>R</strong></td>
+          <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#rights-statement-attributionText">attribution text</a></td>
+            <td><a href="https://schema.theodi.org/odrs/#prop_attributionText"><code>odrs:attributionText</code></a></td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
           <td><strong>R</strong></td>
           <td>0..n</td>
         </tr>
@@ -9053,6 +9540,37 @@
               <th>Definition</th>
               <td>This property contains the text of the Rights Statement. This property can be repeated for parallel
                 language versions of the name - see § 4.3. Multilingualism section.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="rights-statement-attributionText">
+        <h4>Property: attribution text</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>attribution text</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Recommended</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a href="https://schema.theodi.org/odrs/#prop_attributionText"><code>odrs:attributionText</code></a></td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td></td>
             </tr>
           </tbody>
         </table>
@@ -9118,48 +9636,63 @@
           <td><a href="#standard-description">description</a></td>
           <td><a href="http://purl.org/dc/terms/description"><code>dcterms:description</code></a></td>
           <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
-          </td>
-          <td><strong>R</strong></td>
+          <td>R</td>
           <td>0..n</td>
         </tr>
         <tr>
           <td><a href="#standard-identifier">identifier</a></td>
           <td><a href="http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a></td>
           <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-          </td>
-          <td><strong>R</strong></td>
+          <td>R</td>
           <td>0..n</td>
         </tr>
         <tr>
           <td><a href="#standard-issued">issued</a></td>
           <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a></td>
           <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
-          </td>
-          <td><strong>R</strong></td>
+          <td>R</td>
           <td>0..1</td>
         </tr>
         <tr>
           <td><a href="#standard-title">title</a></td>
           <td><a href="http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
           <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
-          </td>
-          <td><strong>R</strong></td>
+          <td>R</td>
           <td>0..n</td>
         </tr>
         <tr>
           <td><a href="#standard-type">type</a></td>
           <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a></td>
           <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a></td>
-          </td>
-          <td><strong>R</strong></td>
+          <td>R</td>
           <td>0..n</td>
         </tr>
         <tr>
-          <td><a href="#standard-version">version</a></td>
-          <td><a href="http://purl.org/dc/terms/version"><code>dcterms:version</code></a></td>
+          <td><a href="#standard-versionInfo">version information</a></td>
+          <td><a href="https://www.w3.org/TR/owl-ref/#versionInfo-def"><code>owl:versionInfo</code></a></td>
           <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-          </td>
-          <td><strong>R</strong></td>
+          <td>R</td>
+          <td>0..1</td>
+        </tr>
+        <tr>
+          <td><a href="#standard-in-scheme">in scheme</a></td>
+          <td><a data-cite="SKOS-REFERENCE#inScheme"><code>skos:inScheme</code></a></td>
+          <td><a data-cite="SKOS-REFERENCE#ConceptScheme"><code>skos:ConceptScheme</code></a></td>
+          <td>O</td>
+          <td>0..1</td>
+        </tr>
+        <tr>
+          <td><a href="#standard-created">creation date</a></td>
+          <td><a href="http://purl.org/dc/terms/created"><code>dcterms:created</code></a></td>
+          <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
+          <td>O</td>
+          <td>0..1</td>
+        </tr>
+        <tr>
+          <td><a href="#standard-modified">last modified</a></td>
+          <td><a href="http://purl.org/dc/terms/modified"><code>dcterms:modified</code></a></td>
+          <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
+          <td>O</td>
           <td>0..1</td>
         </tr>
       </tbody>
@@ -9167,8 +9700,41 @@
 
     <section id="recommended-properties-for-standard">
       <h4>Recommended Properties</h4>
+      <section id="standard-title">
+        <h4>Property: title</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>title</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Recommended</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a href="http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
+              </td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>This property contains a name given to the Standard. This property can be repeated for parallel language versions of the
+              name.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
       <section id="standard-description">
-        <h4>Property: relation</h4>
+        <h4>Property: description</h4>
         <table class="def" id="table-recommended-properties-for-standard">
           <tbody>
             <tr>
@@ -9203,7 +9769,240 @@
           </tbody>
         </table>
       </section>
-
+      <section id="standard-identifier">
+        <h4>Property: identifier</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>identifier</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Recommended</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a href="http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a></td>
+              </td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>This property contains the main identifier for the Standard, e.g. the URI or other unique identifier in the
+                context of
+                the Catalog, or of a reference register</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="standard-issued">
+        <h4>Property: issued</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>issued</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Recommended</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..1</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a></td>
+              </td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>This property contains the date of formal issuance (e.g., publication) of the Standard.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="standard-type">
+        <h4>Property: type</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>type</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Recommended</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..1</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a></td>
+              </td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a></td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>This property refers to the type of the Standard. A controlled vocabulary for the values has not been established.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="standard-versionInfo">
+        <h4>Property: version info</h4>
+        <table class="def" id="table-concept-scheme-version">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>version information</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Optional</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..1</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a href="https://www.w3.org/TR/owl-ref/#versionInfo-def"><code>owl:versionInfo</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>This property contains a version number or other version designation of the Standard.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="standard-in-scheme">
+        <h4>Property: in scheme</h4>
+        <table class="def">
+          <tbody>
+            <tr>
+              <th>Property</th>
+              <td>in scheme</td>
+            </tr>
+            <tr>
+              <th>Requirement level</th>
+              <td>Recommended</td>
+            </tr>
+            <tr>
+              <th>Cardinality</th>
+              <td>0..1</td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td><a data-cite="SKOS-REFERENCE#inScheme"><code>skos:inScheme</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td><a data-cite="SKOS-REFERENCE#ConceptScheme"><code>skos:ConceptScheme</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>This property MAY be used to specify the reference register to which the Standard belongs.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      
+      </section>
+      <section id="optional-properties-for-standard">
+        <h4>Optional Properties</h4>
+        <section id="standard-created">
+          <h4>Property: creation date</h4>
+          <table class="def" id="table-optional-properties-for-standard">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>creation date</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/created"><code>dcterms:created</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property contains the date on which the Standard has been first created.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="standard-modified">
+          <h4>Property: last modified</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>last modified</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/modified"><code>dcterms:modified</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property contains the most recent date on which the Standard was changed or modified.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+    
     </section>
     <section id="standard-example">
       <h4>Example</h4>
