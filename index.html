@@ -184,7 +184,7 @@
         which assumed the role of a de facto standard within the United States
       </li>
       <li>The community defined DCAT-US to provide guidance for American data publishers on how to specify their data
-        catalogues and to data portal managers on how to process data catalogues, in a DCAT-US conformant manner,
+        catalogs and to data portal managers on how to process data catalogs, in a DCAT-US conformant manner,
         so that interoperability is assured.
       </li>
     </ul>
@@ -207,7 +207,7 @@
       <p>The Application Profile specified in this document is based on the specification of the Data Catalog Vocabulary
         (DCAT)
         developed under the responsibility of the Government Linked Data Working Group at W3C. DCAT is an RDF vocabulary
-        designed to facilitate interoperability between data catalogues published on the Web. Additional
+        designed to facilitate interoperability between data catalogs published on the Web. Additional
         classes and properties from other well-known vocabularies are re-used where necessary.
       </p>
       <p>The DCAT vocabulary consists of classes and properties.</p>
@@ -246,7 +246,7 @@
           <tbody>
             <tr>
               <td><a href="#Class:Catalog">Catalog</a></td>
-              <td>A catalogue or repository that hosts the Datasets or Data Services being described.</td>
+              <td>A catalog or repository that hosts the Datasets or Data Services being described.</td>
               <td><a data-cite="VOCAB-DCAT-3#Class:Catalog"><code>dcat:Catalog</code></a></td>
             </tr>
             <tr>
@@ -656,7 +656,7 @@
               <a href="#properties-for-agent">Agent</a>
             </td>
             <td>
-              <p>An entity (e.g., an individual or an organisation) that is associated with Catalogues, Catalogue
+              <p>An entity (e.g., an individual or an organisation) that is associated with Catalogs, Catalog
                 Records, Data Services, or Datasets. If the Agent is an organisation, the use of the Organization
                 Ontology [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-org"
                     title="The Organization Ontology">VOCAB-ORG</a></cite>] is recommended. See <a
@@ -679,8 +679,7 @@
               <a href="#properties-for-catalog">Catalog</a>
             </td>
             <td>
-              <p>A catalogue or repository that hosts the resources (as Data Services, Datasets, or other Catalogues)
-                being described.</p>
+              <p>A catalog or repository that hosts the resources (as Data Services, Datasets, or other Catalogs) being described.</p>
             </td>
             <td>
               <p><code>dcat:Catalog</code></p>
@@ -773,7 +772,7 @@
               <a href="#properties-for-concept">Concept</a>
             </td>
             <td>
-              <p>A subject of a Catalogue, Dataset, or Data Service.</p>
+              <p>A subject of a Catalog, Dataset, or Data Service.</p>
             </td>
             <td>
               <p><code>skos:Concept</code></p>
@@ -943,12 +942,12 @@
             </td>
           </tr>
 
-          <tr class="class optional" id="catalogue-record">
+          <tr class="class optional" id="catalog-record">
             <td>
-              <a href="#properties-for-catalogue-record">Catalogue Record</a>
+              <a href="#properties-for-catalog-record">Catalog Record</a>
             </td>
             <td>
-              <p>A description of a Catalogue's, Data Service's, or Dataset's entry in the Catalogue.</p>
+              <p>A description of a Catalog's, Data Service's, or Dataset's entry in the Catalog.</p>
             </td>
             <td>
               <p><code>dcat:CatalogRecord</code></p>
@@ -1285,7 +1284,7 @@
               <a href="#properties-for-standard">Standard</a>
             </td>
             <td>
-              <p>A standard or other specification to which a Catalogue, Catalogue Record, Data Service, Dataset, or
+              <p>A standard or other specification to which a Catalog, Catalog Record, Data Service, Dataset, or
                 Distribution conforms.</p>
             </td>
             <td>
@@ -1303,7 +1302,7 @@
               <p>Status</p>
             </td>
             <td>
-              <p>An indication of the maturity of a Distribution or the type of change of a Catalogue Record.</p>
+              <p>An indication of the maturity of a Distribution or the type of change of a Catalog Record.</p>
             </td>
             <td>
               <p><code>skos:Concept</code></p>
@@ -1568,10 +1567,10 @@
     <section id="properties-for-catalog">
       <h3>Class: Catalog</h3>
       <p>
-        A Catalogue or repository that hosts the Datasets or Data Services being described.
+        A Catalog or repository that hosts the Datasets or Data Services being described.
       </p>
       <p>
-        DCAT-US allows Catalogues of only Datasets, but also Catalogues of only Data Services,
+        DCAT-US allows Catalogs of only Datasets, but also Catalogs of only Data Services,
         but usually it will be a mixture of both.
       </p>
       <table class="def">
@@ -1582,21 +1581,21 @@
         </tr>
         <tr>
           <th class="prop">Definition:</th>
-          <td></td>
+          <td>A curated collection of metadata about resources.</td>
         </tr>
         <tr>
           <th class="prop">Subclass Of:</th>
-          <td><a data-cite="VOCAB-DCAT-3#Class:Resource"><code>dcat:Resource</code></a></td>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a></td>
         </tr>
         <tr>
           <th class="prop">Usage note:</th>
           <td>
             <ul>
-              <li></li>
+              <li>A Web-based data catalog is typically represented as a single instance of this class.</li>
+              <li>Datasets and data services are examples of resources in the context of a data catalog.</li>
             </ul>
           </td>
         </tr>
-
       </table>
       <table class="simple">
         <thead>
@@ -1636,8 +1635,8 @@
             </td>
             <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a>
             </td>
-            <td>R</td>
-            <td>0..n</td>
+            <td><strong>M</strong></td>
+            <td>1..n</td>
           </tr>
           <tr>
             <td><a href="#catalog-homepage">homepage</a></td>
@@ -1687,15 +1686,6 @@
             <td>0..1</td>
           </tr>
           <tr>
-            <td><a href="#catalog-service">service</a></td>
-            <td><a data-cite="VOCAB-DCAT-3#Property:catalog_service"><code>dcat:service</code></a>
-            </td>
-            <td><a data-cite="VOCAB-DCAT-3#Class:Data_Service"><code>dcat:DataService</code></a>
-            </td>
-            <td>R</td>
-            <td>0..n</td>
-          </tr>
-          <tr>
             <td><a href="#catalog-spatial-geographic">spatial /geographic</a></td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
             </td>
@@ -1724,17 +1714,16 @@
             <td>0..1</td>
           </tr>
           <tr>
+            <td><a href="#catalog-conformsTo">schema version</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:resource_conforms_to"><code>dct:conformsTo</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Standard"><code>dct:Standard</code></a></td>
+            <td>R</td>
+            <td>0..1</td>
+            </tr>
+            <tr>
             <td><a href="#catalog-creator">creator</a></td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/creator"><code>dct:creator</code></a></td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
-            </td>
-            <td>O</td>
-            <td>0..n</td>
-          </tr>
-          <tr>
-            <td><a href="#catalog-theme-category">theme</a></td>
-            <td><a data-cite="VOCAB-DCAT-3#Property:catalog_theme"><code>dcat:theme</code></a></td>
-            <td><a data-cite="SKOS-REFERENCE#concepts"><code>skos:Concept</code></a>
             </td>
             <td>O</td>
             <td>0..n</td>
@@ -1756,8 +1745,99 @@
             <td>O</td>
             <td>0..n</td>
           </tr>
-        </tbody>
-      </table>
+          <tr>
+            <td><a href="#catalog-contactPoint">contact point</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:resource_contact_point"><code>dcat:contactPoint</code></a></td>
+            <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-keyword">keyword/tag</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:resource_keyword"><code>dcat:keyword</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-hasPart">has part</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:resource_has_part"><code>dcterms:hasPart</code></a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Catalog"><code>dcat:Catalog</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-catalog-record">catalog record</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:catalog_catalog_record"><code>dcat:record</code></a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Catalog_Record"><code>dcat:CatalogRecord</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-service">service</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:catalog_service"><code>dcat:service</code></a>
+            </td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Data_Service"><code>dcat:DataService</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-theme-category">theme/category</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:catalog_theme"><code>dcat:theme</code></a></td>
+            <td><a data-cite="SKOS-REFERENCE#concepts"><code>skos:Concept</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-identifier">identifier</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:resource_identifier"><code>dct:identifier</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-isPartOf">is part of</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/isPartOf"><code>dct:isPartOf</code></a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Catalog"><code>dcat:Catalog</code></a></td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-rightsHolder">rights holder</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/rightsHolder"><code>dct:rightsHolder</code></a></td>
+            <td><a href="http://xmlns.com/foaf/0.1/term_Organization"><code>foaf:Organization</code></a></td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-subject">subject</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/subject"><code>dct:subject</code></a></td>
+            <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a></td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-temporal">termporal coverage</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/temporal"><code>dct:temporal</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/PeriodOfTime"><code>dct:PeriodOfTime</code></a></td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#catalog-qualifiedAttribution">qualified attribution</a></td>
+            <td><a data-cite="PROV#property:qualifiedAttribution"><code>prov:qualifiedAttribution</code></a></td>
+            <td><a data-cite="PROV#Class:Attribution"><code>prov:Attribution</code></a></td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          </tbody>
+          </table>
 
       <section id="catalog-mandatory-props">
         <h4>Mandatory Properties</h4>
@@ -1791,7 +1871,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>The title of the catalogue in the indicated language</li>
+                    <li>The title of the catalog in the indicated language</li>
                     <li>This property can be repeated for parallel language versions of the description
                       (see <a class="no-sectionRef" href="#multilingualism"></a>)
                     </li>
@@ -1841,7 +1921,7 @@
                 <td>
                   <ul>
                     <li>This property contains a free-text account of the data
-                      Catalogue (in the language indicated in the attribute).
+                      Catalog (in the language indicated in the attribute).
                     </li>
                     <li>This property can be repeated for parallel language versions of
                       the description (see <a class="no-sectionRef" href="#multilingualism"></a>).
@@ -1888,7 +1968,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to an entity (organisation) responsible for making the Catalogue available.
+                    <li>This property refers to an entity (organisation) responsible for making the Catalog available.
                     </li>
                   </ul>
                 </td>
@@ -1899,10 +1979,6 @@
             <pre data-include-format="text" data-include="./examples/catalog/publisher.ttl"></pre>
           </aside>
         </section>
-      </section>
-      <section id="catalog-recommended-props">
-        <h4>Recommended Properties</h4>
-
         <section id="catalog-dataset">
           <h4>Property: dataset</h4>
           <table class="def">
@@ -1913,11 +1989,11 @@
               </tr>
               <tr>
                 <th>Requirement level</th>
-                <td>Recommended</td>
+                <td>Mandatory</td>
               </tr>
               <tr>
                 <th>Cardinality</th>
-                <td>0..n</td>
+                <td>1..n</td>
               </tr>
               <tr>
                 <th>URI</th>
@@ -1938,9 +2014,9 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property links the Catalogue with a Dataset that is part of the Catalogue.</li>
-                    <li>As empty Catalogues are usually indications of problems, this property SHOULD be combined
-                      with the property service to implement an empty Catalogue check.
+                    <li>This property links the Catalog with a Dataset that is part of the Catalog.</li>
+                    <li>As empty Catalogs are usually indications of problems, this property SHOULD be combined
+                      with the property service to implement an empty Catalog check.
                     </li>
                   </ul>
                 </td>
@@ -1951,6 +2027,10 @@
             <pre data-include-format="text" data-include="./examples/catalog/dataset.ttl"></pre>
           </aside>
         </section>
+      </section>
+      <section id="catalog-recommended-props">
+        <h4>Recommended Properties</h4>
+
         <section id="catalog-homepage">
           <h4>Property: homepage</h4>
           <table class="def">
@@ -1979,8 +2059,8 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to a web page that acts as the main page for the Catalogue</li>
-                    <li>For instance data.gov, would be the homepage of the Data Catalogue exported
+                    <li>This property refers to a web page that acts as the main page for the Catalog</li>
+                    <li>For instance data.gov, would be the homepage of the Data Catalog exported
                       to [[DATAGOV]].
                     </li>
                   </ul>
@@ -2024,11 +2104,11 @@
                 <td>
                   <ul>
                     <li>This property refers to a language used in the textual metadata describing
-                      titles, descriptions, etc. of the Datasets in the Catalogue.
+                      titles, descriptions, etc. of the Datasets in the Catalog.
                     </li>
-                    <li>The properties title and description of Catalogues, Datasets or Distribution
+                    <li>The properties title and description of Catalogs, Datasets or Distribution
                       can be provided in multiple languages. In that case, it makes sense to also list
-                      these languages on the Catalogue level.
+                      these languages on the Catalog level.
                     </li>
                     <li>CV to be used: [[VOCAB-US-LANGUAGE]]</li>
                   </ul>
@@ -2070,7 +2150,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to the licence under which the Catalogue can be used or reused.
+                    <li>This property refers to the licence under which the Catalog can be used or reused.
                     </li>
                     <li>CV to be used: [[VOCAB-US-LICENSE]]</li>
                   </ul>
@@ -2117,7 +2197,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property contains the date of formal issuance (e.g., for publication of the Catalogue).
+                    <li>This property contains the date of formal issuance (e.g., for publication of the Catalog).
                     </li>
                   </ul>
                 </td>
@@ -2158,7 +2238,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to a statement that specifies rights associated with the Catalogue.</li>
+                    <li>This property refers to a statement that specifies rights associated with the Catalog.</li>
                   </ul>
                 </td>
               </tr>
@@ -2166,50 +2246,6 @@
           </table>
           <aside class="example" title="Usage of dct:rights for dcat:Catalog">
             <pre data-include-format="text" data-include="./examples/catalog/rights.ttl"></pre>
-          </aside>
-        </section>
-        <section id="catalog-service">
-          <h4>Property: service</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>service</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td>Recommended</td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>0..n</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="VOCAB-DCAT-3#Property:catalog_service"><code>dcat:service</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a data-cite="VOCAB-DCAT-3#Class:Data_Service"><code>dcat:DataService</code></a>
-                  (<a class="no-sectionRef" href="#Class:Data_Service"></a>)
-                </td>
-              </tr>
-              <tr>
-                <th>Usage Note</th>
-                <td>
-                  <ul>
-                    <li>This property refers to a site or end-point (Data Service) that is listed in the Catalogue.</li>
-                    <li>As empty Catalogues are usually indications of problems, this property SHOULD be combined
-                      with the property Dataset to implement an empty Catalogue check.
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <aside class="example" title="Usage of dcat:service for dcat:Catalog">
-            <pre data-include-format="text" data-include="./examples/catalog/service.ttl"></pre>
           </aside>
         </section>
         <section id="catalog-spatial-geographic">
@@ -2242,7 +2278,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to a geographical area covered by the Catalogue.</li>
+                    <li>This property refers to a geographical area covered by the Catalog.</li>
                     <li>TO DISCUSS: Conventions to be used: The Vocabularies Name Authority Lists MUST be used for
                       continents, countries and
                       places that are in those lists; if a particular location is not in one of the mentioned Named
@@ -2292,7 +2328,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to a knowledge organization system used to classify the Catalogue's
+                    <li>This property refers to a knowledge organization system used to classify the Catalog's
                       Datasets.
                     </li>
                     <li>CV to be used: http://TBD/resource/dataset/data-theme </li>
@@ -2340,7 +2376,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property contains the most recent date on which the Catalogue was modified.</li>
+                    <li>This property contains the most recent date on which the Catalog was modified.</li>
                   </ul>
                 </td>
               </tr>
@@ -2348,6 +2384,51 @@
           </table>
           <aside class="example" title="Usage of dct:modified for dcat:Catalog">
             <pre data-include-format="text" data-include="./examples/catalog/modified.ttl"></pre>
+          </aside>
+        </section>
+        <section id="catalog-conformsTo">
+          <h4>Property: schema version</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>schema version</td>
+              </tr>
+              <tr>
+                <th class="prop">Definition:</th>
+                <td>An established standard to which the described catalog conforms.</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/conformsTo"><code>dct:conformsTo</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Standard"><code>dct:Standard</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property SHOULD be used to indicate the model, schema, ontology, view or profile that the cataloged
+                      resource content conforms to.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:conformsTo for dcat:Catalog">
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/conformsTo.ttl"></pre> -->
           </aside>
         </section>
       </section>
@@ -2383,7 +2464,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to the licence under which the Catalogue can be used or reused.
+                    <li>This property refers to the licence under which the Catalog can be used or reused.
                     </li>
                     <li>CV to be used: [[VOCAB-US-LICENSE]]</li>
                   </ul>
@@ -2393,49 +2474,6 @@
           </table>
           <aside class="example" title="Usage of dct:license for dcat:Catalog">
             <pre data-include-format="text" data-include="./examples/catalog/license.ttl"></pre>
-          </aside>
-        </section>
-        <section id="catalog-theme-category">
-          <h4>Property: theme/category</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>theme/category</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td>Optional</td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>0..n</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="VOCAB-DCAT-3#Property:resource_theme"><code>dcat:theme</code></a></td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Usage Note</th>
-                <td>
-                  <ul>
-                    <li>
-                      This property refers to a category of the Catalog. A Catalog may be associated with multiple
-                      themes.
-                    </li>
-                    <li>CV to be used: [[VOCAB-US-THEME]]</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <aside class="example" title="Example for dcat:theme for dcat:Catalog.">
-            <pre data-include-format="text" data-include="./examples/catalog/theme.ttl"></pre>
           </aside>
         </section>
         <section id="catalog-access-rights">
@@ -2522,7 +2560,498 @@
             <pre data-include-format="text" data-include="./examples/catalog/subcatalog.ttl"></pre>
           </aside>
         </section>
+        <section id="catalog-contactPoint">
+          <h4>Property: contact point</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>contact point</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_contact_point"><code>dcat:contactPoint</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <!-- TODO: add an href when/if vcard:Kind is introduced-->
+                <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>Relevant contact information for the cataloged resource. Use of vCard is recommended
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:contactPoint for dcat:Catalog">
+            <!-- TODO: uncomment below and add a contactPoint example for dcat:Catalog-->
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/contactPoint.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="catalog-keyword">
+          <h4>Property: keyword/tag</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>keyword/tag</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_keyword"><code>dcat:keyword</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>A keyword or tag describing the resource.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:keyword for dcat:Catalog">
+            <!-- TODO: uncomment below and add a dcat:keyword example for dcat:Catalog-->
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/keyword.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="catalog-hasPart">
+          <h4>Property: has part</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>has part</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_has_part"><code>dcterms:hasPart</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Catalog"><code>dcat:Catalog</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a related catalog that is part of the described catalog.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:hasPart for dcat:Catalog">
+            <!-- TODO: uncomment below and add a dcterms:hasPart example for dcat:Catalog-->
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/hasPart.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="catalog-catalog-record">
+          <h4>Property: catalog record</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>catalog record</td>
+              </tr>
+              <tr>
+                <th>Definition:</th>
+                <td>A record describing the registration of a single resource (e.g., a dataset, a data service) that is part
+                  of
+                  the catalog.</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:catalog_catalog_record"><code>dcat:record</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Catalog_Record"><code>dcat:CatalogRecord</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:record for dcat:Catalog">
+            <!-- TODO: uncomment below and add a dcdat:record example for dcat:Catalog-->
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/catalogRecord.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="catalog-service">
+          <h4>Property: service</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>service</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:catalog_service"><code>dcat:service</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Data_Service"><code>dcat:DataService</code></a>
+                  (<a class="no-sectionRef" href="#Class:Data_Service"></a>)
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a site or end-point (Data Service) that is listed in the Catalog.</li>
+                    <li>As empty Catalogs are usually indications of problems, this property SHOULD be combined
+                      with the property Dataset to implement an empty Catalog check.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:service for dcat:Catalog">
+            <pre data-include-format="text" data-include="./examples/catalog/service.ttl"></pre>
+          </aside>
+        </section>
+        <section id="catalog-theme-category">
+          <h4>Property: theme/category</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>theme/category</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_theme"><code>dcat:theme</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>
+                      This property refers to a category of the Catalog. A Catalog may be associated with multiple
+                      themes.
+                    </li>
+                    <li>CV to be used: [[VOCAB-US-THEME]]</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Example for dcat:theme for dcat:Catalog.">
+            <pre data-include-format="text" data-include="./examples/catalog/theme.ttl"></pre>
+          </aside>
+        </section>
+        <section id="catalog-identifier">
+          <h4>Property: identifier</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>identifier</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/identifier"><code>dct:identifier</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>
+                      This property contains the main identifier for the Catalog, e.g. the URI or other unique identifier.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Example for dct:identifier for dcat:Catalog.">
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/identifier.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="catalog-isPartOf">
+          <h4>Property: is part of</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>is part of</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_has_part"><code>dcterms:hasPart</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Catalog"><code>dcat:Catalog</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a related Catalog in which the described Catalog is physically or logically
+                      included.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:isPartOf for dcat:Catalog">
+            <!-- TODO: uncomment below and add a dcterms:isPartOf example for dcat:Catalog-->
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/isPartOf.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="catalog-rightsHolder">
+          <h4>Property:rights holder</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>rights holder</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/rightsHolder"><code>dcterms:rightsHolder</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://xmlns.com/foaf/0.1/term_Organization"><code>foaf:Organization</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to an organisation holding rights on the Catalog.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:rightsHolder for dcat:Catalog">
+            <!-- TODO: uncomment below and add a dcterms:rightsHolder example for dcat:Catalog-->
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/rightsHolder.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="catalog-subject">
+          <h4>Property: subject</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>subject</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/subject"><code>dcterms:subject</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="SKOS-REFERENCE#Class:Concept"><code>skos:Concept</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:subject for dcat:Catalog">
+            <!-- TODO: uncomment below and add a dcterms:subject example for dcat:Catalog-->
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/subject.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="catalog-temporal">
+          <h4>Property: temporal coverage</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>temporal coverage</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/temporal"><code>dct:temporal</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/PeriodOfTime"><code>dct:PeriodOfTime</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a temporal period that the Catalog covers.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:temporal for dcat:Catalog">
+            <!-- TODO: uncomment below and add a dcterms:temporal example for dcat:Catalog-->
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/temporal.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="catalog-qualifiedAttribution">
+          <h4>Property: qualified attribution</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>qualified attribution</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="PROV#property:qualifiedAttribution"><code>prov:qualifiedAttribution</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="PROV#Class:Attribution"><code>prov:Attribution</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a link to an Agent having some form of responsibility for the Catalog.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of prov:qualifiedAttribution for dcat:Catalog">
+            <!-- TODO: uncomment below and add a prov:qualifiedAttribution example for dcat:Catalog-->
+            <!-- <pre data-include-format="text" data-include="./examples/catalog/qualifiedAttribution.ttl"></pre> -->
+          </aside>
+        </section>
       </section>
+
       <section id="catalog-example">
         <h4>Example</h4>
         <aside class="example" title="dcat:Catalog example">
@@ -2544,7 +3073,7 @@
         </tr>
         <tr>
           <th class="prop">Definition:</th>
-          <td>A controlled vocabulary term used to classify Catalogue, Dataset, or Data Service.</td>
+          <td>A controlled vocabulary term used to classify Catalog, Dataset, or Data Service.</td>
         </tr>
         <tr>
           <th class="prop">Usage note:</th>
@@ -3510,7 +4039,7 @@
           </aside>
         </section>
         <section id="data-service-contact-point">
-          <h4>Property: contact Point</h4>
+          <h4>Property: contact point</h4>
           <table class="def">
             <tbody>
               <tr>
@@ -3593,7 +4122,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to an entity (organisation) responsible for making the Catalogue available.
+                    <li>This property refers to an entity (organisation) responsible for making the Catalog available.
                     </li>
                   </ul>
                 </td>
@@ -3633,7 +4162,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>The title of the catalogue in the indicated language</li>
+                    <li>The title of the catalog in the indicated language</li>
                     <li>This property can be repeated for parallel language versions of the
                       description (see <a class="no-sectionRef" href="#multilingualism"></a>)
                     </li>
@@ -4376,7 +4905,7 @@
                 <td>
                   <ul>
                     <li>This property contains the unique identifier for the Dataset, e.g. the URI or other
-                      unique identifier in the context of the Catalogue.
+                      unique identifier in the context of the Catalog.
                     </li>
                     <li>
                       The identifier may be used as part of the URI of the Dataset.
@@ -4515,7 +5044,7 @@
                   <ul>
                     <li>This property links the Dataset to an available Distribution.</li>
                     <li>In exceptional cases, a Dataset for which no distribution form exists (yet) can
-                      be described in the Catalogue. In this case, the element dcat:distribution may be omitted.
+                      be described in the Catalog. In this case, the element dcat:distribution may be omitted.
                     </li>
                   </ul>
                 </td>
@@ -4653,7 +5182,7 @@
                     <li>This property contains the date of formal issuance (e.g., first publication of the Dataset).
                     </li>
                     <li>If this date is not known, the date of the first referencing of the data collection in
-                      the Catalogue can be entered.
+                      the Catalog can be entered.
                     </li>
                   </ul>
                 </td>
@@ -6844,7 +7373,7 @@
         </tr>
         <tr>
           <th class="prop">Usage note:</th>
-          <td>Depending on whether a catalogue supports or not publications as first-class citizens, a publication can
+          <td>Depending on whether a catalog supports or not publications as first-class citizens, a publication can
             be fully described, or simply denoted by its URI.</td>
         </tr>
         <tr>
@@ -8559,7 +9088,7 @@
       </tr>
       <tr>
         <th class="prop">Usage note:</th>
-        <td>A standard or other specification to which a Catalogue, Catalogue Record, Data Service, Dataset, or
+        <td>A standard or other specification to which a Catalog, Catalog Record, Data Service, Dataset, or
           Distribution conforms</td>
 
       </tr>
@@ -9171,10 +9700,10 @@
     </aside>
     <section id="provider-requirements">
       <h3>Data Provider requirements</h3>
-      <p>A data catalogue conforms to DCAT-US if:</p>
+      <p>A data catalog conforms to DCAT-US if:</p>
       <ul>
         <li>
-          An RDF description of the catalogue is available
+          An RDF description of the catalog is available
         </li>
         <li>
           All classes and properties defined in DCAT-US 3.0 are used in a way consistent with the
@@ -9192,7 +9721,7 @@
       <p>An application (data portal) conforms to DCAT-US if:</p>
       <ul>
         <li>
-          It is able to process RDF catalogues that conform to DCAT-US .
+          It is able to process RDF catalogs that conform to DCAT-US .
         </li>
         <li>
           Processing means that it MUST accept incoming data and transparently provide this
