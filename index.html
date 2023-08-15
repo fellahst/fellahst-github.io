@@ -5459,12 +5459,14 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="DCAT-US##http://TBD/geographicBoundingBox"><code>dcat-us:geographicBoundingBox</code></a>
+                <td><a
+                    data-cite="DCAT-US##http://TBD/geographicBoundingBox"><code>dcat-us:geographicBoundingBox</code></a>
                 </td>
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a data-cite="DCAT-US#http://TBD/GeographicBoundingBox"><code>dcat-us:GeographicBoundingBox</code></a>
+                <td><a
+                    data-cite="DCAT-US#http://TBD/GeographicBoundingBox"><code>dcat-us:GeographicBoundingBox</code></a>
                 </td>
               </tr>
               <tr>
@@ -5477,7 +5479,8 @@
               </tr>
             </tbody>
           </table>
-          <aside class="example" id="ex-data-service-geographicBoundingBox" title="Example for dcat-us:geographicBoundingBox on dcat:DataService">
+          <aside class="example" id="ex-data-service-geographicBoundingBox"
+            title="Example for dcat-us:geographicBoundingBox on dcat:DataService">
             <!-- TODO -->
             <!-- <pre data-include-format="text" data-include="./examples/service/geographicBoundingBox.ttl"></pre> -->
           </aside>
@@ -7218,7 +7221,53 @@
           <tr>
             <td><a href="#distribution-representation-technique">representation technique</a></td>
             <td><a data-cite="VOCAB-ADMS#adms-representationtechnique"><code>adms:representationTechnique</code></a>
+            </td>
             <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#distribution-status">status</a></td>
+            <td><a data-cite="VOCAB-ADMS#adms-status"><code>adms:status</code></a></td>
+            <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#distribution-characterEncoding">character encoding</a></td>
+            <td><code>cnt:characterEncoding</code></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#distribution-compression-format">compression format</a></td>
+            <td><a
+                data-cite="VOCAB-DCAT-3#Property:distribution_compression_format"><code>dcat:compressFormat</code></a>
+            </td>
+            <td><a href="http://purl.org/dc/terms/MediaType"><code>dcterms:MediaType</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#distribution-spatialResolution">spatial resolution in meters</a></td>
+            <td><a
+                href="http://www.w3.org/ns/dcat#spatialResolutionInMeters"><code>dcat:spatialResolutionInMeters</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#distribution-access-rights">access rights</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accessRights"><code>dct:accessRights</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement"><code>dct:RightsStatement</code></a>
             </td>
             <td>O</td>
             <td>0..1</td>
@@ -7226,6 +7275,7 @@
           <tr>
             <td><a href="#distribution-access-service">access service</a></td>
             <td><a data-cite="VOCAB-DCAT-3#Property:distribution_access_service"><code>dcat:accessService</code></a>
+            </td>
             <td><a data-cite="VOCAB-DCAT-3#Class:Data_Service"><code>dcat:DataService</code></a>
             </td>
             <td>O</td>
@@ -7727,6 +7777,265 @@
       </section>
       <section id="distribution-optional-props">
         <h4>Optional Properties</h4>
+        <section id="distribution-representation-technique">
+          <h4>Property: representation technique</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>representation technique</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-ADMS#adms-representationtechnique"><code>adms:representationTechnique</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property MAY be used to provide more information about the format in which an Distribution
+                      is released. This is
+                      different from the file format as, for example, a ZIP file (file format) could contain an XML
+                      schema (representation
+                      technique).</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of adms:representationtechnique for dcat:Distribution">
+            <!-- TODO -->
+            <!-- <pre data-include-format="text" data-include="./examples/distribution/representationtechnique.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="distribution-status">
+          <h4>Property: status</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>status</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-ADMS#adms-status"><code>adms:status</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to the maturity of the Distribution. It MUST take one of the values
+                      Completed, Deprecated, Under
+                      Development, Withdrawn from the ADMS status [ADMS-SKOS] vocabulary.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of adms:status for dcat:Distribution">
+            <!-- TODO -->
+            <!-- <pre data-include-format="text" data-include="./examples/distribution/status.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="distribution-characterEncoding">
+          <h4>Property: character encoding</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>character encoding</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><code>cnt:characterEncoding</code>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property SHOULD be used to specify the character encoding of the Distribution, by using as
+                      value the character set
+                      names in the IANA register [[IANA-CHARSETS]].</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of cnt:characterEncoding for dcat:Distribution">
+            <!-- TODO -->
+            <!-- <pre data-include-format="text" data-include="./examples/distribution/characterEncoding.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="distribution-compression-format">
+          <h4>Property: compression format</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>compression format</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a
+                    data-cite="VOCAB-DCAT-3#Property:distribution_compression_format"><code>dcat:compressFormat</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://purl.org/dc/terms/MediaType"><code>dcterms:MediaType</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to the format of the file in which the data is contained in a compressed
+                      form, e.g., to reduce the
+                      size of the downloadable file. It SHOULD be expressed using a media type as defined in the
+                      official register of media
+                      types managed by IANA [[IANA-MEDIA-TYPES]].</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:compressFormat for dcat:Distribution">
+            <!-- <pre data-include-format="text" data-include="./examples/distribution/compress-format.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="distribution-spatialResolution">
+          <h4>Property: spatial resolution in meters</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>spatial resolution in meters</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a
+                    href="http://www.w3.org/ns/dcat#spatialResolutionInMeters"><code>dcat:spatialResolutionInMeters</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to the minimum spatial separation resolvable in a Distribution, measured in
+                      meters.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:spatialResolutionInMeters for dcat:Distribution">
+            <!-- <pre data-include-format="text" data-include="./examples/distribution/spatialResolutionInMeters.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="distribution-access-rights">
+          <h4>Property: access rights</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>access rights</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accessRights"><code>dct:accessRights</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement"><code>dct:RightsStatement</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property MAY include information regarding access or restrictions based on privacy,
+                      security, or other policies.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:accessRights for dcat:Distribution">
+            <!-- <pre data-include-format="text" data-include="./examples/distribution/accessRights.ttl"></pre> -->
+          </aside>
+        </section>
         <section id="distribution-access-service">
           <h4>Property: access service</h4>
           <table class="def">
@@ -9307,18 +9616,213 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td><a href="#identifier-notation">notation</a></td>
+            <td><a data-cite="SKOS-REFERENCE#notation"><code>skos:notation</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+            </td>
+            <td><strong>R</strong></td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#identifier-creator">creator</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/creator"><code>dct:creator</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#identifier-schemaAgency">schema agency</a></td>
+            <td><a data-cite="VOCAB-ADMS#schemaAgency"><code>adms:schemaAgency</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#identifier-version">version</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/version"><code>dct:version</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#identifier-issued">issued</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/issued"><code>dct:issued</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+            (typed as
+            as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+            <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+            <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+            or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
 
 
         </tbody>
       </table>
-      <section id="identifier-mandatory-props">
-        <h4>Mandatory Properties</h4>
-      </section>
       <section id="identifier-recommended-props">
         <h4>Recommended Properties</h4>
+        <section id="identifier-notation">
+          <h4>Property: notation</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>notation</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="SKOS-REFERENCE#notation"><code>skos:notation</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </section>
       <section id="identifier-optional-props">
         <h4>Optional Properties</h4>
+        <section id="identifier-creator">
+          <h4>Property: creator</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>creator</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/creator"><code>dct:creator</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="identifier-schemaAgency">
+          <h4>Property: schema agency</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>schema agency</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-ADMS#schemaAgency"><code>adms:schemaAgency</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td<a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="identifier-version">
+          <h4>Property: version</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>version</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/version"><code>dct:version</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="identifier-issued">
+          <h4>Property: issued</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>issued</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/issued"><code>dct:issued</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                (typed as
+                as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+                <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+                <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+                or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
       </section>
     </section>
 
