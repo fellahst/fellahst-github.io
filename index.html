@@ -245,7 +245,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><a href="#Class:Catalog">Catalog</a></td>
+              <td><a href="VOCAB-DCAT-3#Class:Catalog">Catalog</a></td>
               <td>A catalog or repository that hosts the Datasets or Data Services being described.</td>
               <td><a data-cite="VOCAB-DCAT-3#Class:Catalog"><code>dcat:Catalog</code></a></td>
             </tr>
@@ -679,7 +679,8 @@
               <a href="#properties-for-catalog">Catalog</a>
             </td>
             <td>
-              <p>A catalog or repository that hosts the resources (as Data Services, Datasets, or other Catalogs) being described.</p>
+              <p>A catalog or repository that hosts the resources (as Data Services, Datasets, or other Catalogs) being
+                described.</p>
             </td>
             <td>
               <p><code>dcat:Catalog</code></p>
@@ -1723,8 +1724,8 @@
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Standard"><code>dct:Standard</code></a></td>
             <td>R</td>
             <td>0..1</td>
-            </tr>
-            <tr>
+          </tr>
+          <tr>
             <td><a href="#catalog-creator">creator</a></td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/creator"><code>dct:creator</code></a></td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
@@ -1840,8 +1841,8 @@
             <td>O</td>
             <td>0..n</td>
           </tr>
-          </tbody>
-          </table>
+        </tbody>
+      </table>
 
       <section id="catalog-mandatory-props">
         <h4>Mandatory Properties</h4>
@@ -2007,7 +2008,6 @@
               <tr>
                 <th>Range</th>
                 <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a>
-                  (<a class="no-sectionRef" href="#Class:Dataset"></a>)
                 </td>
               </tr>
               <tr>
@@ -2424,7 +2424,8 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property SHOULD be used to indicate the model, schema, ontology, view or profile that the cataloged
+                    <li>This property SHOULD be used to indicate the model, schema, ontology, view or profile that the
+                      cataloged
                       resource content conforms to.</li>
                   </ul>
                 </td>
@@ -2695,7 +2696,8 @@
               </tr>
               <tr>
                 <th>Definition:</th>
-                <td>A record describing the registration of a single resource (e.g., a dataset, a data service) that is part
+                <td>A record describing the registration of a single resource (e.g., a dataset, a data service) that is
+                  part
                   of
                   the catalog.</td>
               </tr>
@@ -2753,7 +2755,6 @@
               <tr>
                 <th>Range</th>
                 <td><a data-cite="VOCAB-DCAT-3#Class:Data_Service"><code>dcat:DataService</code></a>
-                  (<a class="no-sectionRef" href="#Class:Data_Service"></a>)
                 </td>
               </tr>
               <tr>
@@ -2846,7 +2847,8 @@
                 <td>
                   <ul>
                     <li>
-                      This property contains the main identifier for the Catalog, e.g. the URI or other unique identifier.
+                      This property contains the main identifier for the Catalog, e.g. the URI or other unique
+                      identifier.
                     </li>
                   </ul>
                 </td>
@@ -2885,7 +2887,8 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to a related Catalog in which the described Catalog is physically or logically
+                    <li>This property refers to a related Catalog in which the described Catalog is physically or
+                      logically
                       included.
                     </li>
                   </ul>
@@ -2916,7 +2919,8 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/rightsHolder"><code>dcterms:rightsHolder</code></a></td>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/rightsHolder"><code>dcterms:rightsHolder</code></a>
+                </td>
               </tr>
               <tr>
                 <th>Range</th>
@@ -3043,7 +3047,8 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to a link to an Agent having some form of responsibility for the Catalog.</li>
+                    <li>This property refers to a link to an Agent having some form of responsibility for the Catalog.
+                    </li>
                   </ul>
                 </td>
               </tr>
@@ -3866,18 +3871,37 @@
         </tr>
         <tr>
           <th class="prop">Definition:</th>
-          <td>A Data Service is a collection of operations that provides access to one or more Datasets or data
-            processing functions. If a dcat:DataService is bound to one or more specified Datasets, they are
-            indicated by the dcat:servesDataset property.</td>
+          <td>
+            A collection of operations that provides access to one or more
+            datasets or data processing functions.
+          </td>
         </tr>
         <tr>
-          <th class="prop">Subclass Of:</th>
+          <th class="prop">Sub-class of:</th>
           <td><a data-cite="VOCAB-DCAT-3#Class:Resource"><code>dcat:Resource</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Sub-class of:</th>
+          <td>
+            <a href="http://purl.org/dc/dcmitype/Service"><code>dctype:Service</code></a>
+          </td>
         </tr>
         <tr>
           <th class="prop">Usage note:</th>
           <td>
             <ul>
+              <li>If a
+                <a href="VOCAB-DCAT-3#Class:Data_Service"><code>dcat:DataService</code></a> is
+                bound to one or more specified Datasets, they are indicated by the
+                <a href="VOCAB-DCAT-3#Property:data_service_serves_dataset"><code>dcat:servesDataset</code></a>
+                property.
+              </li>
+              <li>The kind of service can be indicated using the
+                <a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a>
+                property. Its value may be taken from a controlled vocabulary such
+                as the INSPIRE spatial data service type code list
+                [[?INSPIRE-SDST]].
+              </li>
               <li>TOFIX: DCAT-AP provides guidelines about the usage of Data services and Distribution in relation to
                 Datasets:
                 [[DCAT-AP-USAGEGUIDE]].</li>
@@ -3958,22 +3982,6 @@
             <td>0..n</td>
           </tr>
           <tr>
-            <td><a href="#data-service-access-rights">access rights</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accessRights"><code>dct:accessRights</code></a>
-            </td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement"><code>dct:RightsStatement</code></a>
-            </td>
-            <td>O</td>
-            <td>0..1</td>
-          </tr>
-          <tr>
-            <td><a href="#data-service-documentation">Documentation</a></td>
-            <td><a href="http://xmlns.com/foaf/0.1/#term_page"><code>foaf:page</code></a></td>
-            <td><a href="http://xmlns.com/foaf/0.1/#term_Document"><code>foaf:Document</code></a></td>
-            <td>O</td>
-            <td>0..n</td>
-          </tr>
-          <tr>
             <td><a href="#data-service-keyword">Keyword</a></td>
             <td><a data-cite="VOCAB-DCAT-3#Property:resource_keyword"><code>dcat:keyword</code></a>
             </td>
@@ -3983,9 +3991,194 @@
             <td>0..n</td>
           </tr>
           <tr>
-            <td><a href="#data-service-landing-page">Landing page</a></td>
-            <td><a data-cite="VOCAB-DCAT-3#Property:resource_landing_page"><code>dcat:landingPage</code></a>
-            <td><a href="http://xmlns.com/foaf/0.1/#term_Document"><code>foaf:Document</code></a></td>
+            <td><a href="#data-service-spatialResolution">spatial resolution in meters</a></td>
+            <td><a
+                href="http://www.w3.org/ns/dcat#spatialResolutionInMeters"><code>dcat:spatialResolutionInMeters</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-temporalResolution">temporal resolution</a></td>
+            <td><a href="VOCAB-DCAT-3#Property:dataset_temporal_resolution"><code>dcat:temporalResolution</code></a>
+            </td>
+            <td>
+              <a href="http://www.w3.org/2000/01/rdf-schema#Literal"><code>rdfs:Literal</code></a>
+              typed as
+              <a data-cite="XMLSCHEMA11-2#duration"><code>xsd:duration</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-theme-category">theme/category</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:dataset_theme"><code>dcat:theme</code></a></td>
+            <td><a data-cite="SKOS-REFERENCE#concepts"><code>skos:Concept</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-access-rights">access rights</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accessRights"><code>dct:accessRights</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement"><code>dct:RightsStatement</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-conforms-to">conforms to</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/conformsTo"><code>dct:conformsTo</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Standard"><code>dct:Standard</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-created">creation date</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/created"><code>dct:created</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a> typed as xsd:date or xsd:dateTime
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-creator">creator</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/creator"><code>dct:creator</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-description">description</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/description"><code>dcterms:description</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+            <td><strong>O</strong></td>
+            <td>O..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-identifier">identifier</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-language">language</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/language"><code>dct:language</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/LinguisticSystem"><code>dct:LinguisticSystem</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-modified">update/modification date</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+              (typed as
+              as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+              <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+              <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+              or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-rights">Rights</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/rights">
+                <code>dct:rights</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement">
+                <code>dct:RightsStatement</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-rightsHolder">rights holder</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/rightsHolder"><code>dct:rightsHolder</code></a></td>
+            <td><a href="http://xmlns.com/foaf/0.1/term_Organization"><code>foaf:Organization</code></a></td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-spatial-geographic">spatial/geographic coverage</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a></td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-temporal">termporal coverage</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/temporal"><code>dct:temporal</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/PeriodOfTime"><code>dct:PeriodOfTime</code></a></td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-type">type</a></td>
+            <td><a href="http://purl.org/dc/terms/type"><code>dct:type</code></a>
+            </td>
+            <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+            </td>
+            <td><strong>O</strong></td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-hasQualityMeasurement">spatial resolution</a></td>
+            <!-- TODO: Add links in this block -->
+            <td><code>dqv:hasQualityMeasurement</code></a>
+            </td>
+            <td><a href="href="
+                https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement"><code>dqv:QualityMeasurement</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-hasPolicy">has policy</a></td>
+            <!-- TODO: Fix links in this block -->
+            <td><a href="https://www.w3.org/TR/odrl-vocab/#term-hasPolicy"><code>odrl:hasPolicy</code></a></a>
+            </td>
+            <td><a href="https://www.w3.org/TR/odrl-vocab/#term-Policy"><code>odrl:Policy</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-qualified-attribution">qualified attribution</a></td>
+            <td><a data-cite="PROV#property:qualifiedAttribution"><code>prov:qualifiedAttribution</code></a></td>
+            <td><a data-cite="PROV#Attribution">
+                <code>prov:Attribution</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-wasUsedBy">was used by</a></td>
+            <td><a data-cite="PROV#property:wasUsedBy"><code>prov:wasUsedBy</code></a></td>
+            <td><a data-cite="PROV#Activity">
+                <code>prov:Activity</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#data-service-geographic-extent">geographic bounding box</a></td>
+            <td><a data-cite="DCAT-US##http://TBD/geographicBoundingBox"><code>dcat-us:geographicBoundingBox</code></a>
+            </td>
+            <td><a data-cite="DCAT-US#http://TBD/GeographicBoundingBox"><code>dcat-us:GeographicBoundingBox</code></a>
             </td>
             <td>O</td>
             <td>0..n</td>
@@ -3996,15 +4189,17 @@
         <pre data-include-format="text" data-include="./examples/service/service.ttl"></pre>
       </aside>
       <section id="data-service-mandatory-props">
-
         <h4>Mandatory Properties</h4>
+
         <section id="data-service-endpoint-url">
           <h4>Property: endpoint URL</h4>
           <table class="def">
             <tbody>
               <tr>
-                <th>Property</th>
-                <td>endpoint URL</td>
+                <th>RDF Property</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:data_service_endpoint_url">
+                    <code>dcat:endpointURL</code>
+                  </a></td>
               </tr>
               <tr>
                 <th>Requirement level</th>
@@ -4032,7 +4227,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>The root location or primary endpoint of the service (an IRI)</li>
+                    <li>The root location or primary endpoint of the service (a Web-resolvable IRI)</li>
                   </ul>
                 </td>
               </tr>
@@ -4207,6 +4402,17 @@
                 </td>
               </tr>
               <tr>
+                <th class="prop">Definition:</th>
+                <td>
+                  A description of the services available via the end-points,
+                  including their operations, parameters etc.
+                </td>
+              </tr>
+              <tr>
+                <th>Domain</th>
+                <td><a href="VOCAB-DCAT-3#Class:Data_Service"><code>dcat:DataService</code></a></td>
+              </tr>
+              <tr>
                 <th>Range</th>
                 <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a></td>
               </tr>
@@ -4214,10 +4420,20 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property contains a description of the services available via the end-points,
-                      including their operations, parameters etc.The property gives specific details of the actual
-                      endpoint instances.
+                    <li>The endpoint description gives specific details of the actual
+                      endpoint instances, while
+                      <a href="VOCAB-DCAT-3#Property:resource_conforms_to"><code>dcterms:conformsTo</code></a>
+                      is used to indicate the general standard or specification that
+                      the endpoints implement.
                     </li>
+                    <li>An endpoint description may be expressed in a machine-readable
+                      form, such as an OpenAPI (Swagger) description [[?OpenAPI]], an
+                      OGC <code>GetCapabilities</code> response [[?WFS]],
+                      [[?ISO-19142]], [[?WMS]], [[?ISO-19128]], a SPARQL Service
+                      Description [[?SPARQL11-SERVICE-DESCRIPTION]], an
+                      [[?OpenSearch]] or [[?WSDL20]] document, a Hydra API description
+                      [[?HYDRA]], else in text or some other informal mode if a formal
+                      representation is not possible.</li>
                   </ul>
                 </td>
               </tr>
@@ -4290,7 +4506,6 @@
               <tr>
                 <th>Range</th>
                 <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a>
-                  (<a class="no-sectionRef" href="#Class:Dataset"></a>)
                 </td>
               </tr>
               <tr>
@@ -4314,6 +4529,178 @@
       </section>
       <section id="data-service-optional-props">
         <h4>Optional Properties</h4>
+        <section id="data-service-keyword">
+          <h4>Property: keyword</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>keyword</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_keyword"><code>dcat:keyword</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains a keyword or tag describing the Data Service.</li>
+                    <li>If available, the keyword from [[TERMDAT]] SHOULD be used.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:keyword for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/keyword.ttl"></pre>
+          </aside>
+        </section>
+        <section id="data-service-spatialResolution">
+          <h4>Property: spatial resolution in meters</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>spatial resolution in meters</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a
+                    data-cite="VOCAB-DCAT-3#Property:dataset_spatial_resolution"><code>dcat:spatialResolutionInMeters</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to the minimum spatial separation resolvable in a Data Service, measured in
+                      metres.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO: Determine whether spatialResolution for DataService needs an example-->
+          <!-- <aside class="example" id="ex-data-service-spatialResolution"
+            title="Usage of dcat:spatialResolutionInMeters for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/spatial-resolution.ttl"></pre>
+          </aside> -->
+        </section>
+        <section id="data-service-temporalResolution">
+          <h4>Property: temporal resolution</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>temporal resolution</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="VOCAB-DCAT-3#Property:dataset_temporal_resolution"><code>dcat:temporalResolution</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal"><code>rdfs:Literal</code></a>
+                  typed as
+                  <a data-cite="XMLSCHEMA11-2#duration"><code>xsd:duration</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to the minimum time period resolvable in the Data Service.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO: Determine whether temporalResolution for DataService needs an example-->
+          <!-- <aside class="example" id="ex-data-service-temporalResolution"
+                    title="Usage of dcat:temporalResolution for dcat:DataService">
+                    <pre data-include-format="text" data-include="./examples/service/temporalResolution.ttl"></pre>
+                  </aside> -->
+        </section>
+        <section id="data-service-theme-category">
+          <h4>Property: theme/category</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>theme/category</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_theme"><code>dcat:theme</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>
+                      This property refers to a Category of the Data Service. A Data Service may be associated with
+                      multiple Categories.
+                    </li>
+                    <li>CV to be used: [[VOCAB-US-THEME]]</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO -->
+          <!-- <aside class="example" title="Example for dcat:theme for dcat:DataService.">
+            <pre data-include-format="text" data-include="./examples/service/theme.ttl"></pre>
+          </aside> -->
+        </section>
         <section id="data-service-access-rights">
           <h4>Property: access rights</h4>
           <table class="def">
@@ -4357,13 +4744,13 @@
             <pre data-include-format="text" data-include="./examples/service/access-rights.ttl"></pre>
           </aside>
         </section>
-        <section id="data-service-documentation">
-          <h4>Property: documentation</h4>
+        <section id="data-service-conforms-to">
+          <h4>Property: conforms to</h4>
           <table class="def">
             <tbody>
               <tr>
                 <th>Property</th>
-                <td>documentation</td>
+                <td>conforms to</td>
               </tr>
               <tr>
                 <th>Requirement level</th>
@@ -4375,33 +4762,122 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a href="http://xmlns.com/foaf/0.1/#term_page"><code>foaf:page</code></a></td>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/conformsTo"><code>dct:conformsTo</code></a>
+                </td>
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a href="http://xmlns.com/foaf/0.1/#term_Document"><code>foaf:Document</code></a></td>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Standard"><code>dct:Standard</code></a>
+                </td>
               </tr>
               <tr>
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to a page or document about this Data Service.</li>
+                    <li>This property is used to indicate the general standard or specification that the Data Service
+                      endpoints implement.</li>
                   </ul>
                 </td>
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Usage of foaf:page for dcat:DataService">
-            <pre data-include-format="text" data-include="./examples/service/documentation.ttl"></pre>
-          </aside>
+          <!-- TODO -->
+          <!-- <aside class="example" title="Usage of dct:conformsTo for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/conforms-to.ttl"></pre>
+          </aside> -->
         </section>
-        <section id="data-service-keyword">
-          <h4>Property: keyword</h4>
+        <section id="data-service-created">
+          <h4>Property: creation date</h4>
           <table class="def">
             <tbody>
               <tr>
                 <th>Property</th>
-                <td>keyword</td>
+                <td>creation date</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/created"><code>dct:created</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a> typed as xsd:date or xsd:dateTime
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains the date on which the Data Service has been first created.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO: Determine whether an example is needed for dct:created for DataService-->
+          <!-- <aside class="example" title="Usage of dct:created for dcat:DataService">
+                      <pre data-include-format="text" data-include="./examples/service/created.ttl"></pre>
+                    </aside> -->
+        </section>
+        <section id="data-service-creator">
+          <h4>Property: creator</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>creator</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Optional</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/creator">
+                    <code>dct:creator</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to the Agent primarily responsible for producing the Data Service.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO -->
+          <!-- <aside class="example" title="Usage of dct:creator for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/creator.ttl"></pre>
+          </aside> -->
+        </section>
+        <section id="data-service-description">
+          <h4>Property: description</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>description</td>
               </tr>
               <tr>
                 <th>Requirement level</th>
@@ -4413,7 +4889,7 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="VOCAB-DCAT-3#Property:resource_keyword"><code>dcat:keyword</code></a>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/description"><code>dct:description</code></a>
                 </td>
               </tr>
               <tr>
@@ -4425,24 +4901,30 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property contains a keyword or tag describing the Data Service.</li>
-                    <li>If available, the keyword from [[TERMDAT]] SHOULD be used.</li>
+                    <li>This property contains a free-text account of the Data Service.</li>
+                    <li>
+                      This property can be repeated for parallel language versions of the
+                      description (see <a class="no-sectionRef" href="#multilingualism"></a>). On the user interface of
+                      data portals, the content of the element whose language corresponds to the
+                      display language selected by the user is displayed.
+                    </li>
                   </ul>
                 </td>
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Usage of dcat:keyword for dcat:DataService">
-            <pre data-include-format="text" data-include="./examples/service/keyword.ttl"></pre>
-          </aside>
+          <!-- TODO -->
+          <!-- <aside class="example" title="Usage of dct:description for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/description.ttl"></pre>
+          </aside> -->
         </section>
-        <section id="data-service-landing-page">
-          <h4>Property: landing page</h4>
+        <section id="data-service-identifier">
+          <h4>Property: identifier</h4>
           <table class="def">
             <tbody>
               <tr>
                 <th>Property</th>
-                <td>landing page</td>
+                <td>identifier</td>
               </tr>
               <tr>
                 <th>Requirement level</th>
@@ -4454,29 +4936,550 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="VOCAB-DCAT-3#Property:resource_landing_page"><code>dcat:landingPage</code></a>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/identifier"><code>dct:identifier</code></a>
                 </td>
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a href="http://xmlns.com/foaf/0.1/#term_Document"><code>foaf:Document</code></a></td>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
               </tr>
               <tr>
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to a web page that provides access to the Data Service and/or
-                      additional information. It is intended to point to a
-                      landing page at the original data provider, not to a page on a site of a third party, such as an
-                      aggregator.
+                    <li>This property contains the main identifier for the Data Service, e.g. the URI or other unique
+                      identifier in the context
+                      of the Catalog.
                     </li>
                   </ul>
                 </td>
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Usage of foaf:landingPage for dcat:DataService">
-            <pre data-include-format="text" data-include="./examples/service/landing-page.ttl"></pre>
+          <!-- TODO -->
+          <!-- <aside class="example" id="ex-data-service-identifier" title="Usage of dct:identifier for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/identifier.ttl"></pre>
+          </aside> -->
+        </section>
+        <section id="data-service-language">
+          <h4>Property: language</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>language</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <td>Optional</td>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/language"><code>dct:language</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a
+                    data-cite="DCTERMS#http://purl.org/dc/terms/LinguisticSystem"><code>dct:LinguisticSystem</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a language supported by the Data Service. This property can be repeated
+                      if multiple languages
+                      are supported in the Data Service.
+                    </li>
+                    <li>CV to be used: [[VOCAB-US-LANGUAGE]]</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO: Create an example-->
+          <!-- <aside class="example" title="Usage of dct:language for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/language.ttl"></pre>
+          </aside> -->
+        </section>
+        <section id="data-service-modified">
+          <h4>Property: update/ modification date</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>update/ modification date</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                  (typed as
+                  as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+                  <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+                  <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+                  or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains the most recent date on which the Data Service was changed or modified.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO -->
+          <!-- <aside class="example" title="Usage of dct:modified for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/modified.ttl"></pre>
+          </aside> -->
+        </section>
+        <section id="data-service-rights">
+          <h4>Property: rights</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>rights</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/rights"><code>dct:rights</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement">
+                    <code>dct:RightsStatement</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>A statement that concerns all rights for the Data Service not addressed with dcterms:license or
+                      dcterms:accessRights, such as copyright
+                      statements.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO -->
+          <!-- <aside class="example" title="Usage of dct:rights for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/rights.ttl"></pre>
+          </aside> -->
+        </section>
+        <section id="data-service-rightsHolder">
+          <h4>Property: rights holder</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>rights holder</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/rightsHolder"><code>dcterms:rightsHolder</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://xmlns.com/foaf/0.1/term_Organization"><code>foaf:Organization</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to an Agent (organisation) holding rights on the Data Service.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:rightsHolder for dcat:DataService">
+            <!-- TODO: uncomment below and add a dcterms:rightsHolder example for dcat:DataService-->
+            <!-- <pre data-include-format="text" data-include="./examples/service/rightsHolder.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="data-service-spatial-geographic">
+          <h4>Property: spatial/geographic coverage</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>spatial/geographic coverage</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a geographic region that is covered by the Data Service.</li>
+                    <li>TO DISCUSS: Conventions to be used: The Vocabularies Name Authority Lists MUST be used for
+                      continents, countries and
+                      places that are in those lists; if a particular location is not in one of the mentioned Named
+                      Authority Lists, Geonames URIs MUST be used:
+                      [[VOCAB-US-CONTINENT]],
+                      [[VOCAB-US-COUNTRY]],
+                      [[VOCAB-US-PLACE]],
+                      [[GEONAMES]]
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO -->
+          <!-- <aside class="example" title="Usage of dct:spatial for dcat:DataService">
+            <pre data-include-format="text" data-include="./examples/service/spatial.ttl"></pre>
+          </aside> -->
+        </section>
+        <section id="data-service-temporal">
+          <h4>Property: temporal coverage</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>temporal coverage</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/temporal"><code>dct:temporal</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/PeriodOfTime"><code>dct:PeriodOfTime</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a temporal period that the Data Service covers.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:temporal for dcat:DataService">
+            <!-- TODO: uncomment below and add a dcterms:temporal example for dcat:DataService-->
+            <!-- <pre data-include-format="text" data-include="./examples/service/temporal.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="data-service-type">
+          <h4>Property: type</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>type</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <!-- TODO: uncomment or delete-->
+                    <!-- <li>This property SHOULD take as value one of the URIs of the "Resource types" code list operated by the
+                    INSPIRE Registry [INSPIRE-RT] - namely the one corresponding to "Spatial data service".</li> -->
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:type for DataService">
+            <!-- <pre data-include-format="text" data-include="./examples/service/type.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="data-service-hasQualityMeasurement">
+          <h4>Property: spatial resolution</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>spatial resolution</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <!-- TODO: add href here-->
+                <td><code>dqv:hasQualityMeasurement</code>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="href="
+                    https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement"><code>dqv:QualityMeasurement</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>Refers to the performed quality measurements.</li>
+                    <li>In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in
+                      [INSPIRE-MD-REG], [ISO-19115], and
+                      [ISO-19115-1].</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dqv:hasQualityMeasurement for DataService">
+            <!-- <pre data-include-format="text" data-include="./examples/service/quality-measurement.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="data-service-hasPolicy">
+          <h4>Property: has policy</h4>
+
+          <table class="def">
+            <tr>
+              <th>RDF Property:</th>
+              <td>
+                <a data-cite="ODRL-VOCAB#term-hasPolicy"><code>odrl:hasPolicy</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th class="prop">Definition:</th>
+              <td>
+                An
+                <abbr title="Open Digital Rights Language">ODRL</abbr>
+                conformant policy expressing the rights associated with the
+                Data Service.
+              </td>
+            </tr>
+            <tr>
+              <th class="prop">Range:</th>
+              <td>
+                <a data-cite="ODRL-VOCAB#term-Policy"><code>odrl:Policy</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th class="prop">Usage note:</th>
+              <td>
+                Information about rights expressed as an ODRL policy
+                [[ODRL-MODEL]] using the ODRL vocabulary [[ODRL-VOCAB]] MAY be
+                provided for the Data Service.
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section id="data-service-qualified-attribution">
+          <h4>Property: qualified attribution</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>qualified attribution</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="PROV#qualifiedAttribution"><code>prov:qualifiedAttribution</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="PROV#Attribution">
+                    <code>prov:Attribution</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a link to an Agent having some form of responsibility for the Data
+                      Service.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" id="ex-data-service-qualified-attribution"
+            title="Example for prov:qualifiedAttribution on dcat:DataService">
+            <!-- TODO -->
+            <!-- <pre data-include-format="text" data-include="./examples/service/qualified-attribution.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="data-service-wasUsedBy">
+          <h4>Property: was used by</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>was used by</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="PROV#wasUsedBy"><code>prov:wasUsedBy</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="PROV#Activity">
+                    <code>prov:Activity</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to an Activity that used the Data Service.
+                    </li>
+                    <li>This property MAY be used to specify a testing Activity over a Data Service, against a given
+                      Standard, producing as
+                      output a conformance degree.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" id="ex-data-service-wasUsedBy" title="Example for prov:wasUsedBy on dcat:DataService">
+            <!-- TODO -->
+            <!-- <pre data-include-format="text" data-include="./examples/service/wasUsedBy.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="data-service-geographic-extent">
+          <h4>Property: geographic bounding box</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>geographic bounding box</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCAT-US##http://TBD/geographicBoundingBox"><code>dcat-us:geographicBoundingBox</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCAT-US#http://TBD/GeographicBoundingBox"><code>dcat-us:GeographicBoundingBox</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <!-- TODO -->
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" id="ex-data-service-geographicBoundingBox" title="Example for dcat-us:geographicBoundingBox on dcat:DataService">
+            <!-- TODO -->
+            <!-- <pre data-include-format="text" data-include="./examples/service/geographicBoundingBox.ttl"></pre> -->
           </aside>
         </section>
       </section>
@@ -5039,7 +6042,6 @@
               <tr>
                 <th>Range</th>
                 <td><a data-cite="VOCAB-DCAT-3#Class:Distribution"><code>dcat:Distribution</code></a>
-                  (<a class="no-sectionRef" href="#Class:Distribution"></a>)
                 </td>
               </tr>
               <tr>
@@ -6214,6 +7216,14 @@
             <td>0..1</td>
           </tr>
           <tr>
+            <td><a href="#distribution-representation-technique">representation technique</a></td>
+            <td><a data-cite="VOCAB-ADMS#adms-representationtechnique"><code>adms:representationTechnique</code></a>
+            <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
             <td><a href="#distribution-access-service">access service</a></td>
             <td><a data-cite="VOCAB-DCAT-3#Property:distribution_access_service"><code>dcat:accessService</code></a>
             <td><a data-cite="VOCAB-DCAT-3#Class:Data_Service"><code>dcat:DataService</code></a>
@@ -6341,7 +7351,7 @@
           </tr>
           <tr>
             <td><a href="#distribution-temporal-resolution">temporal resolution</a></td>
-            <td><a data-cite="VOCAB-DCAT-3#Property:distribution_release_date">
+            <td><a data-cite="VOCAB-DCAT-3#Property:distribution_temporal_resolution">
                 <code>dcat:temporalResolution</code></a>
             </td>
             <td><a data-cite="XMLSCHEMA11-2#duration"><code>xsd:duration</code></a>
@@ -6741,7 +7751,6 @@
               <tr>
                 <th>Range</th>
                 <td><a data-cite="VOCAB-DCAT-3#Class:Data_Service"><code>dcat:DataService</code></a>
-                  (<a class="no-sectionRef" href="#Class:Data_Service"></a>)
                 </td>
               </tr>
               <tr>
@@ -7499,7 +8508,7 @@
             <td>0..1</td>
           </tr>
           <tr>
-            <td><a href="#document-type">document-type</a></td>
+            <td><a href="#document-type">document type</a></td>
             <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a>
             </td>
             <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a>
@@ -7745,7 +8754,8 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a href="http://purl.org/dc/terms/bibliographicCitation"><code>dcterms:bibliographicCitation</code></a>
+                <td><a
+                    href="http://purl.org/dc/terms/bibliographicCitation"><code>dcterms:bibliographicCitation</code></a>
                 </td>
               </tr>
               <tr>
@@ -8438,13 +9448,36 @@
         </tr>
         <tr>
           <th class="prop">Definition:</th>
-          <td></td>
+          <td>A spatial region or named place. It can be represented using a controlled vocabulary or with geographic
+            coordinates.
+          </td>
         </tr>
         <tr>
           <th class="prop">Usage note:</th>
           <td>
-            A spatial region or named place. It can be represented using a controlled vocabulary or with geographic
-            coordinates.
+            <ul>
+              <li>
+                For an extensive geometry (i.e., a set of coordinates denoting
+                the vertices of the relevant geographic area), the property
+                <a data-cite="VOCAB-DCAT-3#Property:location_geometry"><code
+                    title="http://www.w3.org/ns/locn#geometry">locn:geometry</code></a>
+                [[LOCN]] SHOULD be used.
+              </li>
+              <li>
+                For a geographic bounding box delimiting a spatial area the
+                property
+                <a href="VOCAB-DCAT-3#Property:location_bbox"><code
+                    title="http://www.w3.org/ns/dcat#bbox">dcat:bbox</code></a>
+                SHOULD be used.
+              </li>
+              <li>
+                For the geographic center of a spatial area, or another
+                characteristic point, the property
+                <a href="VOCAB-DCAT-3#Property:location_centroid"><code
+                    title="http://www.w3.org/ns/dcat#centroid">dcat:centroid</code></a>
+                SHOULD be used.
+              </li>
+            </ul>
           </td>
         </tr>
       </table>
@@ -8461,31 +9494,337 @@
         </thead>
         <tbody>
           <tr>
+            <td><a href="#location-bbox">bounding box</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:location_bbox"> <code>dcat:bbox</code></a> </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a> typed as gsp:wktLiteral or
+              gsp:gmlLiteral.</td>
+            <td>R</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
             <td><a href="#location-centroid">centroid</a></td>
-            <td><a data-cite="DCAT#Property:centroid">
-                <code>centroid</code></a>
+            <td><a data-cite="VOCAB-DCAT-3#Property:location_centroid">
+                <code>dcat:centroid</code></a>
             </td>
-            <td><a data-cite="RDF-SCHEMA#ch_literal"><code></code></a></td>
-            <td><strong>O</strong></td>
-            <td>1</td>
+            <!-- TODO: link geosparql properties throughout the document and ensure prefix consistency -->
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a> typed as gsp:wktLiteral or
+              gsp:gmlLiteral.</td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#location-identifier">geographic identifier</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/identifier">
+                <code>dcterms:identifier</code></a>
+            </td>
+            <!-- TODO: link geosparql properties throughout the document and ensure prefix consistency -->
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a> </td>
+            <td>O</td>
+            <td>0..n</td>
           </tr>
           <tr>
             <td><a href="#location-geometry">geometry</a></td>
-            <td><a href="http://w3id.org/ns/location#geometry"> <code>geometry</code></a> </td>
-            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
-            <td><strong>O</strong></td>
-            <td>1</td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:location_geometry"> <code>locn:geometry</code></a> </td>
+            <td><a href="http://www.w3.org/ns/locn#locn:Geometry"><code>locn:Geometry</code></a></td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#location-inScheme">gazetteer</a></td>
+            <td><a data-cite="SKOS-REFERENCE#inScheme"> <code>skos:inScheme</code></a> </td>
+            <td><a data-cite="SKOS-REFERENCE#ConceptScheme"><code>skos:ConceptScheme</code></a></td>
+            <td>O</td>
+            <td>0..1</td>
           </tr>
           <tr>
             <td><a href="#location-prefLabel">geographic name</a></td>
             <td><a data-cite="SKOS-REFERENCE#prefLabel"> <code>skos:prefLabel</code></a> </td>
-            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a> typed as gsp:wktLiteral or
+              gsp:gmlLiteral.</td>
             <td><strong>M</strong></td>
             <td>1..n</td>
           </tr>
 
         </tbody>
       </table>
+
+      <section id="location-mandatory-props">
+        <h4>Mandatory Properties</h4>
+
+        <section id="location-prefLabel">
+          <h4>Property: geographic name</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>RDF Property</th>
+                <td><a data-cite="SKOS-REFERENCE#prefLabel"> <code>skos:prefLabel</code></a></td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n</td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a> typed as geosparql:wktLiteral or
+                  geosparql:gmlLiteral</td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains a preferred label of the Location. This property can be repeated for
+                      parallel
+                      language versions of the label.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <section id="location-recommended-props">
+        <h4>Recommended Properties</h4>
+
+        <section id="location-bbox">
+          <h4>Property: bounding box</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>bounding box</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:location_bbox"><code>dcat:bbox</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a> typed as geosparql:wktLiteral or
+                  geosparql:gmlLiteral</td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The geographic center (centroid) of a spatial thing</td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>The range of this property (rdfs:Literal) is intentionally generic, with the purpose of allowing
+                      different geometry
+                      literal encodings. E.g., the geometry could be encoded as a WKT literal (geosparql:wktLiteral)
+                    </li>
+                    <li>Please note that the order of usage is as follows: use the most specific geospatial relationship
+                      by
+                      preference. E.g. if
+                      the spatial description is a bbox, use dcat:bbox, otherwise use locn:geometry</li>
+                    <li>The WKT encoding supports geospatial positions expressed in coordinate reference systems other
+                      than <a href="https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84">WGS84</a>.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:bbox for dcterms:Location">
+            <pre data-include-format="text" data-include="./examples/location/bbox.ttl"></pre>
+          </aside>
+        </section>
+      </section>
+      <section id="location-optional-props">
+        <h4>Optional Properties</h4>
+
+        <section id="location-centroid">
+          <h4>Property: centroid</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>centroid</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:location_centroid"><code>dcat:centroid</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a> typed as geosparql:wktLiteral or
+                  geosparql:gmlLiteral</td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>The range of this property (rdfs:Literal) is intentionally generic, with the purpose of allowing
+                      different geometry
+                      literal encodings. E.g., the geometry could be encoded as a WKT literal (geosparql:wktLiteral)
+                    </li>
+                    <li>Please note that the order of usage is as follows: use the most specific geospatial relationship
+                      by
+                      preference. E.g. if
+                      the spatial description is a bbox, use dcat:bbox, otherwise use locn:geometry</li>
+                    <li>The WKT encoding supports geospatial positions expressed in coordinate reference systems other
+                      than <a href="https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84">WGS84</a>.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO: provide an example here for centroid -->
+          <!-- <aside class="example" title="Usage of dcat:centroid for dcterms:Location">
+                                                                  <pre data-include-format="text" data-include="./examples/location/centroid.ttl"></pre>
+                                                                </aside> -->
+        </section>
+        <section id="location-identifier">
+          <h4>Property: geographic identifier</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>geographic identifier</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains the geographic identifier for the Location, e.g., the URI or other unique
+                      identifier in the
+                      context of the relevant gazetteer.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO: provide an example here for identifier -->
+          <!-- <aside class="example" title="Usage of dct:identifier for dcterms:Location">
+                                                                          <pre data-include-format="text" data-include="./examples/location/identifier.ttl"></pre>
+                                                                        </aside> -->
+        </section>
+        <section id="location-geometry">
+          <h4>Property: geometry</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>geometry</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:location_geometry"> <code>locn:geometry</code></a></td>
+              </tr>
+              <tr>
+                <!-- TODO: Ensure that this range should be locn:Geometry and not rdfs:Literal (I went with DCAT 3's recommendation rather than GeoDCAT 2.0.0)-->
+                <th>Range</th>
+                <td><a href="http://www.w3.org/ns/locn#locn:Geometry"><code>locn:Geometry</code></a></td>
+              </tr>
+              <tr>
+                <th class="prop">Definition:</th>
+                <td>
+                  Associates a spatial thing [[?SDW-BP]] with a corresponding
+                  geometry.
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  The range of this property (<code title="https://www.w3.org/ns/locn#Geometry">locn:Geometry</code>)
+                  allows
+                  for any type of geometry specification. E.g., the
+                  geometry could be encoded by a literal, as
+                  <abbr title="Well-known Text">WKT</abbr> (<a
+                    href="http://www.opengis.net/ont/geosparql#wktLiteral"><code
+                      title="http://www.opengis.net/ont/geosparql#wktLiteral">geosparql:wktLiteral</code></a>
+                  [[GeoSPARQL]]), or represented by a class, as
+                  <a href="http://www.opengis.net/ont/geosparql#Geometry"><code
+                      title="http://www.opengis.net/ont/geosparql#Geometry">geosparql:Geometry</code></a>
+                  (or any of its subclasses) [[GeoSPARQL]].
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO: provide an example here for geometry -->
+          <!-- <aside class="example" title="Usage of locn:geometry for dcterms:Location">
+                                                                                  <pre data-include-format="text" data-include="./examples/location/geometry.ttl"></pre>
+                                                                                </aside> -->
+        </section>
+        <section id="location-inScheme">
+          <h4>Property: gazetteer</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>RDF Property</th>
+                <td><a data-cite="SKOS-REFERENCE#inScheme"><code>skos:inScheme</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#ConceptScheme"><code>skos:ConceptScheme</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Notes:</th>
+                <td>
+                  <ul>
+                    <li>This property MAY be used to specify the gazetteer to which the Location belongs.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
 
       <aside class="example" title="Usage of dct:Location">
         <pre data-include-format="text" data-include="./examples/location.ttl"></pre>
@@ -8509,11 +9848,11 @@
           <th class="prop">Definition:</th>
           <td>A media type, e.g. the format of a computer file.</td>
         </tr>
-        <tr>
+        <!-- <tr>
           <th class="prop">Usage note:</th>
           <td>
           </td>
-        </tr>
+        </tr> -->
         <tr>
           <th>Reference</th>
           <td>
@@ -8535,10 +9874,45 @@
           </tr>
         </thead>
         <tbody>
-
-
+          <tr>
+            <td><a href="#media-type-label">label</a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_label"><code>rdfs:label</code></a></td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+            <td><strong>R</strong></td>
+            <td>0..1</td>
+          </tr>
         </tbody>
       </table>
+      <section id="media-type-recommended-props">
+        <h4>Recommended Properties</h4>
+        <section id="media-type-label">
+          <h4>Property: label</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>RDF Property</th>
+                <td><a data-cite="RDF-SCHEMA#ch_label"><code>rdfs:label</code></a></td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note:</th>
+                <td>This property contains the denomination of the Media Type.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
 
     </section>
 
@@ -9227,7 +10601,7 @@
       <section id="provenance-statement-recommended-props">
         <h4>Recommended Properties</h4>
         <section id="provenance-statement-label">
-          <h4>Property: provenance statement tet</h4>
+          <h4>Property: provenance statement text</h4>
           <table class="def">
             <tbody>
               <tr>
@@ -9253,728 +10627,733 @@
               </tr>
               <tr>
                 <th>Definition</th>
-                <td>This property contains the text of the Provenance Statement. This property can be repeated for parallel language
-                versions of the name</td>
+                <td>This property contains the text of the Provenance Statement. This property can be repeated for
+                  parallel language
+                  versions of the name</td>
               </tr>
             </tbody>
           </table>
         </section>
       </section>
-  </section>
-
-  <!-- dqv:QualityMeasurement-->
-
-  <section id="properties-for-quality-measurement">
-    <h2>Class: Quality Measurement</h2>
-    <table class="def" id="table-class-quality-measurement">
-      <tr>
-        <th>RDF Class:</th>
-        <td><a data-cite="VOCAB-DQV#QualityMeasurement"><code>dqv:QualityMeasurement</code></a></td>
-      </tr>
-      <tr>
-        <th>Obligation</th>
-        <td>Optional</td>
-      </tr>
-      <tr>
-        <th class="prop">Definition: </th>
-        <td>Represents the evaluation of a given dataset (or dataset distribution) against a specific quality
-          metric.
-        </td>
-      </tr>
-      <tr>
-        <th class="prop">Usage note:</th>
-        <td>Represents the evaluation of a given resource (as a Data Service, Dataset, or Distribution) against a
-          specific quality metric, such as spatial resolution in scale, angle or metric.</td>
-      </tr>
-      <tr>
-        <th>Reference</th>
-        <td>
-          <p><a class="src-ref" href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement">§&nbsp;<bdi
-                class="secno">4.1 </bdi>Class: Quality Measurement</a> [<cite><a class="bibref" data-link-type="biblio"
-                href="#bib-vocab-dqv"
-                title="Data on the Web Best Practices: Data Quality Vocabulary">VOCAB-DQV</a></cite>]</p>
-        </td>
-      </tr>
-    </table>
-    <p><strong>Properties Summary</strong></p>
-    <table class="simple">
-      <thead>
-        <tr>
-          <th>Property</th>
-          <th>URI</th>
-          <th>Range</th>
-          <th>ReqLevel</th>
-          <th>Card</th>
-        </tr>
-      </thead>
-      <tbody>
-
-
-      </tbody>
-    </table>
-    <section id="identifier-mandatory-props">
-      <h4>Mandatory Properties</h4>
     </section>
-    <section id="identifier-recommended-props">
-      <h4>Recommended Properties</h4>
-    </section>
-    <section id="identifier-optional-props">
-      <h4>Optional Properties</h4>
-    </section>
-  </section>
 
-  <!-- dcat:Relationship-->
+    <!-- dqv:QualityMeasurement-->
 
-  <section id="properties-for-relationship">
-    <h2>Class: Relationship</h2>
-    <p>
-    </p>
-    <table class="def">
-      <tr>
-        <th>RDF Class:</th>
-        <td><a data-cite="VOCAB-DCAT-3#Class:Relationship"><code>dcat:Relationship</code></a></td>
-      </tr>
-      <tr>
-        <th class="prop">Definition: </th>
-        <td>An association class for attaching additional information to a relationship between DCAT Resources
-        </td>
-      </tr>
-      <tr>
-        <th class="prop">Usage note:</th>
-        <td>
-          Use to characterize a relationship between datasets, and potentially other resources, where the nature
-          of
-          the relationship is known but is not adequately characterized by the standard [[?DCTERMS]] properties
-          (<a href="http://purl.org/dc/terms/hasPart"><code>dcterms:hasPart</code></a>,
-          <a href="http://purl.org/dc/terms/isPartOf"><code>dcterms:isPartOf</code></a>,
-          <a href="http://purl.org/dc/terms/conformsTo"><code>dcterms:conformsTo</code></a>,
-          <a href="http://purl.org/dc/terms/isFormatOf"><code>dcterms:isFormatOf</code></a>,
-          <a href="http://purl.org/dc/terms/hasFormat"><code>dcterms:hasFormat</code></a>,
-          <a href="http://purl.org/dc/terms/isVersionOf"><code>dcterms:isVersionOf</code></a>,
-          <a href="http://purl.org/dc/terms/hasVersion"><code>dcterms:hasVersion</code></a>,
-          <a href="http://purl.org/dc/terms/replaces"><code>dcterms:replaces</code></a>,
-          <a href="http://purl.org/dc/terms/isReplacedBy"><code>dcterms:isReplacedBy</code></a>,
-          <a href="http://purl.org/dc/terms/references"><code>dcterms:references</code></a>,
-          <a href="http://purl.org/dc/terms/isReferencedBy"><code>dcterms:isReferencedBy</code></a>,
-          <a href="http://purl.org/dc/terms/requires"><code>dcterms:requires</code></a>,
-          <a href="http://purl.org/dc/terms/isRequiredBy"><code>dcterms:isRequiredBy</code></a>)
-          or [[?PROV-O]] properties
-          (<a data-cite="PROV-O#wasDerivedFrom"><code>prov:wasDerivedFrom</code></a>,
-          <a data-cite="PROV-O#wasInfluencedBy"><code>prov:wasInfluencedBy</code></a>,
-          <a data-cite="PROV-O#wasQuotedFrom"><code>prov:wasQuotedFrom</code></a>,
-          <a data-cite="PROV-O#wasRevisionOf"><code>prov:wasRevisionOf</code></a>,
-          <a data-cite="PROV-O#hadPrimarySource"><code>prov:hadPrimarySource</code></a>,
-          <a data-cite="PROV-O#alternateOf"><code>prov:alternateOf</code></a>,
-          <a data-cite="PROV-O#specializationOf"><code>prov:specializationOf</code></a>)
-        </td>
-      </tr>
-    </table>
-
-    <p><strong>Properties Summary</strong></p>
-
-    <table class="simple">
-      <thead>
+    <section id="properties-for-quality-measurement">
+      <h2>Class: Quality Measurement</h2>
+      <table class="def" id="table-class-quality-measurement">
         <tr>
-          <th>Property</th>
-          <th>URI</th>
-          <th>Range</th>
-          <th>ReqLevel</th>
-          <th>Card</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="#relationship-relation">agent</a></td>
-          <td><a href="http://purl.org/dc/terms/relation"><code>dcterms:relation</code></a></td>
-
-          <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code></code></a>
-          </td>
-          <td><strong>M</strong></td>
-          <td>1</td>
+          <th>RDF Class:</th>
+          <td><a data-cite="VOCAB-DQV#QualityMeasurement"><code>dqv:QualityMeasurement</code></a></td>
         </tr>
         <tr>
-          <td><a href="#relationship_hadRole">role</a></td>
-          <td><a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
-          </td>
-          <td><a data-cite="VOCAB-DCAT-3#Class:Role"><code>dcat:Role</code></a>
-          </td>
-          <td><strong>M</strong></td>
-          <td>1</td>
+          <th>Obligation</th>
+          <td>Optional</td>
         </tr>
-      </tbody>
-    </table>
+        <tr>
+          <th class="prop">Definition: </th>
+          <td>Represents the evaluation of a given dataset (or dataset distribution) against a specific quality
+            metric.
+          </td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>Represents the evaluation of a given resource (as a Data Service, Dataset, or Distribution) against a
+            specific quality metric, such as spatial resolution in scale, angle or metric.</td>
+        </tr>
+        <tr>
+          <th>Reference</th>
+          <td>
+            <p><a class="src-ref" href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement">§&nbsp;<bdi
+                  class="secno">4.1 </bdi>Class: Quality Measurement</a> [<cite><a class="bibref"
+                  data-link-type="biblio" href="#bib-vocab-dqv"
+                  title="Data on the Web Best Practices: Data Quality Vocabulary">VOCAB-DQV</a></cite>]</p>
+          </td>
+        </tr>
+      </table>
+      <p><strong>Properties Summary</strong></p>
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
 
-    <section id="relationship-mandatory-props">
-      <h4>Mandatory Properties</h4>
-      <section id="relationship-relation">
-        <h4>Property: relation</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>relation</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Mandatory</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a href="http://purl.org/dc/terms/relation"><code>dcterms:relation</code></a></td>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code></code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>The resource related to the source resource.</td>
-            </tr>
-          </tbody>
-        </table>
+
+        </tbody>
+      </table>
+      <section id="identifier-mandatory-props">
+        <h4>Mandatory Properties</h4>
       </section>
-      <section id="relationship_hadRole">
-        <h4>Property: role</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>role</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Mandatory</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="VOCAB-DCAT-3#Class:Role"><code>dcat:Role</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>The function of an entity or agent with respect to another entity or resource.</td>
-            </tr>
-          </tbody>
-        </table>
+      <section id="identifier-recommended-props">
+        <h4>Recommended Properties</h4>
+      </section>
+      <section id="identifier-optional-props">
+        <h4>Optional Properties</h4>
       </section>
     </section>
-    <section id="relationship-example">
-      <h4>Example</h4>
-      <aside class="example" title="Usage of dcat:Relationship">
-        <pre data-include-format="text" data-include="./examples/dataset/qualified-relationship.ttl"></pre>
-      </aside>
-    </section>
-  </section>
 
-  <!-- dct:RightsStatement -->
+    <!-- dcat:Relationship-->
 
-  <section id="properties-for-rights-statement">
-    <h2>Class: RightsStatement</h2>
-    <table class="def" id="table-class-rights-statement">
-      <tr>
-        <th>RDF Class:</th>
-        <td><a href="http://purl.org/dc/terms/RightsStatement"><code>dcterms:RightsStatement</code></a></td>
-      </tr>
-      <tr>
-        <th>Obligation</th>
-        <td>Optional</td>
-      </tr>
-      <tr>
-        <th class="prop">Definition:</th>
-        <td>A statement about the intellectual property rights (IPR) held in or over a resource, a legal document
-          giving
-          official permission to do something with a resource, or a statement about access rights.</td>
-      </tr>
-      <tr>
-        <th class="prop">Usage note:</th>
-        <td>Information about rights SHOULD be provided on the level of Distribution. Information about rights MAY be
-          provided for a Dataset in addition to but not instead of the information provided for the Distributions of
-          that Dataset.
-          Providing rights information for a Dataset that is different from information provided for a Distribution of
-          that Dataset
-          SHOULD be avoided as this can create legal conflicts.
-        </td>
-      </tr>
-      <tr>
-        <th>Reference</th>
-        <td>
-          <p><a href="http://purl.org/dc/terms/RightsStatement">§&nbsp;Term name: RightsStatement</a>
-            [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
-                title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
-        </td>
-      </tr>
-    </table>
-    <p><strong>Properties Summary</strong></p>
-    <table class="simple">
-      <thead>
+    <section id="properties-for-relationship">
+      <h2>Class: Relationship</h2>
+      <p>
+      </p>
+      <table class="def">
         <tr>
-          <th>Property</th>
-          <th>URI</th>
-          <th>Range</th>
-          <th>ReqLevel</th>
-          <th>Card</th>
+          <th>RDF Class:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Relationship"><code>dcat:Relationship</code></a></td>
         </tr>
-      </thead>
-      <tbody>
-
         <tr>
-          <td><a href="#rights-statement-label">label</a></td>
-          <td><a data-cite="RDF-SCHEMA#ch_label"><code>rdfs:label</code></a></td>
-          <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-          <td><strong>R</strong></td>
-          <td>0..n</td>
+          <th class="prop">Definition: </th>
+          <td>An association class for attaching additional information to a relationship between DCAT Resources
+          </td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            Use to characterize a relationship between datasets, and potentially other resources, where the nature
+            of
+            the relationship is known but is not adequately characterized by the standard [[?DCTERMS]] properties
+            (<a href="http://purl.org/dc/terms/hasPart"><code>dcterms:hasPart</code></a>,
+            <a href="http://purl.org/dc/terms/isPartOf"><code>dcterms:isPartOf</code></a>,
+            <a href="http://purl.org/dc/terms/conformsTo"><code>dcterms:conformsTo</code></a>,
+            <a href="http://purl.org/dc/terms/isFormatOf"><code>dcterms:isFormatOf</code></a>,
+            <a href="http://purl.org/dc/terms/hasFormat"><code>dcterms:hasFormat</code></a>,
+            <a href="http://purl.org/dc/terms/isVersionOf"><code>dcterms:isVersionOf</code></a>,
+            <a href="http://purl.org/dc/terms/hasVersion"><code>dcterms:hasVersion</code></a>,
+            <a href="http://purl.org/dc/terms/replaces"><code>dcterms:replaces</code></a>,
+            <a href="http://purl.org/dc/terms/isReplacedBy"><code>dcterms:isReplacedBy</code></a>,
+            <a href="http://purl.org/dc/terms/references"><code>dcterms:references</code></a>,
+            <a href="http://purl.org/dc/terms/isReferencedBy"><code>dcterms:isReferencedBy</code></a>,
+            <a href="http://purl.org/dc/terms/requires"><code>dcterms:requires</code></a>,
+            <a href="http://purl.org/dc/terms/isRequiredBy"><code>dcterms:isRequiredBy</code></a>)
+            or [[?PROV-O]] properties
+            (<a data-cite="PROV-O#wasDerivedFrom"><code>prov:wasDerivedFrom</code></a>,
+            <a data-cite="PROV-O#wasInfluencedBy"><code>prov:wasInfluencedBy</code></a>,
+            <a data-cite="PROV-O#wasQuotedFrom"><code>prov:wasQuotedFrom</code></a>,
+            <a data-cite="PROV-O#wasRevisionOf"><code>prov:wasRevisionOf</code></a>,
+            <a data-cite="PROV-O#hadPrimarySource"><code>prov:hadPrimarySource</code></a>,
+            <a data-cite="PROV-O#alternateOf"><code>prov:alternateOf</code></a>,
+            <a data-cite="PROV-O#specializationOf"><code>prov:specializationOf</code></a>)
+          </td>
+        </tr>
+      </table>
+
+      <p><strong>Properties Summary</strong></p>
+
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#relationship-relation">agent</a></td>
+            <td><a href="http://purl.org/dc/terms/relation"><code>dcterms:relation</code></a></td>
+
+            <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code></code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><a href="#relationship_hadRole">role</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
+            </td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Role"><code>dcat:Role</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section id="relationship-mandatory-props">
+        <h4>Mandatory Properties</h4>
+        <section id="relationship-relation">
+          <h4>Property: relation</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>relation</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/relation"><code>dcterms:relation</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code></code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The resource related to the source resource.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="relationship_hadRole">
+          <h4>Property: role</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>role</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Role"><code>dcat:Role</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The function of an entity or agent with respect to another entity or resource.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+      <section id="relationship-example">
+        <h4>Example</h4>
+        <aside class="example" title="Usage of dcat:Relationship">
+          <pre data-include-format="text" data-include="./examples/dataset/qualified-relationship.ttl"></pre>
+        </aside>
+      </section>
+    </section>
+
+    <!-- dct:RightsStatement -->
+
+    <section id="properties-for-rights-statement">
+      <h2>Class: RightsStatement</h2>
+      <table class="def" id="table-class-rights-statement">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://purl.org/dc/terms/RightsStatement"><code>dcterms:RightsStatement</code></a></td>
+        </tr>
+        <tr>
+          <th>Obligation</th>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td>A statement about the intellectual property rights (IPR) held in or over a resource, a legal document
+            giving
+            official permission to do something with a resource, or a statement about access rights.</td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>Information about rights SHOULD be provided on the level of Distribution. Information about rights MAY be
+            provided for a Dataset in addition to but not instead of the information provided for the Distributions of
+            that Dataset.
+            Providing rights information for a Dataset that is different from information provided for a Distribution of
+            that Dataset
+            SHOULD be avoided as this can create legal conflicts.
+          </td>
+        </tr>
+        <tr>
+          <th>Reference</th>
+          <td>
+            <p><a href="http://purl.org/dc/terms/RightsStatement">§&nbsp;Term name: RightsStatement</a>
+              [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms"
+                  title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+          </td>
+        </tr>
+      </table>
+      <p><strong>Properties Summary</strong></p>
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td><a href="#rights-statement-label">label</a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_label"><code>rdfs:label</code></a></td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+            <td><strong>R</strong></td>
+            <td>0..n</td>
           </tr>
           <tr>
             <td><a href="#rights-statement-attributionText">attribution text</a></td>
-            <td><a href="https://schema.theodi.org/odrs/#prop_attributionText"><code>odrs:attributionText</code></a></td>
+            <td><a href="https://schema.theodi.org/odrs/#prop_attributionText"><code>odrs:attributionText</code></a>
+            </td>
             <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-          <td><strong>R</strong></td>
-          <td>0..n</td>
-        </tr>
+            <td><strong>R</strong></td>
+            <td>0..n</td>
+          </tr>
 
-      </tbody>
-    </table>
-    <section id="recommended-properties-for-rights-statement">
-      <h4>Recommended Properties</h4>
-      <section id="rights-statement-label">
-        <h4>Property: label</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>label</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="RDF-SCHEMA#ch_label"><code>rdfs:label</code></a></td>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>This property contains the text of the Rights Statement. This property can be repeated for parallel
-                language versions of the name - see § 4.3. Multilingualism section.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section id="rights-statement-attributionText">
-        <h4>Property: attribution text</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>attribution text</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a href="https://schema.theodi.org/odrs/#prop_attributionText"><code>odrs:attributionText</code></a></td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+        </tbody>
+      </table>
+      <section id="recommended-properties-for-rights-statement">
+        <h4>Recommended Properties</h4>
+        <section id="rights-statement-label">
+          <h4>Property: label</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>label</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="RDF-SCHEMA#ch_label"><code>rdfs:label</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property contains the text of the Rights Statement. This property can be repeated for parallel
+                  language versions of the name - see § 4.3. Multilingualism section.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="rights-statement-attributionText">
+          <h4>Property: attribution text</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>attribution text</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="https://schema.theodi.org/odrs/#prop_attributionText"><code>odrs:attributionText</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
+      </section>
+      <section id="rights-statement-example">
+        <h4>Example</h4>
+        <aside class="example" title="Usage of dct:RightsStatement">
+          <pre data-include-format="text" data-include="./examples/rights-statement.ttl"></pre>
+        </aside>
+      </section>
     </section>
-    <section id="rights-statement-example">
-      <h4>Example</h4>
-      <aside class="example" title="Usage of dct:RightsStatement">
-        <pre data-include-format="text" data-include="./examples/rights-statement.ttl"></pre>
-      </aside>
-    </section>
-  </section>
 
-  <!-- dct:Standard -->
+    <!-- dct:Standard -->
 
-  <section id="properties-for-standard">
-    <h2>Class: Standard</h2>
-    <p>
-    </p>
-    <table class="def" id="table-class-standard">
-      <tr>
-        <th>RDF Class:</th>
-        <td><a data-cite="DCTerms#terms_Standard"><code>dct:Standard</code></a></td>
-      </tr>
-      <tr>
-        <th>Obligation</th>
-        <td>Optional</td>
-      </tr>
-      <tr>
-        <th class="prop">Definition: </th>
-        <td></td>
-      </tr>
-      <tr>
-        <th class="prop">Usage note:</th>
-        <td>A standard or other specification to which a Catalog, Catalog Record, Data Service, Dataset, or
-          Distribution conforms</td>
+    <section id="properties-for-standard">
+      <h2>Class: Standard</h2>
+      <p>
+      </p>
+      <table class="def" id="table-class-standard">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a data-cite="DCTerms#terms_Standard"><code>dct:Standard</code></a></td>
+        </tr>
+        <tr>
+          <th>Obligation</th>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <th class="prop">Definition: </th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>A standard or other specification to which a Catalog, Catalog Record, Data Service, Dataset, or
+            Distribution conforms</td>
 
-      </tr>
-      <tr>
-        <th>Reference</th>
-        <td>
-          <p><a href="http://purl.org/dc/terms/Standard">§&nbsp;Term name: Standard</a> [<cite><a class="bibref"
-                data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
-        </td>
-      </tr>
-    </table>
+        </tr>
+        <tr>
+          <th>Reference</th>
+          <td>
+            <p><a href="http://purl.org/dc/terms/Standard">§&nbsp;Term name: Standard</a> [<cite><a class="bibref"
+                  data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>]</p>
+          </td>
+        </tr>
+      </table>
 
-    <p><strong>Properties Summary</strong></p>
+      <p><strong>Properties Summary</strong></p>
 
-    <table class="simple">
-      <thead>
-        <tr>
-          <th>Property</th>
-          <th>URI</th>
-          <th>Range</th>
-          <th>ReqLevel</th>
-          <th>Card</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="#standard-description">description</a></td>
-          <td><a href="http://purl.org/dc/terms/description"><code>dcterms:description</code></a></td>
-          <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
-          <td>R</td>
-          <td>0..n</td>
-        </tr>
-        <tr>
-          <td><a href="#standard-identifier">identifier</a></td>
-          <td><a href="http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a></td>
-          <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-          <td>R</td>
-          <td>0..n</td>
-        </tr>
-        <tr>
-          <td><a href="#standard-issued">issued</a></td>
-          <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a></td>
-          <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
-          <td>R</td>
-          <td>0..1</td>
-        </tr>
-        <tr>
-          <td><a href="#standard-title">title</a></td>
-          <td><a href="http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
-          <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
-          <td>R</td>
-          <td>0..n</td>
-        </tr>
-        <tr>
-          <td><a href="#standard-type">type</a></td>
-          <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a></td>
-          <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a></td>
-          <td>R</td>
-          <td>0..n</td>
-        </tr>
-        <tr>
-          <td><a href="#standard-versionInfo">version information</a></td>
-          <td><a href="https://www.w3.org/TR/owl-ref/#versionInfo-def"><code>owl:versionInfo</code></a></td>
-          <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-          <td>R</td>
-          <td>0..1</td>
-        </tr>
-        <tr>
-          <td><a href="#standard-in-scheme">in scheme</a></td>
-          <td><a data-cite="SKOS-REFERENCE#inScheme"><code>skos:inScheme</code></a></td>
-          <td><a data-cite="SKOS-REFERENCE#ConceptScheme"><code>skos:ConceptScheme</code></a></td>
-          <td>O</td>
-          <td>0..1</td>
-        </tr>
-        <tr>
-          <td><a href="#standard-created">creation date</a></td>
-          <td><a href="http://purl.org/dc/terms/created"><code>dcterms:created</code></a></td>
-          <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
-          <td>O</td>
-          <td>0..1</td>
-        </tr>
-        <tr>
-          <td><a href="#standard-modified">last modified</a></td>
-          <td><a href="http://purl.org/dc/terms/modified"><code>dcterms:modified</code></a></td>
-          <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
-          <td>O</td>
-          <td>0..1</td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#standard-description">description</a></td>
+            <td><a href="http://purl.org/dc/terms/description"><code>dcterms:description</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#standard-identifier">identifier</a></td>
+            <td><a href="http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a></td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#standard-issued">issued</a></td>
+            <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a></td>
+            <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
+            <td>R</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#standard-title">title</a></td>
+            <td><a href="http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#standard-type">type</a></td>
+            <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a></td>
+            <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a></td>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#standard-versionInfo">version information</a></td>
+            <td><a href="https://www.w3.org/TR/owl-ref/#versionInfo-def"><code>owl:versionInfo</code></a></td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+            <td>R</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#standard-in-scheme">in scheme</a></td>
+            <td><a data-cite="SKOS-REFERENCE#inScheme"><code>skos:inScheme</code></a></td>
+            <td><a data-cite="SKOS-REFERENCE#ConceptScheme"><code>skos:ConceptScheme</code></a></td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#standard-created">creation date</a></td>
+            <td><a href="http://purl.org/dc/terms/created"><code>dcterms:created</code></a></td>
+            <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#standard-modified">last modified</a></td>
+            <td><a href="http://purl.org/dc/terms/modified"><code>dcterms:modified</code></a></td>
+            <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <section id="recommended-properties-for-standard">
-      <h4>Recommended Properties</h4>
-      <section id="standard-title">
-        <h4>Property: title</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>title</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a href="http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>This property contains a name given to the Standard. This property can be repeated for parallel language versions of the
-              name.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section id="standard-description">
-        <h4>Property: description</h4>
-        <table class="def" id="table-recommended-properties-for-standard">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>description</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a href="http://purl.org/dc/terms/description"><code>dcterms:description</code></a></td>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>This property contains a free-text account of the Standard. This property can be repeated for
-                parallel language versions of the description - see <a class="no-secRef sec-ref"
-                  href="#accessibility-and-multilingual-aspects">§&nbsp;<bdi class="secno">9. </bdi>Accessibility
-                  and
-                  Multilingual Aspects</a></p> .</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section id="standard-identifier">
-        <h4>Property: identifier</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>identifier</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..n</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a href="http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a></td>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>This property contains the main identifier for the Standard, e.g. the URI or other unique identifier in the
-                context of
-                the Catalog, or of a reference register</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section id="standard-issued">
-        <h4>Property: issued</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>issued</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a></td>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>This property contains the date of formal issuance (e.g., publication) of the Standard.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section id="standard-type">
-        <h4>Property: type</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>type</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a></td>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a></td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>This property refers to the type of the Standard. A controlled vocabulary for the values has not been established.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section id="standard-versionInfo">
-        <h4>Property: version info</h4>
-        <table class="def" id="table-concept-scheme-version">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>version information</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Optional</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a href="https://www.w3.org/TR/owl-ref/#versionInfo-def"><code>owl:versionInfo</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>This property contains a version number or other version designation of the Standard.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section id="standard-in-scheme">
-        <h4>Property: in scheme</h4>
-        <table class="def">
-          <tbody>
-            <tr>
-              <th>Property</th>
-              <td>in scheme</td>
-            </tr>
-            <tr>
-              <th>Requirement level</th>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <th>Cardinality</th>
-              <td>0..1</td>
-            </tr>
-            <tr>
-              <th>URI</th>
-              <td><a data-cite="SKOS-REFERENCE#inScheme"><code>skos:inScheme</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Range</th>
-              <td><a data-cite="SKOS-REFERENCE#ConceptScheme"><code>skos:ConceptScheme</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th>Definition</th>
-              <td>This property MAY be used to specify the reference register to which the Standard belongs.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      
-      
+      <section id="recommended-properties-for-standard">
+        <h4>Recommended Properties</h4>
+        <section id="standard-title">
+          <h4>Property: title</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>title</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property contains a name given to the Standard. This property can be repeated for parallel
+                  language versions of the
+                  name.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="standard-description">
+          <h4>Property: description</h4>
+          <table class="def" id="table-recommended-properties-for-standard">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>description</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/description"><code>dcterms:description</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property contains a free-text account of the Standard. This property can be repeated for
+                  parallel language versions of the description - see <a class="no-secRef sec-ref"
+                    href="#accessibility-and-multilingual-aspects">§&nbsp;<bdi class="secno">9. </bdi>Accessibility
+                    and
+                    Multilingual Aspects</a></p> .</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="standard-identifier">
+          <h4>Property: identifier</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>identifier</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/identifier"><code>dcterms:identifier</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property contains the main identifier for the Standard, e.g. the URI or other unique identifier
+                  in the
+                  context of
+                  the Catalog, or of a reference register</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="standard-issued">
+          <h4>Property: issued</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>issued</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/issued"><code>dcterms:issued</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property contains the date of formal issuance (e.g., publication) of the Standard.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="standard-type">
+          <h4>Property: type</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>type</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://purl.org/dc/terms/type"><code>dcterms:type</code></a></td>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#Concept"><code>skos:Concept</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property refers to the type of the Standard. A controlled vocabulary for the values has not
+                  been established.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="standard-versionInfo">
+          <h4>Property: version info</h4>
+          <table class="def" id="table-concept-scheme-version">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>version information</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="https://www.w3.org/TR/owl-ref/#versionInfo-def"><code>owl:versionInfo</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property contains a version number or other version designation of the Standard.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="standard-in-scheme">
+          <h4>Property: in scheme</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>in scheme</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="SKOS-REFERENCE#inScheme"><code>skos:inScheme</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#ConceptScheme"><code>skos:ConceptScheme</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>This property MAY be used to specify the reference register to which the Standard belongs.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
       </section>
       <section id="optional-properties-for-standard">
         <h4>Optional Properties</h4>
@@ -10042,15 +11421,14 @@
             </tbody>
           </table>
         </section>
-    
+      </section>
+      <section id="standard-example">
+        <h4>Example</h4>
+        <aside class="example" title="Usage of dct:Standard">
+          <pre data-include-format="text" data-include="./examples/dataset/standard.ttl"></pre>
+        </aside>
+      </section>
     </section>
-    <section id="standard-example">
-      <h4>Example</h4>
-      <aside class="example" title="Usage of dct:Standard">
-        <pre data-include-format="text" data-include="./examples/dataset/standard.ttl"></pre>
-      </aside>
-    </section>
-  </section>
   </section>
 
   <!-- Dereferenceable identifiers -->
