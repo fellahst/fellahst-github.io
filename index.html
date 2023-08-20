@@ -1338,6 +1338,181 @@
         <li><strong>CV</strong> (“Controlled Vocabulary”): defines which controlled vocabulary SHOULD be used.</li>
       </ul>
     </section>
+    <section id="properties-for-access-restriction">
+      <h2>Class: AccessRestriction</h2>
+      <p>TODO</p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://TBD#AccessRestriction"><code
+                title="http://TBD#AccessRestriction">dcat-us:AccessRestriction</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
+
+      <p><strong>Properties Summary</strong></p>
+
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#access_restriction-restriction_status">restriction status</a></td>
+            <td><a href="http://TBD#restrictionStatus"><code>dcat-us:restrictionStatus</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>skos:Concept</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1..1</td>
+          </tr>
+          <tr>
+            <td><a href="#access_restriction-authority">restriction authority</a></td>
+            <td><a href="http://TBD#authority"><code>dcat-us:authority</code></a>
+            </td>
+            <td><a href="https://www.w3.org/TR/vocab-org/#org:Organization"><code>org:Organization</code></a>
+            <td><strong>R</strong></td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#access_restriction-restriction_note">restriction note</a></td>
+            <td><a href="http://TBD#restrictionNote"><code>dcat-us:restrictionNote</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+            <td><strong>O</strong></td>
+            <td>0..1</td>
+          </tr>
+        </tbody>
+      </table>
+      <section id="access_restriction-mandatory-props">
+        <h3>Mandatory Properties</h3>
+        <section id="access_restriction-restriction_status">
+          <h4>Property: restriction status</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>restriction status</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://TBD#restrictionStatus"><code>dcat-us:restrictionStatus</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#concepts"><code>skos:Concept</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The status of the restriction</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <section id="access_restriction-recommended-props">
+        <h3>Recommended Properties</h3>
+        <section id="access_restriction-authority">
+          <h4>Property: restriction authority</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>restriction authority</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://TBD#authority"><code>dcat-us:authority</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="https://www.w3.org/TR/vocab-org/#org:Organization"><code>org:Organization</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The authority of the restriction</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <section id="access_restriction-optional-props">
+        <h3>Optional Properties</h3>
+        <section id="access_restriction-restriction_note">
+          <h4>Property: restriction note</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>restriction note</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://TBD#restrictionNote"><code>dcat-us:restrictionNote</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+    
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>A note related to the access restriction</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </section>
     <section id="properties-for-agent">
       <h2>Class: Agent</h2>
       <p>TODO</p>
@@ -3857,6 +4032,183 @@
       </section>
     </section>
 
+    <!-- CUI Restriction -->
+    <section id="properties-for-cui_restriction">
+      <h2>Class: CUI Restriction</h2>
+      <p>TODO</p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://TBD#CUIRestriction"><code
+                title="http://TBD#CUIRestriction">dcat-us:CUIRestriction</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
+
+      <p><strong>Properties Summary</strong></p>
+
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#cui_restriction-cui_banner_marking">cui banner marking</a></td>
+            <td><a href="http://TBD#cuiBannerMarking"><code>dcat-us:cuiBannerMarking</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1..1</td>
+          </tr>
+          <tr>
+            <td><a href="#cui_restriction-designation_indicator">cui designation indicator</a></td>
+            <td><a href="http://TBD#designationIndicator"><code>dcat-us:designationIndicator</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1..1</td>
+          </tr>
+          <tr>
+            <td><a href="#cui_restriction-required_indicator_per_authority">required indicator per authority</a></td>
+            <td><a href="http://TBD#requiredIndicatorPerAuthority"><code>dcat-us:requiredIndicatorPerAuthority</code></a>
+            </td>
+            <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+            </td>
+            <td><strong>O</strong></td>
+            <td>0..n</td>
+          </tr>
+        </tbody>
+      </table>
+      <aside class="example" id="ex-cui-restriction" title="dcat-us:CUIRestriction with mandatory and optional properties">
+        <pre data-include-format="text" data-include="./examples/restriction/cuiRestriction.ttl"></pre>
+      </aside>
+      <section id="cui_restriction-mandatory-props">
+        <h3>Mandatory Properties</h3>
+        <section id="cui_restriction-cui_banner_marking">
+          <h4>Property: CUI banner marking</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>CUI banner marking</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://TBD#cuiBannerMarking"><code>dcat-us:cuiBannerMarking</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>CUI (Controlled Unclassified Information) banner marking is required for any unclassified information that is deemed sensitive and requires protection.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="cui_restriction-designation_indicator">
+          <h4>Property: designation indicator</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>Designation Indicator</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://TBD#designationIndicator"><code>dcat-us:designationIndicator</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>Designation Indicator show which agency made the document CUI.  free text per NARA Marking Guidebook and DODI 5200.48 (should have at least "controlled by:).It is best practice to include contact information.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <section id="cui_restriction-optional-props">
+        <h3>Optional Properties</h3>
+        <section id="cui_restriction-required_indicator_per_authority">
+          <h4>Property: required indicator per authority</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>Required indicator per authority</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://TBD#requiredIndicatorPerAuthority"><code>dcat-us:requiredIndicatorPerAuthority</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#string"><code>xsd:string</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>free text (e.g., text of the category description or the distribution statement)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </section>
     <!-- dcat:DataService-->
     <section id="properties-for-data-service">
       <h2>Class: Data Service</h2>
@@ -5566,6 +5918,14 @@
             <td>1..n</td>
           </tr>
           <tr>
+            <td><a href="#dataset-contact-point">contact point</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:resource_contact_point"><code>dcat:contactPoint</code></a></td>
+            <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a>
+            <td><strong>M</strong></td>
+            <td>1..n</td>
+            </td>
+          </tr>
+          <tr>
             <td><a href="#dataset-publisher">publisher</a></td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a>
             </td>
@@ -5574,26 +5934,10 @@
             <td>1..1</td>
           </tr>
           <tr>
-            <td><a href="#dataset-contact-point">contact point</a></td>
-            <td><a data-cite="VOCAB-DCAT-3#Property:resource_contact_point"><code>dcat:contactPoint</code></a></td>
-            <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a>
-            <td>R</td>
-            <td>0..n</td>
-            </td>
-          </tr>
-          <tr>
-            <td><a href="#dataset-distribution">dataset distribution</a></td>
+            <td><a href="#dataset-distribution">distribution</a></td>
             <td><a data-cite="VOCAB-DCAT-3#Property:dataset_distribution"><code>dcat:distribution</code></a></td>
             <td><a data-cite="VOCAB-DCAT-3#Class:Distribution"><code>dcat:Distribution</code></a>
             </td>
-            <td>R</td>
-            <td>0..n</td>
-          </tr>
-          <tr>
-            <td><a href="#dataset-spatial-geographical-coverage">spatial/geographical coverage</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
-            </td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a></td>
             <td>R</td>
             <td>0..n</td>
           </tr>
@@ -5613,19 +5957,6 @@
             </td>
             <td>R</td>
             <td>0..n</td>
-          </tr>
-          <tr>
-            <td><a href="#dataset-update-modification-date">update/modification date</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a></td>
-            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
-              (typed as
-              as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
-              <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
-              <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
-              or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
-            </td>
-            <td>R</td>
-            <td>0..1</td>
           </tr>
           <tr>
             <td><a href="#dataset-release-date">release date</a></td>
@@ -5651,6 +5982,14 @@
             <td>0..n</td>
           </tr>
           <tr>
+            <td><a href="#dataset-spatial-geographical-coverage">spatial/ geographical coverage</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a></td>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
             <td><a href="#dataset-temporal-coverage">temporal coverage</a></td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/temporal"><code>dct:temporal</code></a>
             </td>
@@ -5668,6 +6007,19 @@
             <td>0..n</td>
           </tr>
           <tr>
+            <td><a href="#dataset-update-modification-date">update/ modification date</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+              (typed as
+              as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+              <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+              <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+              or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+            </td>
+            <td>R</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
             <td><a href="#dataset-access-rights">access rights</a></td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accessRights"><code>dct:accessRights</code></a>
             </td>
@@ -5681,6 +6033,14 @@
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/conformsTo"><code>dct:conformsTo</code></a>
             </td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Standard"><code>dct:Standard</code></a>
+            </td>
+            <td>O</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-contributor">contributor</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/contributor"><code>dct:contributor</code></a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
             </td>
             <td>O</td>
             <td>0..n</td>
@@ -5712,9 +6072,10 @@
             <td>0..1</td>
           </tr>
           <tr>
-            <td><a href="#dataset-hasVersion">has version</a></td>
-            <td><a data-cite="VOCAB-DCAT-3#Property:resource_has_version"><code>dcat:hasVersion</code></a></td>
-            <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a>
+            <td><a href="#dataset-image">image</a></td>
+            <td><a data-cite="SCHEMA-ORG/image" data-no-xref=""><code>schema:image</code></a></td>
+            <td><a data-cite="SCHEMA-ORG/url" data-no-xref=""><code>schema:url</code></a> or
+              <a data-cite="SCHEMA-ORG/ImageObject" data-no-xref=""><code>schema:ImageObject</code></a>
             </td>
             <td>O</td>
             <td>0..n</td>
@@ -5733,23 +6094,6 @@
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/language"><code>dct:language</code></a>
             </td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/LinguisticSystem"><code>dct:LinguisticSystem</code></a>
-            </td>
-            <td>O</td>
-            <td>0..n</td>
-          </tr>
-          <tr>
-            <td><a href="#dataset-contributor">contributor</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/contributor"><code>dct:contributor</code></a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
-            </td>
-            <td>O</td>
-            <td>0..n</td>
-          </tr>
-          <tr>
-            <td><a href="#dataset-image">image</a></td>
-            <td><a data-cite="SCHEMA-ORG/image" data-no-xref=""><code>schema:image</code></a></td>
-            <td><a data-cite="SCHEMA-ORG/url" data-no-xref=""><code>schema:url</code></a> or
-              <a data-cite="SCHEMA-ORG/ImageObject" data-no-xref=""><code>schema:ImageObject</code></a>
             </td>
             <td>O</td>
             <td>0..n</td>
@@ -5979,10 +6323,6 @@
             <pre data-include-format="text" data-include="./examples/dataset/publisher.ttl"></pre>
           </aside>
         </section>
-      </section>
-      <section id="dataset-recommended-props">
-        <h4>Recommended Properties</h4>
-
         <section id="dataset-contact-point">
           <h4>Property: contact point</h4>
           <table class="def">
@@ -5993,11 +6333,11 @@
               </tr>
               <tr>
                 <th>Requirement level</th>
-                <td>Recommended</td>
+                <td><strong>Mandatory</strong></td>
               </tr>
               <tr>
                 <th>Cardinality</th>
-                <td>0..n</td>
+                <td>1..n</td>
               </tr>
               <tr>
                 <th>URI</th>
@@ -6030,13 +6370,17 @@
             <pre data-include-format="text" data-include="./examples/dataset/contact-point.ttl"></pre>
           </aside>
         </section>
+      </section>
+      <section id="dataset-recommended-props">
+        <h4>Recommended Properties</h4>
+
         <section id="dataset-distribution">
-          <h4>Property: dataset distribution</h4>
+          <h4>Property: distribution</h4>
           <table class="def">
             <tbody>
               <tr>
                 <th>Property</th>
-                <td>dataset distribution</td>
+                <td>distribution</td>
               </tr>
               <tr>
                 <th>Cardinality</th>
@@ -6072,63 +6416,13 @@
             <pre data-include-format="text" data-include="./examples/dataset/distribution.ttl"></pre>
           </aside>
         </section>
-        <section id="dataset-spatial-geographical-coverage">
-          <h4>Property: spatial/ geographical coverage</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>spatial/geographical coverage </td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td>Recommended</td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>0..n</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Usage Note</th>
-                <td>
-                  <ul>
-                    <li>
-                      This property refers to a geographic region that is covered by the Dataset.
-                    </li>
-                    <li>CV to be used: The Vocabularies Name Authority Lists MUST be used for continents,
-                      countries and places that are in those lists; if a particular location is not in one of
-                      the mentioned Named Authority Lists, Geonames URIs MUST be used:
-                      [[VOCAB-US-CONTINENT]],
-                      [[VOCAB-US-COUNTRY]],
-                      [[VOCAB-US-PLACE]],
-                      [[GEONAMES]]
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <aside class="example" id="ex-dataset-spatial-proposal" title="Usage of dct:spatial for dcat:Dataset">
-            <pre data-include-format="text" data-include="./examples/dataset/spatial.ttl"></pre>
-          </aside>
-        </section>
         <section id="dataset-keyword">
           <h4>Property: keyword/tag</h4>
           <table class="def">
             <tbody>
               <tr>
                 <th>Property</th>
-                <td>keyword/tag</td>
+                <td>keyword/ tag</td>
               </tr>
               <tr>
                 <th>Requirement level</th>
@@ -6211,62 +6505,6 @@
             <pre data-include-format="text" data-include="./examples/dataset/landing-page.ttl"></pre>
           </aside>
         </section>
-        <section id="dataset-update-modification-date">
-          <h4>Property: update/modification date</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>update/modification date</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td>Recommended</td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>0..1</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
-                  (typed as
-                  as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
-                  <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
-                  <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
-                  or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
-                </td>
-              </tr>
-              <tr>
-                <th>Usage Note</th>
-                <td>
-                  <ul>
-                    <li>This property contains the most recent date on which the Dataset was changed or modified.</li>
-                    <li>No value may indicate that the Dataset has never changed after its initial publication,
-                      or that the date of the last modification is not known, or that the
-                      Dataset is continuously updated
-                    </li>
-                    <li>This property MUST only be set if the distributions (the actual data) that
-                      the Dataset describes have been updated after it has been issued. In this case the property
-                      MUST contain the date of the last update. That way a person or institution using the data
-                      for an analysis or application will know when to update the report or application on their side.
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <aside class="example" title="Usage of dct:modified for dcat:Dataset">
-            <pre data-include-format="text" data-include="./examples/dataset/modified.ttl"></pre>
-          </aside>
-        </section>
-        
-        
         <section id="dataset-release-date">
           <h4>Property: release date</h4>
           <table class="def">
@@ -6316,7 +6554,56 @@
             <pre data-include-format="text" data-include="./examples/dataset/issued.ttl"></pre>
           </aside>
         </section>
-
+        <section id="dataset-spatial-geographical-coverage">
+          <h4>Property: spatial/ geographical coverage</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>spatial/ geographical coverage </td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>
+                      This property refers to a geographic region that is covered by the Dataset.
+                    </li>
+                    <li>CV to be used: The Vocabularies Name Authority Lists MUST be used for continents,
+                      countries and places that are in those lists; if a particular location is not in one of
+                      the mentioned Named Authority Lists, Geonames URIs MUST be used:
+                      [[VOCAB-US-CONTINENT]],
+                      [[VOCAB-US-COUNTRY]],
+                      [[VOCAB-US-PLACE]],
+                      [[GEONAMES]]
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" id="ex-dataset-spatial-proposal" title="Usage of dct:spatial for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/spatial.ttl"></pre>
+          </aside>
+        </section>
         <section id="dataset-temporal-coverage">
           <h4>Property: temporal coverage</h4>
           <table class="def">
@@ -6396,6 +6683,60 @@
           </table>
           <aside class="example" title="Example for dcat:theme for dcat:Dataset.">
             <pre data-include-format="text" data-include="./examples/dataset/theme.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-update-modification-date">
+          <h4>Property: update/ modification date</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>update/ modification date</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                  (typed as
+                  as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+                  <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+                  <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+                  or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains the most recent date on which the Dataset was changed or modified.</li>
+                    <li>No value may indicate that the Dataset has never changed after its initial publication,
+                      or that the date of the last modification is not known, or that the
+                      Dataset is continuously updated
+                    </li>
+                    <li>This property MUST only be set if the distributions (the actual data) that
+                      the Dataset describes have been updated after it has been issued. In this case the property
+                      MUST contain the date of the last update. That way a person or institution using the data
+                      for an analysis or application will know when to update the report or application on their side.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:modified for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/modified.ttl"></pre>
           </aside>
         </section>
       </section>
@@ -6491,6 +6832,48 @@
             <pre data-include-format="text" data-include="./examples/dataset/conforms-to.ttl"></pre>
           </aside>
         </section>
+        <section id="dataset-contributor">
+          <h4>Property: contributor</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>contributor</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Optional</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/contributor">
+                    <code>dct:contributor</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to an agent contributing to the Dataset.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:contributor for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/contributor.ttl"></pre>
+          </aside>
+        </section>
         <section id="dataset-creator">
           <h4>Property: creator</h4>
           <table class="def">
@@ -6505,7 +6888,7 @@
               </tr>
               <tr>
                 <th>Cardinality</th>
-                <td>0..1</td>
+                <td>0..n</td>
               </tr>
               <tr>
                 <th>URI</th>
@@ -6522,7 +6905,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to an entity responsible for producing the dataset.
+                    <li>This property refers to an agent responsible for creating the Dataset available.
                     </li>
                   </ul>
                 </td>
@@ -6613,52 +6996,57 @@
             <pre data-include-format="text" data-include="./examples/dataset/frequency.ttl"></pre>
           </aside>
         </section>
-        <section id="dataset-hasVersion">
-          <h4>Property: has version</h4>
-
+        <section id="dataset-image">
+          <h4>Property: image</h4>
           <table class="def">
-            <tr>
-              <th>RDF Property:</th>
-              <td>
-                <a href="http://www.w3.org/ns/dcat#hasVersion"><code>dcat:hasVersion</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th class="prop">Definition:</th>
-              <td>
-                This resource has a more specific, versioned resource [[?PAV]].
-              </td>
-            </tr>
-            <tr>
-              <th class="prop">Equivalent property:</th>
-              <td>
-                <a href="http://purl.org/pav/hasVersion"><code>pav:hasVersion</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th class="prop">Sub-property of:</th>
-              <td>
-                <a
-                  href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasVersion"><code
-                    title="http://purl.org/dc/terms/hasVersion">dcterms:hasVersion</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th class="prop">Sub-property of:</th>
-              <td>
-                <a data-cite="?PROV-O#generalizationOf"><code
-                    title="http://www.w3.org/ns/prov#generalizationOf">prov:generalizationOf</code></a>
-              </td>
-            </tr>
-            <tr>
-              <th class="prop">Usage note:</th>
-              <td>
-                <p>
-                  A related Dataset that is a version, edition, or adaptation of the described Dataset.
-                </p>
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>image</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..3</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="SCHEMA-ORG/image" data-no-xref=""><code>schema:image</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SCHEMA-ORG/url" data-no-xref=""><code>schema:url</code></a> or
+                  <a data-cite="SCHEMA-ORG/ImageObject" data-no-xref=""><code>schema:ImageObject</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>A thumbnail picture illustrating the content of the dataset.</td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>
+                      A thumbnail picture illustrating the content of the Dataset.
+                    </li>
+                    <li>For distributions that consist of visual content (photographs, videos, maps, etc.)
+                      it makes sense to add a limited number of thumbnails to the metadata.
+                    </li>
+                    <li>
+                      It’s a DCAT-US Custom Class
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
           </table>
+          <aside class="example" title="Usage of schema:Image for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/image.ttl"></pre>
+          </aside>
         </section>
         <section id="dataset-is-referenced-by">
           <h4>Property: is referenced by</h4>
@@ -6724,7 +7112,8 @@
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/LinguisticSystem"><code>dct:LinguisticSystem</code></a>
+                <td><a
+                    data-cite="DCTERMS#http://purl.org/dc/terms/LinguisticSystem"><code>dct:LinguisticSystem</code></a>
                 </td>
               </tr>
               <tr>
@@ -6744,103 +7133,6 @@
             <pre data-include-format="text" data-include="./examples/dataset/language.ttl"></pre>
           </aside>
         </section>
-
-        <section id="dataset-contributor">
-          <h4>Property: contributor</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>contributor</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td><strong>Optional</strong></td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>0..n</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/contributor">
-                    <code>dct:contributor</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Usage Note</th>
-                <td>
-                  <ul>
-                    <li>This property refers to an agent contributing to the Dataset.
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <aside class="example" title="Usage of dct:contributor for dcat:Dataset">
-            <pre data-include-format="text" data-include="./examples/dataset/contributor.ttl"></pre>
-          </aside>
-        </section>
-        <section id="dataset-image">
-          <h4>Property: image</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>image</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td>Optional</td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>0..3</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="SCHEMA-ORG/image" data-no-xref=""><code>schema:image</code></a></td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a data-cite="SCHEMA-ORG/url" data-no-xref=""><code>schema:url</code></a> or
-                  <a data-cite="SCHEMA-ORG/ImageObject" data-no-xref=""><code>schema:ImageObject</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Definition</th>
-                <td>A thumbnail picture illustrating the content of the dataset.</td>
-              </tr>
-              <tr>
-                <th>Usage Note</th>
-                <td>
-                  <ul>
-                    <li>
-                      A thumbnail picture illustrating the content of the Dataset.
-                    </li>
-                    <li>For distributions that consist of visual content (photographs, videos, maps, etc.)
-                      it makes sense to add a limited number of thumbnails to the metadata.
-                    </li>
-                    <li>
-                      It’s a DCAT-US Custom Class
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <aside class="example" title="Usage of schema:Image for dcat:Dataset">
-            <pre data-include-format="text" data-include="./examples/dataset/image.ttl"></pre>
-          </aside>
-        </section>
-        
-        
         <section id="dataset-qualified-attribution">
           <h4>Property: qualified attribution</h4>
           <table class="def">
@@ -9442,7 +9734,7 @@
         <tbody>
           <tr>
             <td><a href="#geographic_bbox-west-bounding-longitude">west bounding longitude</a></td>
-            <td><a data-cite="DCAT-US#Property:data_service_westBoundingLongitude">
+            <td><a data-cite="DCAT-US#Property:geographic_bbox_westBoundingLongitude">
                 <code>dcat-us:westBoundingLongitude</code></a>
             </td>
             <td><a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a></td>
@@ -9451,7 +9743,7 @@
           </tr>
           <tr>
             <td><a href="#geographic_bbox-east-bounding-longitude">east bounding longitude</a></td>
-            <td><a data-cite="DCAT-US#Property:data_service_eastBoundingLongitude">
+            <td><a data-cite="DCAT-US#Property:geographic_bbox_eastBoundingLongitude">
                 <code>dcat-us:eastBoundingLongitude</code></a>
             </td>
             <td><a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a></td>
@@ -9460,7 +9752,7 @@
           </tr>
           <tr>
             <td><a href="#geographic_bbox-south-bounding-latitude">south bouding latitude</a></td>
-            <td><a data-cite="DCAT-US#Property:data_service_southBoundingLatitude">
+            <td><a data-cite="DCAT-US#Property:geographic_bbox_southBoundingLatitude">
                 <code>dcat-us:southBoundingLatitude</code></a>
             </td>
             <td><a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a></td>
@@ -9469,7 +9761,7 @@
           </tr>
           <tr>
             <td><a href="#geographic_bbox-north-bounding-latitude">north bounding latitude</a></td>
-            <td><a data-cite="DCAT-US#Property:data_service_northBoundingLatitude">
+            <td><a data-cite="DCAT-US#Property:geographic_bbox_northBoundingLatitude">
                 <code>dcat-us:northBoundingLatitude</code></a>
             </td>
             <td><a data-cite="XMLSCHEMA11-2#decimal"><code>xsd:decimal</code></a></td>
@@ -11994,6 +12286,181 @@
         </aside>
       </section>
     </section>
+    <section id="properties-for-use-restriction">
+      <h2>Class: UseRestriction</h2>
+      <p>TODO</p>
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a href="http://TBD#UseRestriction"><code
+                title="http://TBD#UseRestriction">dcat-us:UseRestriction</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+
+            </ul>
+          </td>
+        </tr>
+
+      </table>
+
+      <p><strong>Properties Summary</strong></p>
+
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#use_restriction-restriction_status">restriction status</a></td>
+            <td><a href="http://TBD#restrictionStatus"><code>dcat-us:restrictionStatus</code></a>
+            </td>
+            <td><a data-cite="SKOS-REFERENCE#concepts"><code>skos:Concept</code></a>
+            </td>
+            <td><strong>M</strong></td>
+            <td>1..1</td>
+          </tr>
+          <tr>
+            <td><a href="#use_restriction-authority">restriction authority</a></td>
+            <td><a href="http://TBD#authority"><code>dcat-us:authority</code></a>
+            </td>
+            <td><a href="https://www.w3.org/TR/vocab-org/#org:Organization"><code>org:Organization</code></a>
+            <td><strong>R</strong></td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#use_restriction-restriction_note">restriction note</a></td>
+            <td><a href="http://TBD#restrictionNote"><code>dcat-us:restrictionNote</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+            <td><strong>O</strong></td>
+            <td>0..1</td>
+          </tr>
+        </tbody>
+      </table>
+      <section id="use_restriction-mandatory-props">
+        <h3>Mandatory Properties</h3>
+        <section id="use_restriction-restriction_status">
+          <h4>Property: restriction status</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>restriction status</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://TBD#restrictionStatus"><code>dcat-us:restrictionStatus</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SKOS-REFERENCE#concepts"><code>skos:Concept</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The status of the restriction</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <section id="use_restriction-recommended-props">
+        <h3>Recommended Properties</h3>
+        <section id="use_restriction-authority">
+          <h4>Property: restriction authority</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>restriction authority</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://TBD#authority"><code>dcat-us:authority</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="https://www.w3.org/TR/vocab-org/#org:Organization"><code>org:Organization</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>The authority of the restriction</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <section id="use_restriction-optional-props">
+        <h3>Optional Properties</h3>
+        <section id="use_restriction-restriction_note">
+          <h4>Property: restriction note</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>restriction note</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="http://TBD#restrictionNote"><code>dcat-us:restrictionNote</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+    
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>A note related to the access restriction</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </section>
   </section>
 
   <!-- Dereferenceable identifiers -->
@@ -12176,6 +12643,128 @@
 
     <h2>Citation Metadata</h2>
 
+  </section>
+
+  <!-- Legal Information  -->
+  <section id="legal-metadata" class="informative">
+
+    <h2>Legal Information</h2>
+    <p>
+      Supplying accurate and adequate legal information holds significance in establishing trust among those who wish
+      to reuse candidate data. The absence of clear legal details poses a risk to data reuse, as individuals are left
+      unaware of permissible actions. While prior regulations and initiatives, like the Findable, Accessible,
+      Interoperable, and Reusable (FAIR)
+      data principles, underline this importance, contemporary laws have become more rigorous by stipulating a baseline
+      level of reuse standards.
+      Selecting the right way to express conditions for access to and re-use of resources can be complex.
+      In essence, it is advisable for data publishers to engage their legal experts to ensure the provision of suitable
+      guidelines.
+
+    </p>
+    <p>
+      This specification distinguishes the following main situations:
+      one where a statement is associated with a resource that is explicitly declared as a 'license';
+      a second, where the statement is associated with a resource denoting only access rights;
+      a third, covering all the other cases - i.e., statements not concerning licensing conditions and/or access rights
+      (e.g., copyright statements).
+
+    </p>
+
+    <aside class="note">
+      <p>
+        The provision of licensing conditions and access rights complies with the Best Practices 4 ("<a
+          data-cite="DWBP#licenses">Provide data license information</a>") and 22 ("<a
+          data-cite="DWBP#DataUnavailabilityReference">Provide an explanation for data that is not available</a>"),
+        respectively, from [[DWBP]].
+      </p>
+    </aside>
+
+    <p>Licensing information is specified on (a) data catalogues (services) and on (b) the distribution(s) of a dataset,
+      and not on the dataset itself. The principle is that different dataset distributions may be associated with
+      different licensing terms. Moreover, [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-20200608"
+          title="DCAT Application Profile for data portals in Europe. Version 2.0.1">DCAT-AP-20200608</a></cite>]
+      recommends the use of <code>dct:accessRights</code> for specifying access conditions.</p>
+
+    <p>Based on this, GeoDCAT-AP specifies use and access limitations by using, respectively, <code>dct:license</code>
+      and <code>dct:accessRights</code>. These properties take as value the URI of the use / access limitations, when
+      available. Otherwise, since the range of these properties is not a literal, but, respectively, classes
+      <code>dct:LicenseDocument</code> and <code>dct:RightsStatement</code>, the free-text content of the corresponding
+      ISO&nbsp;19115 / <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> metadata elements
+      can be expressed by using <code>rdfs:label</code>, as illustrated in [<cite><a class="bibref"
+          data-link-type="biblio" href="#bib-dc-ug-pm"
+          title="Dublin Core™ User Guide: Publishing Metadata">DC-UG-PM</a></cite>].
+    </p>
+
+    <div class="note" role="note" id="issue-container-generatedID-61">
+      <div role="heading" class="note-title marker" id="h-note-61" aria-level="5"><span>Note</span></div>
+      <aside class="">
+        <p>It is worth noting that, for specifying use and access limitations, [<cite><a class="bibref"
+              data-link-type="biblio" href="#bib-inspire-md-20170302"
+              title="Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007. Version 2.0.1">INSPIRE-MD-20170302</a></cite>]
+          recommends the use of the relevant URI sets operated by the <abbr
+            title="Infrastructure for spatial information in Europe">INSPIRE</abbr> Registry - namely, [<cite><a
+              class="bibref" data-link-type="biblio" href="#bib-inspire-cau"
+              title="INSPIRE Registry: Conditions applying to access and use">INSPIRE-CAU</a></cite>], for two cases of
+          use limitations (“no conditions apply” and “conditions unknown”), and [<cite><a class="bibref"
+              data-link-type="biblio" href="#bib-inspire-lpa"
+              title="INSPIRE Registry: Limitations on public access">INSPIRE-LPA</a></cite>], for access limitations.
+        </p>
+        <p>Moreover, [<cite><a class="bibref" data-link-type="biblio" href="#bib-inspire-md-20170302"
+              title="Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007. Version 2.0.1">INSPIRE-MD-20170302</a></cite>]
+          recommends against the use of free-text only for specifying access limitations. Because of this, access
+          limitations <em class="rfc2119">SHOULD</em> be specified only with URIs from [<cite><a class="bibref"
+              data-link-type="biblio" href="#bib-inspire-lpa"
+              title="INSPIRE Registry: Limitations on public access">INSPIRE-LPA</a></cite>]. Property
+          <code>rdfs:label</code> <em class="rfc2119">MAY</em> only be used to specify access limitations in legacy
+          metadata records, not compliant with [<cite><a class="bibref" data-link-type="biblio"
+              href="#bib-inspire-md-20170302"
+              title="Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007. Version 2.0.1">INSPIRE-MD-20170302</a></cite>].
+        </p>
+
+      </aside>
+    </div>
+
+
+    <p>DCAT-US profile makes use of a code list to specify access restrictions.</p>
+
+    <p>In the following table, the URIs of code list values are abbreviated for space constraints, specifying only the
+      local part. For all of them, the base URI is <code>http://data.gov/vocab/access-rights/</code></p>
+
+    <table class="simple">
+      <thead>
+        <tr>
+          <th>URI (abbr.)</th>
+          <th>Label</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code title="http://data.gov/vocab/access-rights/no-limitations">no-limitations</code></td>
+          <td>No limitations</td>
+          <td>Anybody can directly and anonymously access the data, without being required to register or authenticate.
+          </td>
+        </tr>
+        <tr>
+          <td><code title="http://data.gov/vocab/access-rights/registration-required">registration-required</code>
+          </td>
+          <td>Registration required</td>
+          <td>Anybody can access the data, but they have to register first.</td>
+        </tr>
+        <tr>
+          <td><code
+              title="http://data.gov/vocab/access-rights/authorisation-required">authorisation-required</code>
+          </td>
+          <td>Authorisation required</td>
+          <td>Only some users can access the resource.</td>
+        </tr>
+        <tr>
+          <td><code title="http://data.gov/vocab/access-rights/unknown">unknown</code></td>
+          <td>Unknown</td>
+          <td>Access restrictions are unknown.</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <!-- Resource Restrictions -->
