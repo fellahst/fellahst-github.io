@@ -3,8 +3,6 @@
 
 <https://opendata/dataservice/1234>
   a dcat:DataService ;
-  dcat:keyword "ereigniskataster"@de,
-               "hochwasser"@de,
-               "lawine"@de,
-               "murgang"@de,
-               "naturereignis"@de .
+  dcat:keyword "cadastre"@en,
+               "land management"@en,
+               "cadastro"@es.

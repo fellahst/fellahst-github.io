@@ -3,5 +3,5 @@
 <https://data.census.gov/catalog>
   a dcat:Catalog ;
 
- #Recommended Property  (TODO: need to change URI namespace)
-  dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme>  .
+ #Recommended Property 
+  dcat:themeTaxonomy <http://data.gov/resource/authority/data-theme>  .
