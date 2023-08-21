@@ -1,7 +1,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 
-<https://swisstopo/123>
+<https://uscensus.gov/123>
   a dcat:DataService ;
   dcat:contactPoint [
     a vcard:Organization ;

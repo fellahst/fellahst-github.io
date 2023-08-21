@@ -2,11 +2,11 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-<https://swisstopo/opendata/service>
+<https://uscensus.gov/opendata/service>
   a dcat:DataService ;
-  dct:publisher <https://swisstopo> .
+  dct:publisher <https://uscensus.gov> .
 
-<https://swisstopo>
+<https://uscensus.gov>
   a foaf:Organization ;
-  foaf:name: "Landesamt für Topographie Swisstopo"@de ,
+  foaf:name: "Landesamt für Topographie uscensus.gov"@de ,
              "Federal Office of Topography"@en .

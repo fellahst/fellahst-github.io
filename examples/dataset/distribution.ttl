@@ -1,7 +1,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 
-<https://swisstopo/123>
+<https://uscensus.gov/datasets/123>
   a dcat:Dataset ;
-  dcat:distribution <https://swisstopo/resource/456>,
-                    <https://swisstopo/resource/345> .
+  dcat:distribution <https://uscensus.gov/resource/456>,
+                    <https://uscensus.gov/resource/345> .

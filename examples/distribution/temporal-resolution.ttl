@@ -1,5 +1,5 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 
-<https://swisstopo/opendata/123>
+<https://uscensus.gov/opendata/123>
   a dcat:Distribution ;
   dcat:temporalResolution "P1D"^^xsd:duration ;
