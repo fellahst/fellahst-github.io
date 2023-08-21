@@ -3,5 +3,4 @@
 
 <https://uscensus.gov/opendata/service>
   a dcat:DataService ;
-  dct:title "Opendata der des Landesamts für Topographie"@de,
-            "Opendata catalog of the Federal Office for Topography"@en.
+  dct:title "Opendata catalog service of the US Census"@en.

@@ -3,4 +3,4 @@
 
 <https://uscensus.gov/opendata/1234>
   a dcat:Distribution ;
-  dct:title "COVID_19 Anteil der positiven SARS-CoV-2 Tests im Kanton Zürich nach Kalenderwoche"@de .
+  dct:title "Some title of the distribution"@en .

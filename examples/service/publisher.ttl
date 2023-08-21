@@ -8,5 +8,4 @@
 
 <https://uscensus.gov>
   a foaf:Organization ;
-  foaf:name: "Landesamt für Topographie uscensus.gov"@de ,
-             "Federal Office of Topography"@en .
+  foaf:name: "US Census"@en .

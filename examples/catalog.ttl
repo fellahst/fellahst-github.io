@@ -8,9 +8,8 @@
 
   dcat:dataset <https://uscensus.gov/data/123>, <https://uscensus.gov/data/345> ;
 
-  dct:title "Open Data City of Zurich"@en ,
-            "Offene Daten der Stadt Zurich"@de ;
-  dct:description "Datenkatalog der Stadt Zurich"@de ;
+  dct:title "Open Data Catalog for New York City"@en;
+  dct:description "Open Data Catalog for New York Cityh"@en ;
 
   dct:issued "2021-01-07T00:00:00"^^xsd:dateTime ;
   foaf:homepage <https://uscensus.gov/index.html> ;
@@ -33,5 +32,5 @@
 
 <https://uscensus.gov>
   a foaf:Organization   ;
-  foaf:name "Landesamt für Topography"@en .
+  foaf:name "US Census"@en .
 
