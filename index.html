@@ -1717,17 +1717,17 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="VOCAB_DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
+                <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
                 </td>
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a data-cite="VOCAB_DCAT-3#class:Role"><code>dcat:Role</code></a>
+                <td><a href="https://www.w3.org/TR/vocab-dcat-3/#class:Role"><code>dcat:Role</code></a>
                 </td>
               </tr>
               <tr>
                 <th>Definition</th>
-                <td></td>
+                <td>The function of an entity or agent with respect to another entity or resource.</td>
               </tr>
             </tbody>
           </table>
@@ -4039,8 +4039,8 @@
       <table class="def">
         <tr>
           <th>RDF Class:</th>
-          <td><a href="http://TBD#CUIRestriction"><code
-                title="http://TBD#CUIRestriction">dcat-us:CUIRestriction</code></a></td>
+          <td><a href="http://TBD#CuiRestriction"><code
+                title="http://TBD#CuiRestriction">dcat-us:CuiRestriction</code></a></td>
         </tr>
         <tr>
           <th class="prop">Definition:</th>
@@ -7544,6 +7544,39 @@
             </td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/RightsStatement">
                 <code>dct:RightsStatement</code></a>
+            </td>
+            <td>R</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#distribution-access_restriction">Access Restriction</a></td>
+            <td><a data-cite="http://TBD#accessRestriction">
+                <code>dcat-us:accessRestriction</code></a>
+            </td>
+            <td><a data-cite="http://TBD#AccessRestriction">
+                <code>dcat-us:AccessRestriction</code></a>
+            </td>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#distribution-use_restriction">Use Restriction</a></td>
+            <td><a data-cite="http://TBD#useRestriction">
+                <code>dcat-us:useRestriction</code></a>
+            </td>
+            <td><a data-cite="http://TBD#UseRestriction">
+                <code>dcat-us:UseRestriction</code></a>
+            </td>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#distribution-cui_restriction">CUI Restriction</a></td>
+            <td><a data-cite="http://TBD#cuiRestriction">
+                <code>dcat-us:cuiRestriction</code></a>
+            </td>
+            <td><a data-cite="http://TBD#CuiRestriction">
+                <code>dcat-us:CuiRestriction</code></a>
             </td>
             <td>R</td>
             <td>0..1</td>
@@ -12583,7 +12616,7 @@
       and <a href="http://purl.org/dc/terms/publisher"><code>dcterms:publisher</code></a>). The
       range of <a data-cite="PROV-O#qualifiedAttribution"><code>prov:qualifiedAttribution</code></a> is
       <a data-cite="PROV-O#Attribution"><code>prov:Attribution</code></a>.
-      Use <a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code><a></a> on
+      Use <a data-cite="VOCAB-DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a> on
         the
         <a data-cite="PROV-O#Attribution"><code>prov:Attribution</code></a> to capture the
         responsibility of the Agent with respect to the Resource. More precisely, the relevant Agent is
