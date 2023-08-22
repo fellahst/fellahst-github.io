@@ -10988,7 +10988,7 @@
         <tbody>
           <tr>
             <td><a href="#metric-in_dimension">in dimension</a></td>
-            <td><a href="http://purl.org/dc/terms/relation"><code>dqv:inDimension</code></a></td>
+            <td><a href="https://www.w3.org/TR/vocab-dqv/#dqv:inDimension"><code>dqv:inDimension</code></a></td>
 
             <td><a href="https://www.w3.org/TR/vocab-dqv/#dqv:Dimension"><code>dqv:Dimension</code></a>
             </td>
@@ -11018,6 +11018,70 @@
 
       <section id="metric-mandatory-props">
         <h4>Mandatory Properties</h4>
+        <section id="#metric-in_dimension">
+          <h4>Property: in dimension</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>in dimension</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="https://www.w3.org/TR/vocab-dqv/#dqv:inDimension"><code>dqv:inDimension</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="https://www.w3.org/TR/vocab-dqv/#dqv:Dimension"><code>dqv:Dimension</code></a></td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>Represents the dimensions a quality metric, certificate and annotation allow a measurement of.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="metric_expected_datatype">
+          <h4>Property: expected datatype</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>expected datatype</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a href="https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType"><code>dqv:expectedDataType</code></a></td>
+               
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="XMLSCHEMA11-2#anySimpleType"><code>xsd:anySimpleType</code></a></td>
+               
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>Represents the expected data type for the metric's observed value (e.g., xsd:boolean, xsd:double etc...)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </section>
       <section id="metric-recommended-props">
 
@@ -11056,8 +11120,11 @@
           </table>
         </section>
       </section>
-      <section id="metric-optional-props">
-        <h4>Optional Properties</h4>
+      <section id="metric-example">
+        <h4>Example</h4>
+        <aside class="example" title="org:Metric example">
+          <pre data-include-format="text" data-include="./examples/metric.ttl"></pre>
+        </aside>
       </section>
     </section>
 
