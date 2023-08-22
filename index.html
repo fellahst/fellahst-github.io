@@ -707,6 +707,22 @@
                     title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]</p>
             </td>
           </tr>
+          <tr class="class mandatory" id="dataset-series">
+            <td>
+              <a href="#properties-for-dataset-series">Dataset Series</a>
+            </td>
+            <td>
+              <p>A collection of datasets that are published separately, but share some characteristics that group them.</p>
+            </td>
+            <td>
+              <p><code>dcat:DatasetSeries</code></p>
+            </td>
+            <td>
+              <p><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">§&nbsp;<bdi class="secno">6.6 </bdi>Class:
+                  Dataset Series</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dcat-3"
+                    title="Data Catalog Vocabulary (DCAT) - Version 3">VOCAB-DCAT-3</a></cite>]</p>
+            </td>
+          </tr>
           <tr class="class mandatory" id="literal">
             <td>
               <p>Literal</p>
@@ -7644,6 +7660,712 @@
         <h4>Example</h4>
         <aside class="example" id="ex-dataset" title="Dataset">
           <pre data-include-format="text" data-include="./examples/dataset/dataset.ttl"></pre>
+        </aside>
+      </section>
+    </section>
+    <!-- dcat:DatasetSeries-->
+    <section id="properties-for-dataset-series">
+      <h2>Class: Dataset Series</h2>
+      <!-- TODO: Write a Paragraph describing Dataset Series -->
+      <!-- <p>
+                      </p> -->
+      <table class="def">
+        <tr>
+          <th>RDF Class:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Dataset_Series"><code>dcat:DatasetSeries</code></a>
+          </td>
+        </tr>
+        <tr>
+          <th class="prop">Definition:</th>
+          <td>A collection of datasets that are published separately, but share some characteristics that group them.</td>
+        </tr>
+        <tr>
+          <th class="prop">Subclass Of:</th>
+          <td><a data-cite="VOCAB-DCAT-3#Class:Resource"><code>dcat:Resource</code></a></td>
+        </tr>
+        <tr>
+          <th class="prop">Usage note:</th>
+          <td>
+            <ul>
+              <li></li>
+            </ul>
+          </td>
+        </tr>
+    
+      </table>
+      <table class="simple">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>URI</th>
+            <th>Range</th>
+            <th>ReqLevel</th>
+            <th>Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Mandatory Properties -->
+          <tr>
+            <td><a href="#dataset-series-title">title</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+            <td><strong>M</strong></td>
+            <td>1..n</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-series-description">description</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/description"><code>dcterms:description</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
+            <td><strong>M</strong></td>
+            <td>1..n</td>
+          </tr> 
+          <!-- Recommended Properties-->
+          <tr>
+            <td><a href="#dataset-series-contact-point">contact point</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:resource_contact_point"><code>dcat:contactPoint</code></a></td>
+            <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-series-first">first</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:first"><code>dcat:first</code></a>
+            </td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a></td>
+            <td>R</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-series-spatial-geographical-coverage">spatial/geographical coverage</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a></td>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-series-last">last</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:last"><code>dcat:last</code></a>
+            </td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a></td>
+            <td>R</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-series-update-modification-date">update/modification date</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a></td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+              (typed as
+              as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+              <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+              <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+              or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+            </td>
+            <td>R</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-series-publisher">publisher</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a>
+            </td>
+            <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a></td>
+            <td>R</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-series-seriesMember">series member</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:seriesMember"><code>dcat:seriesMember</code></a>
+            </td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a></td>
+            <td>R</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-series-temporal-coverage">temporal coverage</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/temporal"><code>dct:temporal</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/PeriodOfTime"><code>dct:PeriodOfTime</code></a>
+            </td>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <!-- Optional Properties-->
+          <tr>
+            <td><a href="#dataset-series-frequency">frequency</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accrualPeriodicity"><code>dct:accrualPeriodicity</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Frequency"><code>dct:Frequency</code></a>
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-series-release-date">release date</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/issued"><code>dct:issued</code></a>
+            </td>
+            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+              (typed as
+              as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+              <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+              <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+              or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+            </td>
+            <td>O</td>
+            <td>0..1</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <section id="dataset-series-mandatory-props">
+        <h4>Mandatory Properties</h4>
+        <section id="dataset-series-title">
+          <h4>Property: title</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>Title</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Mandatory</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/title"><code>dcterms:title</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains a name given to the Dataset Series.</li>
+                    <li>This property can be repeated for parallel language versions of the name
+                      (see <a class="no-sectionRef" href="#multilingualism"></a>).
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcterms:title for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/title.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-series-description">
+          <h4>Property: description</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>description</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Mandatory</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>1..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/description"><code>dct:description</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains a free-text account of the Dataset Series.</li>
+                    <li>
+                      This property can be repeated for parallel language versions of the
+                      description (see <a class="no-sectionRef" href="#multilingualism"></a>). It is recommended to provide
+                      an indication
+                      about the dimensions the Dataset Series evolves.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:description for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/description.ttl"></pre>
+          </aside>
+        </section>
+      </section>
+      <section id="dataset-series-recommended-props">
+        <h4>Recommended Properties</h4>
+    
+        <section id="dataset-series-contact-point">
+          <h4>Property: contact point</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>contact point</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_contact_point"><code>dcat:contactPoint</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>Contact information that can be used for sending comments about the Dataset Series.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dcat:contactPoint for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/contact-point.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-series-first">
+          <h4>Property: first</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>first</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:first"><code>dcat:first</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>The first resource in an ordered collection or series of resources, to which the current resource
+                      belongs.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" id="ex-dataset-series-first" title="Usage of dcat:first for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/first.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-series-spatial-geographical-coverage">
+          <h4>Property: spatial/geographical coverage</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>spatial/geographical coverage </td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>
+                      This property refers to a geographic region that is covered by the Dataset Series.
+                    </li>
+                    <li>When spatial coverage is a dimension in the dataset series then the spatial coverage of each dataset
+                      in the collection
+                      should be part of the spatial coverage. In that case, an open ended value is recommended, e.g. EU or a
+                      broad bounding
+                      box covering the expected values.</li>
+                    <li>CV to be used: The Vocabularies Name Authority Lists MUST be used for continents,
+                      countries and places that are in those lists; if a particular location is not in one of
+                      the mentioned Named Authority Lists, Geonames URIs MUST be used:
+                      [[VOCAB-US-CONTINENT]],
+                      [[VOCAB-US-COUNTRY]],
+                      [[VOCAB-US-PLACE]],
+                      [[GEONAMES]]
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" id="ex-dataset-series-spatial-proposal"
+            title="Usage of dct:spatial for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/spatial.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-series-last">
+          <h4>Property: last</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>last</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:last"><code>dcat:last</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>The last resource in an ordered collection or series of resources</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" id="ex-dataset-series-last" title="Usage of dcat:last for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/last.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-series-update-modification-date">
+          <h4>Property: update/modification date</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>update/modification date</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                  (typed as
+                  as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+                  <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+                  <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+                  or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains the most recent date on which the Dataset Series was changed or modified.
+                    </li>
+                    <li>No value may indicate that the Dataset Series has never changed after its initial publication,
+                      or that the date of the last modification is not known, or that the
+                      Dataset Series is continuously updated
+                    </li>
+                    <li>This is not equal to the most recent modified dataset in the collection of the dataset series.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:modified for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/modified.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-series-publisher">
+          <h4>Property: publisher</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>publisher</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Recommended</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_publisher">
+                    <code>dct:publisher</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to an entity (organization) responsible for ensuring the coherency of the
+                      Dataset Series.
+                    </li>
+                    <li>The publisher of the dataset series may not be the publisher of all datasets. E.g. a digital archive
+                      could take over the publishing of older datasets in the series.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:publisher for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/publisher.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-series-seriesMember">
+          <h4>Property: series member</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>series member</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-DCAT-3#Property:seriesMember"><code>dcat:seriesMember</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>A member of the Dataset Series.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" id="ex-dataset-series-seriesMember" title="Usage of dcat:seriesMember for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/seriesMember.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-series-temporal-coverage">
+          <h4>Property: temporal coverage</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>temporal coverage</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/temporal"><code>dct:temporal</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/PeriodOfTime"><code>dct:PeriodOfTime</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>A temporal period that the Dataset Series covers.</li>
+                    <li>When temporal coverage is a dimension in the dataset series then the temporal coverage of each dataset in the collection
+                    should be part of the temporal coverage. In that case, an open ended value is recommended, e.g. after 2012.</li>
+                    <li>The temporal coverage of a dataset series may be encoded as an instance of dcterms:PeriodOfTime, or may be
+                    indicated using an IRI reference (link) to a resource describing a time period</li>
+                  </ul>.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" id="ex-dataset-series-temporal" title="Usage of dct:temporal for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/temporal.ttl"></pre>
+          </aside>
+        </section>
+      </section>
+      <section id="dataset-series-optional-props">
+    
+        <h4>Optional Properties</h4>
+        <section id="dataset-series-frequency">
+          <h4>Property: frequency</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>frequency</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a
+                    data-cite="DCTERMS#http://purl.org/dc/terms/accrualPeriodicity"><code>dct:accrualPeriodicity</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Frequency"><code>dct:Frequency</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to the frequency at which the Dataset Series is updated.</li>
+                    <li>The frequency of a dataset series is not equal to the frequency of the dataset in the collection.
+                    </li>
+                    <li>CV to be used: [[VOCAB-US-FREQUENCY]].</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:accrualPeriodicity for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/frequency.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-series-release-date">
+          <h4>Property: release date</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>release date</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/issued"><code>dct:issued</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                  (typed as
+                  as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+                  <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+                  <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+                  or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains the date of formal issuance (e.g.,publication) of the Dataset Series.
+                    </li>
+                    <li>The moment when the dataset series was established as a managed resource. This is not equal to the
+                      release date of the oldest dataset in the collection of the dataset series.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:issued for dcat:DatasetSeries">
+            <pre data-include-format="text" data-include="./examples/dataset-series/issued.ttl"></pre>
+          </aside>
+        </section>
+      </section>
+    
+      <section id="dataset-series-example">
+        <h4>Example</h4>
+        <aside class="example" id="ex-dataset-series" title="DatasetSeries">
+          <pre data-include-format="text" data-include="./examples/dataset-series/dataset-series.ttl"></pre>
         </aside>
       </section>
     </section>
