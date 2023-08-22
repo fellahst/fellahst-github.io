@@ -622,7 +622,7 @@
           <tr>
             <td><a href="#dataset-publisher">Dataset publisher</a></td>
             <td><a data-cite="VOCAB-DCAT-3#Property:resource_publisher"><code>dct:publisher</code></a></td>
-            <td><a href="http://xmlns.com/foaf/0.1/#term_Document"><code>foaf:Agent</code></a></td>
+            <td><a href="http://xmlns.com/foaf/0.1/#Agent"><code>foaf:Agent</code></a></td>
             <td>Content negotiation for the URI and language encoded string for the name</td>
           </tr>
         </tbody>
@@ -1502,7 +1502,6 @@
               <tr>
                 <th>Range</th>
                 <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a></td>
-
               </tr>
               <tr>
                 <th>Definition</th>
@@ -1717,13 +1716,12 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a
-                    href="https://www.w3.org/TR/vocab-dcat-3/#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
+                <td><a data-cite="VOCAB_DCAT-3#Property:relationship_hadRole"><code>dcat:hadRole</code></a>
                 </td>
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a href="https://www.w3.org/TR/vocab-dcat-3/#class:Role"><code>dcat:Role</code></a>
+                <td><a data-cite="VOCAB_DCAT-3#class:Role"><code>dcat:Role</code></a>
                 </td>
               </tr>
               <tr>
@@ -5928,23 +5926,22 @@
             <td><a href="#dataset-contact-point">contact point</a></td>
             <td><a data-cite="VOCAB-DCAT-3#Property:resource_contact_point"><code>dcat:contactPoint</code></a></td>
             <td><a data-cite="VCARD-RDF#d4e1819"><code>vcard:Kind</code></a>
-            <td><strong>M</strong></td>
-            <td>1..n</td>
-            </td>
+            <td>R</td>
+            <td>0..n</td>
           </tr>
           <tr>
-            <td><a href="#dataset-publisher">publisher</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a>
-            </td>
-            <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a></td>
-            <td><strong>M</strong></td>
-            <td>1..1</td>
-          </tr>
-          <tr>
-            <td><a href="#dataset-distribution">distribution</a></td>
+            <td><a href="#dataset-distribution">dataset distribution</a></td>
             <td><a data-cite="VOCAB-DCAT-3#Property:dataset_distribution"><code>dcat:distribution</code></a></td>
             <td><a data-cite="VOCAB-DCAT-3#Class:Distribution"><code>dcat:Distribution</code></a>
             </td>
+            <td>R</td>
+            <td>0..n</td>
+          </tr>
+          <tr>
+            <td><a href="#dataset-spatial-geographical-coverage">spatial/geographical coverage</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
+            </td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a></td>
             <td>R</td>
             <td>0..n</td>
           </tr>
@@ -5966,9 +5963,8 @@
             <td>0..n</td>
           </tr>
           <tr>
-            <td><a href="#dataset-release-date">release date</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/issued"><code>dct:issued</code></a>
-            </td>
+            <td><a href="#dataset-update-modification-date">update/modification date</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a></td>
             <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
               (typed as
               as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
@@ -5980,19 +5976,19 @@
             <td>0..1</td>
           </tr>
           <tr>
+            <td><a href="#dataset-publisher">publisher</a></td>
+            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a>
+            </td>
+            <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a></td>
+            <td><strong>R</strong></td>
+            <td>0..1</td>
+          </tr>
+          <tr>
             <td><a href="#dataset-geographic-extent">geographic bounding box</a></td>
             <td><a data-cite="DCAT-US##http://TBD/geographicBoundingBox"><code>dcat-us:geographicBoundingBox</code></a>
             </td>
             <td><a data-cite="DCAT-US#http://TBD/GeographicBoundingBox"><code>dcat-us:GeographicBoundingBox</code></a>
             </td>
-            <td>R</td>
-            <td>0..n</td>
-          </tr>
-          <tr>
-            <td><a href="#dataset-spatial-geographical-coverage">spatial/ geographical coverage</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
-            </td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a></td>
             <td>R</td>
             <td>0..n</td>
           </tr>
@@ -6014,19 +6010,6 @@
             <td>0..n</td>
           </tr>
           <tr>
-            <td><a href="#dataset-update-modification-date">update/ modification date</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a></td>
-            <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
-              (typed as
-              as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
-              <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
-              <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
-              or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
-            </td>
-            <td>R</td>
-            <td>0..1</td>
-          </tr>
-          <tr>
             <td><a href="#dataset-access-rights">access rights</a></td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/accessRights"><code>dct:accessRights</code></a>
             </td>
@@ -6040,14 +6023,6 @@
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/conformsTo"><code>dct:conformsTo</code></a>
             </td>
             <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Standard"><code>dct:Standard</code></a>
-            </td>
-            <td>O</td>
-            <td>0..n</td>
-          </tr>
-          <tr>
-            <td><a href="#dataset-contributor">contributor</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/contributor"><code>dct:contributor</code></a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
             </td>
             <td>O</td>
             <td>0..n</td>
@@ -6079,10 +6054,9 @@
             <td>0..1</td>
           </tr>
           <tr>
-            <td><a href="#dataset-image">image</a></td>
-            <td><a data-cite="SCHEMA-ORG/image" data-no-xref=""><code>schema:image</code></a></td>
-            <td><a data-cite="SCHEMA-ORG/url" data-no-xref=""><code>schema:url</code></a> or
-              <a data-cite="SCHEMA-ORG/ImageObject" data-no-xref=""><code>schema:ImageObject</code></a>
+            <td><a href="#dataset-hasVersion">has version</a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Property:resource_has_version"><code>dcat:hasVersion</code></a></td>
+            <td><a data-cite="VOCAB-DCAT-3#Class:Dataset"><code>dcat:Dataset</code></a>
             </td>
             <td>O</td>
             <td>0..n</td>
@@ -6106,29 +6080,84 @@
             <td>0..n</td>
           </tr>
           <tr>
-            <td><a href="#dataset-qualified-attribution">qualified attribution</a></td>
-            <td><a data-cite="PROV#property:qualifiedAttribution"><code>prov:qualifiedAttribution</code></a></td>
-            <td><a data-cite="PROV#Attribution">
-                <code>prov:Attribution</code></a>
-            </td>
+            <td><a href="#dataset-otherIdentifier">other identifier</a></td>
+            <td><a data-cite="VOCAB-ADMS#identifier"><code>adms:identifier</code></a></td>
+            <td><a href="http://www.w3.org/ns/adms#Identifier"><code>adms:Identifier</code></a></td>
             <td>O</td>
             <td>0..n</td>
-          </tr>
+            </tr>
+            <tr>
+              <td><a href="#dataset-provenance">provenance</a></td>
+              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/provenance"><code>dct:provenance</code></a>
+              </td>
+              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/ProvenanceStatement"><code>dct:ProvenanceStatement</code></a>
+              </td>
+              <td>O</td>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <td><a href="#dataset-qualified-attribution">qualified attribution</a></td>
+              <td><a data-cite="PROV#property:qualifiedAttribution"><code>prov:qualifiedAttribution</code></a></td>
+              <td><a data-cite="PROV#Attribution">
+                  <code>prov:Attribution</code></a>
+              </td>
+              <td>O</td>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <td><a href="#dataset-qualified-relation">qualified relation</a></td>
+              <td><a data-cite="VOCAB-DCAT-3#Property:resource_qualified_relation">
+                  <code>dcat:qualifiedRelation</code></a>
+              </td>
+              <td><a data-cite="VOCAB-DCAT-3#Class:Relationship">
+                  <code>dcat:Relationship</code></a>
+              </td>
+              <td>O</td>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <td><a href="#dataset-related-resource">related resource</a></td>
+              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/relation"><code>dct:relation</code></a></td>
+              <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a></td>
+              <td>O</td>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <td><a href="#dataset-release-date">release date</a></td>
+              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/issued"><code>dct:issued</code></a>
+              </td>
+              <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                (typed as
+                as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+                <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+                <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+                or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+              </td>
+              <td>O</td>
+              <td>0..1</td>
+            </tr>
+            <tr>
+              <td><a href="#dataset-sample">sample</a></td>
+              <td><a data-cite="VOCAB-ADMS#sample"><code>adms:sample</code></a></td>
+              <td><a data-cite="VOCAB-DCAT-3#Class:Distributio"><code>dcat:Distribution</code></a>
+              </td>
+              <td>O</td>
+              <td>0..n</td>
+            </tr>
+            <tr>
+              <td><a href="#dataset-contributor">contributor</a></td>
+              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/contributor"><code>dct:contributor</code></a></td>
+              <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Agent"><code>dct:Agent</code></a>
+              </td>
+              <td>O</td>
+              <td>0..n</td>
+            </tr>
           <tr>
-            <td><a href="#dataset-qualified-relation">qualified relation</a></td>
-            <td><a data-cite="VOCAB-DCAT-3#Property:resource_qualified_relation">
-                <code>dcat:qualifiedRelation</code></a>
+            <td><a href="#dataset-image">image</a></td>
+            <td><a data-cite="SCHEMA-ORG/image" data-no-xref=""><code>schema:image</code></a></td>
+            <td><a data-cite="SCHEMA-ORG/url" data-no-xref=""><code>schema:url</code></a> or
+              <a data-cite="SCHEMA-ORG/ImageObject" data-no-xref=""><code>schema:ImageObject</code></a>
             </td>
-            <td><a data-cite="VOCAB-DCAT-3#Class:Relationship">
-                <code>dcat:Relationship</code></a>
-            </td>
-            <td>O</td>
-            <td>0..n</td>
-          </tr>
-          <tr>
-            <td><a href="#dataset-related-resource">related resource</a></td>
-            <td><a data-cite="DCTERMS#http://purl.org/dc/terms/relation"><code>dct:relation</code></a></td>
-            <td><a data-cite="RDF-SCHEMA#ch_resource"><code>rdfs:Resource</code></a></td>
             <td>O</td>
             <td>0..n</td>
           </tr>
@@ -6288,48 +6317,10 @@
             <pre data-include-format="text" data-include="./examples/dataset/identifier.ttl"></pre>
           </aside>
         </section>
-        <section id="dataset-publisher">
-          <h4>Property: publisher</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>publisher</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td><strong>Mandatory</strong></td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>1..1</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="VOCAB-DCAT-3#Property:resource_publisher">
-                    <code>dct:publisher</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Usage Note</th>
-                <td>
-                  <ul>
-                    <li>This property refers to an entity (organisation) responsible for making the Dataset available.
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <aside class="example" title="Usage of dct:publisher for dcat:Dataset">
-            <pre data-include-format="text" data-include="./examples/dataset/publisher.ttl"></pre>
-          </aside>
-        </section>
+      </section>
+      <section id="dataset-recommended-props">
+        <h4>Recommended Properties</h4>
+
         <section id="dataset-contact-point">
           <h4>Property: contact point</h4>
           <table class="def">
@@ -6340,11 +6331,11 @@
               </tr>
               <tr>
                 <th>Requirement level</th>
-                <td><strong>Mandatory</strong></td>
+                <td>Recommended</td>
               </tr>
               <tr>
                 <th>Cardinality</th>
-                <td>1..n</td>
+                <td>0..n</td>
               </tr>
               <tr>
                 <th>URI</th>
@@ -6377,17 +6368,13 @@
             <pre data-include-format="text" data-include="./examples/dataset/contact-point.ttl"></pre>
           </aside>
         </section>
-      </section>
-      <section id="dataset-recommended-props">
-        <h4>Recommended Properties</h4>
-
         <section id="dataset-distribution">
-          <h4>Property: distribution</h4>
+          <h4>Property: dataset distribution</h4>
           <table class="def">
             <tbody>
               <tr>
                 <th>Property</th>
-                <td>distribution</td>
+                <td>dataset distribution</td>
               </tr>
               <tr>
                 <th>Cardinality</th>
@@ -6423,13 +6410,63 @@
             <pre data-include-format="text" data-include="./examples/dataset/distribution.ttl"></pre>
           </aside>
         </section>
+        <section id="dataset-spatial-geographical-coverage">
+          <h4>Property: spatial/ geographical coverage</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>spatial/geographical coverage </td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Recommended</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>
+                      This property refers to a geographic region that is covered by the Dataset.
+                    </li>
+                    <li>CV to be used: The Vocabularies Name Authority Lists MUST be used for continents,
+                      countries and places that are in those lists; if a particular location is not in one of
+                      the mentioned Named Authority Lists, Geonames URIs MUST be used:
+                      [[VOCAB-US-CONTINENT]],
+                      [[VOCAB-US-COUNTRY]],
+                      [[VOCAB-US-PLACE]],
+                      [[GEONAMES]]
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" id="ex-dataset-spatial-proposal" title="Usage of dct:spatial for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/spatial.ttl"></pre>
+          </aside>
+        </section>
         <section id="dataset-keyword">
           <h4>Property: keyword/tag</h4>
           <table class="def">
             <tbody>
               <tr>
                 <th>Property</th>
-                <td>keyword/ tag</td>
+                <td>keyword/tag</td>
               </tr>
               <tr>
                 <th>Requirement level</th>
@@ -6512,13 +6549,13 @@
             <pre data-include-format="text" data-include="./examples/dataset/landing-page.ttl"></pre>
           </aside>
         </section>
-        <section id="dataset-release-date">
-          <h4>Property: release date</h4>
+        <section id="dataset-update-modification-date">
+          <h4>Property: update/modification date</h4>
           <table class="def">
             <tbody>
               <tr>
                 <th>Property</th>
-                <td>release date</td>
+                <td>update/modification date</td>
               </tr>
               <tr>
                 <th>Requirement level</th>
@@ -6530,7 +6567,7 @@
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/issued"><code>dct:issued</code></a>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a>
                 </td>
               </tr>
               <tr>
@@ -6547,70 +6584,71 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property contains the date of formal issuance (e.g., first publication of the Dataset).
+                    <li>This property contains the most recent date on which the Dataset was changed or modified.</li>
+                    <li>No value may indicate that the Dataset has never changed after its initial publication,
+                      or that the date of the last modification is not known, or that the
+                      Dataset is continuously updated
                     </li>
-                    <li>If this date is not known, the date of the first referencing of the data collection in
-                      the Catalog can be entered.
+                    <li>This property MUST only be set if the distributions (the actual data) that
+                      the Dataset describes have been updated after it has been issued. In this case the property
+                      MUST contain the date of the last update. That way a person or institution using the data
+                      for an analysis or application will know when to update the report or application on their side.
                     </li>
                   </ul>
                 </td>
               </tr>
             </tbody>
           </table>
-          <aside class="example" title="Usage of dct:issued for dcat:Dataset">
-            <pre data-include-format="text" data-include="./examples/dataset/issued.ttl"></pre>
+          <aside class="example" title="Usage of dct:modified for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/modified.ttl"></pre>
           </aside>
         </section>
-        <section id="dataset-spatial-geographical-coverage">
-          <h4>Property: spatial/ geographical coverage</h4>
+        <section id="dataset-publisher">
+          <h4>Property: publisher</h4>
           <table class="def">
             <tbody>
               <tr>
                 <th>Property</th>
-                <td>spatial/ geographical coverage </td>
+                <td>publisher</td>
               </tr>
               <tr>
                 <th>Requirement level</th>
-                <td>Recommended</td>
+                <td><strong>Recommended</strong></td>
               </tr>
               <tr>
                 <th>Cardinality</th>
-                <td>0..n</td>
+                <td>0..1</td>
               </tr>
               <tr>
                 <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/spatial"><code>dct:spatial</code></a>
+                <td><a data-cite="VOCAB-DCAT-3#Property:resource_publisher">
+                    <code>dct:publisher</code></a>
                 </td>
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/Location"><code>dct:Location</code></a>
+                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
                 </td>
               </tr>
               <tr>
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>
-                      This property refers to a geographic region that is covered by the Dataset.
-                    </li>
-                    <li>CV to be used: The Vocabularies Name Authority Lists MUST be used for continents,
-                      countries and places that are in those lists; if a particular location is not in one of
-                      the mentioned Named Authority Lists, Geonames URIs MUST be used:
-                      [[VOCAB-US-CONTINENT]],
-                      [[VOCAB-US-COUNTRY]],
-                      [[VOCAB-US-PLACE]],
-                      [[GEONAMES]]
+                    <li>This property refers to an entity (organization) responsible for making the Dataset available.
                     </li>
                   </ul>
                 </td>
               </tr>
             </tbody>
           </table>
-          <aside class="example" id="ex-dataset-spatial-proposal" title="Usage of dct:spatial for dcat:Dataset">
-            <pre data-include-format="text" data-include="./examples/dataset/spatial.ttl"></pre>
+          <aside class="example" title="Usage of dct:publisher for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/publisher.ttl"></pre>
           </aside>
         </section>
+
+
+
+
         <section id="dataset-temporal-coverage">
           <h4>Property: temporal coverage</h4>
           <table class="def">
@@ -6690,60 +6728,6 @@
           </table>
           <aside class="example" title="Example for dcat:theme for dcat:Dataset.">
             <pre data-include-format="text" data-include="./examples/dataset/theme.ttl"></pre>
-          </aside>
-        </section>
-        <section id="dataset-update-modification-date">
-          <h4>Property: update/ modification date</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>update/ modification date</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td>Recommended</td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>0..1</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/modified"><code>dct:modified</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
-                  (typed as
-                  as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
-                  <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
-                  <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
-                  or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
-                </td>
-              </tr>
-              <tr>
-                <th>Usage Note</th>
-                <td>
-                  <ul>
-                    <li>This property contains the most recent date on which the Dataset was changed or modified.</li>
-                    <li>No value may indicate that the Dataset has never changed after its initial publication,
-                      or that the date of the last modification is not known, or that the
-                      Dataset is continuously updated
-                    </li>
-                    <li>This property MUST only be set if the distributions (the actual data) that
-                      the Dataset describes have been updated after it has been issued. In this case the property
-                      MUST contain the date of the last update. That way a person or institution using the data
-                      for an analysis or application will know when to update the report or application on their side.
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <aside class="example" title="Usage of dct:modified for dcat:Dataset">
-            <pre data-include-format="text" data-include="./examples/dataset/modified.ttl"></pre>
           </aside>
         </section>
       </section>
@@ -6839,48 +6823,6 @@
             <pre data-include-format="text" data-include="./examples/dataset/conforms-to.ttl"></pre>
           </aside>
         </section>
-        <section id="dataset-contributor">
-          <h4>Property: contributor</h4>
-          <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>contributor</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td><strong>Optional</strong></td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>0..n</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/contributor">
-                    <code>dct:contributor</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Usage Note</th>
-                <td>
-                  <ul>
-                    <li>This property refers to an agent contributing to the Dataset.
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <aside class="example" title="Usage of dct:contributor for dcat:Dataset">
-            <pre data-include-format="text" data-include="./examples/dataset/contributor.ttl"></pre>
-          </aside>
-        </section>
         <section id="dataset-creator">
           <h4>Property: creator</h4>
           <table class="def">
@@ -6895,7 +6837,7 @@
               </tr>
               <tr>
                 <th>Cardinality</th>
-                <td>0..n</td>
+                <td>0..1</td>
               </tr>
               <tr>
                 <th>URI</th>
@@ -6912,7 +6854,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to an agent responsible for creating the Dataset available.
+                    <li>This property refers to an entity responsible for producing the dataset.
                     </li>
                   </ul>
                 </td>
@@ -7003,57 +6945,52 @@
             <pre data-include-format="text" data-include="./examples/dataset/frequency.ttl"></pre>
           </aside>
         </section>
-        <section id="dataset-image">
-          <h4>Property: image</h4>
+        <section id="dataset-hasVersion">
+          <h4>Property: has version</h4>
+
           <table class="def">
-            <tbody>
-              <tr>
-                <th>Property</th>
-                <td>image</td>
-              </tr>
-              <tr>
-                <th>Requirement level</th>
-                <td>Optional</td>
-              </tr>
-              <tr>
-                <th>Cardinality</th>
-                <td>0..3</td>
-              </tr>
-              <tr>
-                <th>URI</th>
-                <td><a data-cite="SCHEMA-ORG/image" data-no-xref=""><code>schema:image</code></a></td>
-              </tr>
-              <tr>
-                <th>Range</th>
-                <td><a data-cite="SCHEMA-ORG/url" data-no-xref=""><code>schema:url</code></a> or
-                  <a data-cite="SCHEMA-ORG/ImageObject" data-no-xref=""><code>schema:ImageObject</code></a>
-                </td>
-              </tr>
-              <tr>
-                <th>Definition</th>
-                <td>A thumbnail picture illustrating the content of the dataset.</td>
-              </tr>
-              <tr>
-                <th>Usage Note</th>
-                <td>
-                  <ul>
-                    <li>
-                      A thumbnail picture illustrating the content of the Dataset.
-                    </li>
-                    <li>For distributions that consist of visual content (photographs, videos, maps, etc.)
-                      it makes sense to add a limited number of thumbnails to the metadata.
-                    </li>
-                    <li>
-                      It’s a DCAT-US Custom Class
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
+            <tr>
+              <th>RDF Property:</th>
+              <td>
+                <a href="http://www.w3.org/ns/dcat#hasVersion"><code>dcat:hasVersion</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th class="prop">Definition:</th>
+              <td>
+                This resource has a more specific, versioned resource [[?PAV]].
+              </td>
+            </tr>
+            <tr>
+              <th class="prop">Equivalent property:</th>
+              <td>
+                <a href="http://purl.org/pav/hasVersion"><code>pav:hasVersion</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th class="prop">Sub-property of:</th>
+              <td>
+                <a
+                  href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasVersion"><code
+                    title="http://purl.org/dc/terms/hasVersion">dcterms:hasVersion</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th class="prop">Sub-property of:</th>
+              <td>
+                <a data-cite="?PROV-O#generalizationOf"><code
+                    title="http://www.w3.org/ns/prov#generalizationOf">prov:generalizationOf</code></a>
+              </td>
+            </tr>
+            <tr>
+              <th class="prop">Usage note:</th>
+              <td>
+                <p>
+                  A related Dataset that is a version, edition, or adaptation of the described Dataset.
+                </p>
+              </td>
+            </tr>
           </table>
-          <aside class="example" title="Usage of schema:Image for dcat:Dataset">
-            <pre data-include-format="text" data-include="./examples/dataset/image.ttl"></pre>
-          </aside>
         </section>
         <section id="dataset-is-referenced-by">
           <h4>Property: is referenced by</h4>
@@ -7119,8 +7056,7 @@
               </tr>
               <tr>
                 <th>Range</th>
-                <td><a
-                    data-cite="DCTERMS#http://purl.org/dc/terms/LinguisticSystem"><code>dct:LinguisticSystem</code></a>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/LinguisticSystem"><code>dct:LinguisticSystem</code></a>
                 </td>
               </tr>
               <tr>
@@ -7138,6 +7074,90 @@
           </table>
           <aside class="example" title="Usage of dct:language for dcat:Dataset">
             <pre data-include-format="text" data-include="./examples/dataset/language.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-otherIdentifier">
+          <h4>Property: other identifier</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>other identifier</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <td>Optional</td>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-ADMS#identifier"><code>adms:identifier</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://www.w3.org/ns/adms#Identifier"><code>adms:Identifier</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>A secondary identifier of the Dataset, such as MAST/ADS17, DataCite18, DOI19, EZID20 or W3ID21.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO: Figure out an example for adms:identifier on dcat:Dataset -->
+          <aside class="example" title="Usage of adms:identifier for dcat:Dataset">
+            <!-- <pre data-include-format="text" data-include="./examples/dataset/otherIdentifier.ttl"></pre> -->
+          </aside>
+        </section>
+        <section id="dataset-provenance">
+          <h4>Property: provenance</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>provenance</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <td>Optional</td>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/provenance"><code>dct:provenance</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/ProvenanceStatement"><code>dct:ProvenanceStatement</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains a statement about the lineage of a Dataset.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO: Create example of dct:provenance for dcat:Dataset-->
+          <aside class="example" title="Usage of dct:provenance for dcat:Dataset">
+            <!-- <pre data-include-format="text" data-include="./examples/dataset/provenance.ttl"></pre> -->
           </aside>
         </section>
         <section id="dataset-qualified-attribution">
@@ -7171,7 +7191,7 @@
                 <th>Usage Note</th>
                 <td>
                   <ul>
-                    <li>This property refers to a link to an Agent having some form of responsibility for the resource
+                    <li>This property refers to a link to an Agent having some form of responsibility for the resource.
                     </li>
                   </ul>
                 </td>
@@ -7216,7 +7236,7 @@
                 <td>
                   <ul>
                     <li>This property provides a link to a description of a relationship with another resource and
-                      it’s especially meant for relationships between Dataset.
+                      it is especially meant for relationships between Datasets.
                     </li>
                     <li>It replaces the property rdfs:seeAlso of DCAT-US v1.</li>
                     <li>See here for examples on how to use
@@ -7279,6 +7299,195 @@
             <pre data-include-format="text" data-include="./examples/dataset/relation.ttl"></pre>
           </aside>
         </section>
+        <section id="dataset-release-date">
+          <h4>Property: release date</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>release date</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..1</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/issued"><code>dct:issued</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="RDF-SCHEMA#ch_literal"><code>rdfs:Literal</code></a>
+                  (typed as
+                  as <a data-cite="XMLSCHEMA11-2#date"><code>xsd:date</code></a>,
+                  <a data-cite="XMLSCHEMA11-2#dateTime"><code>xsd:dateTime</code></a>,
+                  <a data-cite="XMLSCHEMA11-2##gYear"><code>xsd:gYear</code></a>
+                  or <a data-cite="XMLSCHEMA11-2#gYearMonth"><code>xsd:gYearMonth</code></a>)
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property contains the date of formal issuance (e.g., first publication) of the Dataset.
+                    </li>
+                    <li>If this date is not known, the date of the first referencing of the data collection in
+                      the Catalog can be entered.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:issued for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/issued.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-sample">
+          <h4>Property: sample</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>sample</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Optional</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="VOCAB-ADMS#sample"><code>adms:sample</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="VOCAB-DCAT-3#Class:Distributio"><code>dcat:Distribution</code></a></td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to a sample Distribution of the Dataset.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TODO: Determine whether an example is needed for adms:sample on dcat:Dataset -->
+          <aside class="example" title="Usage of adms:sample for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/sample.ttl"></pre>
+          </aside>
+        </section>
+
+        <section id="dataset-contributor">
+          <h4>Property: contributor</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>contributor</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td><strong>Optional</strong></td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..n</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="DCTERMS#http://purl.org/dc/terms/contributor">
+                    <code>dct:contributor</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a href="http://xmlns.com/foaf/0.1/#term_Agent"><code>foaf:Agent</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>This property refers to an agent contributing to the Dataset.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of dct:contributor for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/contributor.ttl"></pre>
+          </aside>
+        </section>
+        <section id="dataset-image">
+          <h4>Property: image</h4>
+          <table class="def">
+            <tbody>
+              <tr>
+                <th>Property</th>
+                <td>image</td>
+              </tr>
+              <tr>
+                <th>Requirement level</th>
+                <td>Optional</td>
+              </tr>
+              <tr>
+                <th>Cardinality</th>
+                <td>0..3</td>
+              </tr>
+              <tr>
+                <th>URI</th>
+                <td><a data-cite="SCHEMA-ORG/image" data-no-xref=""><code>schema:image</code></a></td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td><a data-cite="SCHEMA-ORG/url" data-no-xref=""><code>schema:url</code></a> or
+                  <a data-cite="SCHEMA-ORG/ImageObject" data-no-xref=""><code>schema:ImageObject</code></a>
+                </td>
+              </tr>
+              <tr>
+                <th>Definition</th>
+                <td>A thumbnail picture illustrating the content of the dataset.</td>
+              </tr>
+              <tr>
+                <th>Usage Note</th>
+                <td>
+                  <ul>
+                    <li>
+                      A thumbnail picture illustrating the content of the Dataset.
+                    </li>
+                    <li>For distributions that consist of visual content (photographs, videos, maps, etc.)
+                      it makes sense to add a limited number of thumbnails to the metadata.
+                    </li>
+                    <li>
+                      It’s a DCAT-US Custom Class
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="example" title="Usage of schema:Image for dcat:Dataset">
+            <pre data-include-format="text" data-include="./examples/dataset/image.ttl"></pre>
+          </aside>
+        </section>
+
+
+
+
+
         <section id="dataset-temporal-resolution">
           <h4>Property: spatial resolution</h4>
           <table class="def">
@@ -11068,12 +11277,12 @@
               <tr>
                 <th>URI</th>
                 <td><a href="https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType"><code>dqv:expectedDataType</code></a></td>
-               
+
               </tr>
               <tr>
                 <th>Range</th>
                 <td><a data-cite="XMLSCHEMA11-2#anySimpleType"><code>xsd:anySimpleType</code></a></td>
-               
+
               </tr>
               <tr>
                 <th>Definition</th>
